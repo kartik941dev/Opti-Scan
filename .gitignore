@@ -1,0 +1,10 @@
+.env
+PROJECT.md
+__pycache__/
+*.pyc
+venv/
+.venv/
+outputs/annotated_sheets/
+outputs/student_scorecards/
+outputs/results.csv
+outputs/results.xlsx
