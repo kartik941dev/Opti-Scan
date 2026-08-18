@@ -1,0 +1,3030 @@
+{
+  "name": "OptiScan_A4_100Q_Standard",
+  "canvas_width": 1654,
+  "canvas_height": 2339,
+  "dpi": 200,
+  "questions_layout": [
+    {
+      "question_number": 1,
+      "section": "Section A (Physics)",
+      "bubbles": {
+        "A": {
+          "cx": 180,
+          "cy": 650,
+          "radius": 13
+        },
+        "B": {
+          "cx": 224,
+          "cy": 650,
+          "radius": 13
+        },
+        "C": {
+          "cx": 268,
+          "cy": 650,
+          "radius": 13
+        },
+        "D": {
+          "cx": 312,
+          "cy": 650,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 2,
+      "section": "Section A (Physics)",
+      "bubbles": {
+        "A": {
+          "cx": 180,
+          "cy": 712,
+          "radius": 13
+        },
+        "B": {
+          "cx": 224,
+          "cy": 712,
+          "radius": 13
+        },
+        "C": {
+          "cx": 268,
+          "cy": 712,
+          "radius": 13
+        },
+        "D": {
+          "cx": 312,
+          "cy": 712,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 3,
+      "section": "Section A (Physics)",
+      "bubbles": {
+        "A": {
+          "cx": 180,
+          "cy": 774,
+          "radius": 13
+        },
+        "B": {
+          "cx": 224,
+          "cy": 774,
+          "radius": 13
+        },
+        "C": {
+          "cx": 268,
+          "cy": 774,
+          "radius": 13
+        },
+        "D": {
+          "cx": 312,
+          "cy": 774,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 4,
+      "section": "Section A (Physics)",
+      "bubbles": {
+        "A": {
+          "cx": 180,
+          "cy": 836,
+          "radius": 13
+        },
+        "B": {
+          "cx": 224,
+          "cy": 836,
+          "radius": 13
+        },
+        "C": {
+          "cx": 268,
+          "cy": 836,
+          "radius": 13
+        },
+        "D": {
+          "cx": 312,
+          "cy": 836,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 5,
+      "section": "Section A (Physics)",
+      "bubbles": {
+        "A": {
+          "cx": 180,
+          "cy": 898,
+          "radius": 13
+        },
+        "B": {
+          "cx": 224,
+          "cy": 898,
+          "radius": 13
+        },
+        "C": {
+          "cx": 268,
+          "cy": 898,
+          "radius": 13
+        },
+        "D": {
+          "cx": 312,
+          "cy": 898,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 6,
+      "section": "Section A (Physics)",
+      "bubbles": {
+        "A": {
+          "cx": 180,
+          "cy": 960,
+          "radius": 13
+        },
+        "B": {
+          "cx": 224,
+          "cy": 960,
+          "radius": 13
+        },
+        "C": {
+          "cx": 268,
+          "cy": 960,
+          "radius": 13
+        },
+        "D": {
+          "cx": 312,
+          "cy": 960,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 7,
+      "section": "Section A (Physics)",
+      "bubbles": {
+        "A": {
+          "cx": 180,
+          "cy": 1022,
+          "radius": 13
+        },
+        "B": {
+          "cx": 224,
+          "cy": 1022,
+          "radius": 13
+        },
+        "C": {
+          "cx": 268,
+          "cy": 1022,
+          "radius": 13
+        },
+        "D": {
+          "cx": 312,
+          "cy": 1022,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 8,
+      "section": "Section A (Physics)",
+      "bubbles": {
+        "A": {
+          "cx": 180,
+          "cy": 1084,
+          "radius": 13
+        },
+        "B": {
+          "cx": 224,
+          "cy": 1084,
+          "radius": 13
+        },
+        "C": {
+          "cx": 268,
+          "cy": 1084,
+          "radius": 13
+        },
+        "D": {
+          "cx": 312,
+          "cy": 1084,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 9,
+      "section": "Section A (Physics)",
+      "bubbles": {
+        "A": {
+          "cx": 180,
+          "cy": 1146,
+          "radius": 13
+        },
+        "B": {
+          "cx": 224,
+          "cy": 1146,
+          "radius": 13
+        },
+        "C": {
+          "cx": 268,
+          "cy": 1146,
+          "radius": 13
+        },
+        "D": {
+          "cx": 312,
+          "cy": 1146,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 10,
+      "section": "Section A (Physics)",
+      "bubbles": {
+        "A": {
+          "cx": 180,
+          "cy": 1208,
+          "radius": 13
+        },
+        "B": {
+          "cx": 224,
+          "cy": 1208,
+          "radius": 13
+        },
+        "C": {
+          "cx": 268,
+          "cy": 1208,
+          "radius": 13
+        },
+        "D": {
+          "cx": 312,
+          "cy": 1208,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 11,
+      "section": "Section A (Physics)",
+      "bubbles": {
+        "A": {
+          "cx": 180,
+          "cy": 1270,
+          "radius": 13
+        },
+        "B": {
+          "cx": 224,
+          "cy": 1270,
+          "radius": 13
+        },
+        "C": {
+          "cx": 268,
+          "cy": 1270,
+          "radius": 13
+        },
+        "D": {
+          "cx": 312,
+          "cy": 1270,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 12,
+      "section": "Section A (Physics)",
+      "bubbles": {
+        "A": {
+          "cx": 180,
+          "cy": 1332,
+          "radius": 13
+        },
+        "B": {
+          "cx": 224,
+          "cy": 1332,
+          "radius": 13
+        },
+        "C": {
+          "cx": 268,
+          "cy": 1332,
+          "radius": 13
+        },
+        "D": {
+          "cx": 312,
+          "cy": 1332,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 13,
+      "section": "Section A (Physics)",
+      "bubbles": {
+        "A": {
+          "cx": 180,
+          "cy": 1394,
+          "radius": 13
+        },
+        "B": {
+          "cx": 224,
+          "cy": 1394,
+          "radius": 13
+        },
+        "C": {
+          "cx": 268,
+          "cy": 1394,
+          "radius": 13
+        },
+        "D": {
+          "cx": 312,
+          "cy": 1394,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 14,
+      "section": "Section A (Physics)",
+      "bubbles": {
+        "A": {
+          "cx": 180,
+          "cy": 1456,
+          "radius": 13
+        },
+        "B": {
+          "cx": 224,
+          "cy": 1456,
+          "radius": 13
+        },
+        "C": {
+          "cx": 268,
+          "cy": 1456,
+          "radius": 13
+        },
+        "D": {
+          "cx": 312,
+          "cy": 1456,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 15,
+      "section": "Section A (Physics)",
+      "bubbles": {
+        "A": {
+          "cx": 180,
+          "cy": 1518,
+          "radius": 13
+        },
+        "B": {
+          "cx": 224,
+          "cy": 1518,
+          "radius": 13
+        },
+        "C": {
+          "cx": 268,
+          "cy": 1518,
+          "radius": 13
+        },
+        "D": {
+          "cx": 312,
+          "cy": 1518,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 16,
+      "section": "Section A (Physics)",
+      "bubbles": {
+        "A": {
+          "cx": 180,
+          "cy": 1580,
+          "radius": 13
+        },
+        "B": {
+          "cx": 224,
+          "cy": 1580,
+          "radius": 13
+        },
+        "C": {
+          "cx": 268,
+          "cy": 1580,
+          "radius": 13
+        },
+        "D": {
+          "cx": 312,
+          "cy": 1580,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 17,
+      "section": "Section A (Physics)",
+      "bubbles": {
+        "A": {
+          "cx": 180,
+          "cy": 1642,
+          "radius": 13
+        },
+        "B": {
+          "cx": 224,
+          "cy": 1642,
+          "radius": 13
+        },
+        "C": {
+          "cx": 268,
+          "cy": 1642,
+          "radius": 13
+        },
+        "D": {
+          "cx": 312,
+          "cy": 1642,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 18,
+      "section": "Section A (Physics)",
+      "bubbles": {
+        "A": {
+          "cx": 180,
+          "cy": 1704,
+          "radius": 13
+        },
+        "B": {
+          "cx": 224,
+          "cy": 1704,
+          "radius": 13
+        },
+        "C": {
+          "cx": 268,
+          "cy": 1704,
+          "radius": 13
+        },
+        "D": {
+          "cx": 312,
+          "cy": 1704,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 19,
+      "section": "Section A (Physics)",
+      "bubbles": {
+        "A": {
+          "cx": 180,
+          "cy": 1766,
+          "radius": 13
+        },
+        "B": {
+          "cx": 224,
+          "cy": 1766,
+          "radius": 13
+        },
+        "C": {
+          "cx": 268,
+          "cy": 1766,
+          "radius": 13
+        },
+        "D": {
+          "cx": 312,
+          "cy": 1766,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 20,
+      "section": "Section A (Physics)",
+      "bubbles": {
+        "A": {
+          "cx": 180,
+          "cy": 1828,
+          "radius": 13
+        },
+        "B": {
+          "cx": 224,
+          "cy": 1828,
+          "radius": 13
+        },
+        "C": {
+          "cx": 268,
+          "cy": 1828,
+          "radius": 13
+        },
+        "D": {
+          "cx": 312,
+          "cy": 1828,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 21,
+      "section": "Section A (Physics)",
+      "bubbles": {
+        "A": {
+          "cx": 180,
+          "cy": 1890,
+          "radius": 13
+        },
+        "B": {
+          "cx": 224,
+          "cy": 1890,
+          "radius": 13
+        },
+        "C": {
+          "cx": 268,
+          "cy": 1890,
+          "radius": 13
+        },
+        "D": {
+          "cx": 312,
+          "cy": 1890,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 22,
+      "section": "Section A (Physics)",
+      "bubbles": {
+        "A": {
+          "cx": 180,
+          "cy": 1952,
+          "radius": 13
+        },
+        "B": {
+          "cx": 224,
+          "cy": 1952,
+          "radius": 13
+        },
+        "C": {
+          "cx": 268,
+          "cy": 1952,
+          "radius": 13
+        },
+        "D": {
+          "cx": 312,
+          "cy": 1952,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 23,
+      "section": "Section A (Physics)",
+      "bubbles": {
+        "A": {
+          "cx": 180,
+          "cy": 2014,
+          "radius": 13
+        },
+        "B": {
+          "cx": 224,
+          "cy": 2014,
+          "radius": 13
+        },
+        "C": {
+          "cx": 268,
+          "cy": 2014,
+          "radius": 13
+        },
+        "D": {
+          "cx": 312,
+          "cy": 2014,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 24,
+      "section": "Section A (Physics)",
+      "bubbles": {
+        "A": {
+          "cx": 180,
+          "cy": 2076,
+          "radius": 13
+        },
+        "B": {
+          "cx": 224,
+          "cy": 2076,
+          "radius": 13
+        },
+        "C": {
+          "cx": 268,
+          "cy": 2076,
+          "radius": 13
+        },
+        "D": {
+          "cx": 312,
+          "cy": 2076,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 25,
+      "section": "Section A (Physics)",
+      "bubbles": {
+        "A": {
+          "cx": 180,
+          "cy": 2138,
+          "radius": 13
+        },
+        "B": {
+          "cx": 224,
+          "cy": 2138,
+          "radius": 13
+        },
+        "C": {
+          "cx": 268,
+          "cy": 2138,
+          "radius": 13
+        },
+        "D": {
+          "cx": 312,
+          "cy": 2138,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 26,
+      "section": "Section B (Chemistry)",
+      "bubbles": {
+        "A": {
+          "cx": 560,
+          "cy": 650,
+          "radius": 13
+        },
+        "B": {
+          "cx": 604,
+          "cy": 650,
+          "radius": 13
+        },
+        "C": {
+          "cx": 648,
+          "cy": 650,
+          "radius": 13
+        },
+        "D": {
+          "cx": 692,
+          "cy": 650,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 27,
+      "section": "Section B (Chemistry)",
+      "bubbles": {
+        "A": {
+          "cx": 560,
+          "cy": 712,
+          "radius": 13
+        },
+        "B": {
+          "cx": 604,
+          "cy": 712,
+          "radius": 13
+        },
+        "C": {
+          "cx": 648,
+          "cy": 712,
+          "radius": 13
+        },
+        "D": {
+          "cx": 692,
+          "cy": 712,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 28,
+      "section": "Section B (Chemistry)",
+      "bubbles": {
+        "A": {
+          "cx": 560,
+          "cy": 774,
+          "radius": 13
+        },
+        "B": {
+          "cx": 604,
+          "cy": 774,
+          "radius": 13
+        },
+        "C": {
+          "cx": 648,
+          "cy": 774,
+          "radius": 13
+        },
+        "D": {
+          "cx": 692,
+          "cy": 774,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 29,
+      "section": "Section B (Chemistry)",
+      "bubbles": {
+        "A": {
+          "cx": 560,
+          "cy": 836,
+          "radius": 13
+        },
+        "B": {
+          "cx": 604,
+          "cy": 836,
+          "radius": 13
+        },
+        "C": {
+          "cx": 648,
+          "cy": 836,
+          "radius": 13
+        },
+        "D": {
+          "cx": 692,
+          "cy": 836,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 30,
+      "section": "Section B (Chemistry)",
+      "bubbles": {
+        "A": {
+          "cx": 560,
+          "cy": 898,
+          "radius": 13
+        },
+        "B": {
+          "cx": 604,
+          "cy": 898,
+          "radius": 13
+        },
+        "C": {
+          "cx": 648,
+          "cy": 898,
+          "radius": 13
+        },
+        "D": {
+          "cx": 692,
+          "cy": 898,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 31,
+      "section": "Section B (Chemistry)",
+      "bubbles": {
+        "A": {
+          "cx": 560,
+          "cy": 960,
+          "radius": 13
+        },
+        "B": {
+          "cx": 604,
+          "cy": 960,
+          "radius": 13
+        },
+        "C": {
+          "cx": 648,
+          "cy": 960,
+          "radius": 13
+        },
+        "D": {
+          "cx": 692,
+          "cy": 960,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 32,
+      "section": "Section B (Chemistry)",
+      "bubbles": {
+        "A": {
+          "cx": 560,
+          "cy": 1022,
+          "radius": 13
+        },
+        "B": {
+          "cx": 604,
+          "cy": 1022,
+          "radius": 13
+        },
+        "C": {
+          "cx": 648,
+          "cy": 1022,
+          "radius": 13
+        },
+        "D": {
+          "cx": 692,
+          "cy": 1022,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 33,
+      "section": "Section B (Chemistry)",
+      "bubbles": {
+        "A": {
+          "cx": 560,
+          "cy": 1084,
+          "radius": 13
+        },
+        "B": {
+          "cx": 604,
+          "cy": 1084,
+          "radius": 13
+        },
+        "C": {
+          "cx": 648,
+          "cy": 1084,
+          "radius": 13
+        },
+        "D": {
+          "cx": 692,
+          "cy": 1084,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 34,
+      "section": "Section B (Chemistry)",
+      "bubbles": {
+        "A": {
+          "cx": 560,
+          "cy": 1146,
+          "radius": 13
+        },
+        "B": {
+          "cx": 604,
+          "cy": 1146,
+          "radius": 13
+        },
+        "C": {
+          "cx": 648,
+          "cy": 1146,
+          "radius": 13
+        },
+        "D": {
+          "cx": 692,
+          "cy": 1146,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 35,
+      "section": "Section B (Chemistry)",
+      "bubbles": {
+        "A": {
+          "cx": 560,
+          "cy": 1208,
+          "radius": 13
+        },
+        "B": {
+          "cx": 604,
+          "cy": 1208,
+          "radius": 13
+        },
+        "C": {
+          "cx": 648,
+          "cy": 1208,
+          "radius": 13
+        },
+        "D": {
+          "cx": 692,
+          "cy": 1208,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 36,
+      "section": "Section B (Chemistry)",
+      "bubbles": {
+        "A": {
+          "cx": 560,
+          "cy": 1270,
+          "radius": 13
+        },
+        "B": {
+          "cx": 604,
+          "cy": 1270,
+          "radius": 13
+        },
+        "C": {
+          "cx": 648,
+          "cy": 1270,
+          "radius": 13
+        },
+        "D": {
+          "cx": 692,
+          "cy": 1270,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 37,
+      "section": "Section B (Chemistry)",
+      "bubbles": {
+        "A": {
+          "cx": 560,
+          "cy": 1332,
+          "radius": 13
+        },
+        "B": {
+          "cx": 604,
+          "cy": 1332,
+          "radius": 13
+        },
+        "C": {
+          "cx": 648,
+          "cy": 1332,
+          "radius": 13
+        },
+        "D": {
+          "cx": 692,
+          "cy": 1332,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 38,
+      "section": "Section B (Chemistry)",
+      "bubbles": {
+        "A": {
+          "cx": 560,
+          "cy": 1394,
+          "radius": 13
+        },
+        "B": {
+          "cx": 604,
+          "cy": 1394,
+          "radius": 13
+        },
+        "C": {
+          "cx": 648,
+          "cy": 1394,
+          "radius": 13
+        },
+        "D": {
+          "cx": 692,
+          "cy": 1394,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 39,
+      "section": "Section B (Chemistry)",
+      "bubbles": {
+        "A": {
+          "cx": 560,
+          "cy": 1456,
+          "radius": 13
+        },
+        "B": {
+          "cx": 604,
+          "cy": 1456,
+          "radius": 13
+        },
+        "C": {
+          "cx": 648,
+          "cy": 1456,
+          "radius": 13
+        },
+        "D": {
+          "cx": 692,
+          "cy": 1456,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 40,
+      "section": "Section B (Chemistry)",
+      "bubbles": {
+        "A": {
+          "cx": 560,
+          "cy": 1518,
+          "radius": 13
+        },
+        "B": {
+          "cx": 604,
+          "cy": 1518,
+          "radius": 13
+        },
+        "C": {
+          "cx": 648,
+          "cy": 1518,
+          "radius": 13
+        },
+        "D": {
+          "cx": 692,
+          "cy": 1518,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 41,
+      "section": "Section B (Chemistry)",
+      "bubbles": {
+        "A": {
+          "cx": 560,
+          "cy": 1580,
+          "radius": 13
+        },
+        "B": {
+          "cx": 604,
+          "cy": 1580,
+          "radius": 13
+        },
+        "C": {
+          "cx": 648,
+          "cy": 1580,
+          "radius": 13
+        },
+        "D": {
+          "cx": 692,
+          "cy": 1580,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 42,
+      "section": "Section B (Chemistry)",
+      "bubbles": {
+        "A": {
+          "cx": 560,
+          "cy": 1642,
+          "radius": 13
+        },
+        "B": {
+          "cx": 604,
+          "cy": 1642,
+          "radius": 13
+        },
+        "C": {
+          "cx": 648,
+          "cy": 1642,
+          "radius": 13
+        },
+        "D": {
+          "cx": 692,
+          "cy": 1642,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 43,
+      "section": "Section B (Chemistry)",
+      "bubbles": {
+        "A": {
+          "cx": 560,
+          "cy": 1704,
+          "radius": 13
+        },
+        "B": {
+          "cx": 604,
+          "cy": 1704,
+          "radius": 13
+        },
+        "C": {
+          "cx": 648,
+          "cy": 1704,
+          "radius": 13
+        },
+        "D": {
+          "cx": 692,
+          "cy": 1704,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 44,
+      "section": "Section B (Chemistry)",
+      "bubbles": {
+        "A": {
+          "cx": 560,
+          "cy": 1766,
+          "radius": 13
+        },
+        "B": {
+          "cx": 604,
+          "cy": 1766,
+          "radius": 13
+        },
+        "C": {
+          "cx": 648,
+          "cy": 1766,
+          "radius": 13
+        },
+        "D": {
+          "cx": 692,
+          "cy": 1766,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 45,
+      "section": "Section B (Chemistry)",
+      "bubbles": {
+        "A": {
+          "cx": 560,
+          "cy": 1828,
+          "radius": 13
+        },
+        "B": {
+          "cx": 604,
+          "cy": 1828,
+          "radius": 13
+        },
+        "C": {
+          "cx": 648,
+          "cy": 1828,
+          "radius": 13
+        },
+        "D": {
+          "cx": 692,
+          "cy": 1828,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 46,
+      "section": "Section B (Chemistry)",
+      "bubbles": {
+        "A": {
+          "cx": 560,
+          "cy": 1890,
+          "radius": 13
+        },
+        "B": {
+          "cx": 604,
+          "cy": 1890,
+          "radius": 13
+        },
+        "C": {
+          "cx": 648,
+          "cy": 1890,
+          "radius": 13
+        },
+        "D": {
+          "cx": 692,
+          "cy": 1890,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 47,
+      "section": "Section B (Chemistry)",
+      "bubbles": {
+        "A": {
+          "cx": 560,
+          "cy": 1952,
+          "radius": 13
+        },
+        "B": {
+          "cx": 604,
+          "cy": 1952,
+          "radius": 13
+        },
+        "C": {
+          "cx": 648,
+          "cy": 1952,
+          "radius": 13
+        },
+        "D": {
+          "cx": 692,
+          "cy": 1952,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 48,
+      "section": "Section B (Chemistry)",
+      "bubbles": {
+        "A": {
+          "cx": 560,
+          "cy": 2014,
+          "radius": 13
+        },
+        "B": {
+          "cx": 604,
+          "cy": 2014,
+          "radius": 13
+        },
+        "C": {
+          "cx": 648,
+          "cy": 2014,
+          "radius": 13
+        },
+        "D": {
+          "cx": 692,
+          "cy": 2014,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 49,
+      "section": "Section B (Chemistry)",
+      "bubbles": {
+        "A": {
+          "cx": 560,
+          "cy": 2076,
+          "radius": 13
+        },
+        "B": {
+          "cx": 604,
+          "cy": 2076,
+          "radius": 13
+        },
+        "C": {
+          "cx": 648,
+          "cy": 2076,
+          "radius": 13
+        },
+        "D": {
+          "cx": 692,
+          "cy": 2076,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 50,
+      "section": "Section B (Chemistry)",
+      "bubbles": {
+        "A": {
+          "cx": 560,
+          "cy": 2138,
+          "radius": 13
+        },
+        "B": {
+          "cx": 604,
+          "cy": 2138,
+          "radius": 13
+        },
+        "C": {
+          "cx": 648,
+          "cy": 2138,
+          "radius": 13
+        },
+        "D": {
+          "cx": 692,
+          "cy": 2138,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 51,
+      "section": "Section C (Mathematics)",
+      "bubbles": {
+        "A": {
+          "cx": 940,
+          "cy": 650,
+          "radius": 13
+        },
+        "B": {
+          "cx": 984,
+          "cy": 650,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1028,
+          "cy": 650,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1072,
+          "cy": 650,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 52,
+      "section": "Section C (Mathematics)",
+      "bubbles": {
+        "A": {
+          "cx": 940,
+          "cy": 712,
+          "radius": 13
+        },
+        "B": {
+          "cx": 984,
+          "cy": 712,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1028,
+          "cy": 712,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1072,
+          "cy": 712,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 53,
+      "section": "Section C (Mathematics)",
+      "bubbles": {
+        "A": {
+          "cx": 940,
+          "cy": 774,
+          "radius": 13
+        },
+        "B": {
+          "cx": 984,
+          "cy": 774,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1028,
+          "cy": 774,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1072,
+          "cy": 774,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 54,
+      "section": "Section C (Mathematics)",
+      "bubbles": {
+        "A": {
+          "cx": 940,
+          "cy": 836,
+          "radius": 13
+        },
+        "B": {
+          "cx": 984,
+          "cy": 836,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1028,
+          "cy": 836,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1072,
+          "cy": 836,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 55,
+      "section": "Section C (Mathematics)",
+      "bubbles": {
+        "A": {
+          "cx": 940,
+          "cy": 898,
+          "radius": 13
+        },
+        "B": {
+          "cx": 984,
+          "cy": 898,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1028,
+          "cy": 898,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1072,
+          "cy": 898,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 56,
+      "section": "Section C (Mathematics)",
+      "bubbles": {
+        "A": {
+          "cx": 940,
+          "cy": 960,
+          "radius": 13
+        },
+        "B": {
+          "cx": 984,
+          "cy": 960,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1028,
+          "cy": 960,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1072,
+          "cy": 960,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 57,
+      "section": "Section C (Mathematics)",
+      "bubbles": {
+        "A": {
+          "cx": 940,
+          "cy": 1022,
+          "radius": 13
+        },
+        "B": {
+          "cx": 984,
+          "cy": 1022,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1028,
+          "cy": 1022,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1072,
+          "cy": 1022,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 58,
+      "section": "Section C (Mathematics)",
+      "bubbles": {
+        "A": {
+          "cx": 940,
+          "cy": 1084,
+          "radius": 13
+        },
+        "B": {
+          "cx": 984,
+          "cy": 1084,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1028,
+          "cy": 1084,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1072,
+          "cy": 1084,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 59,
+      "section": "Section C (Mathematics)",
+      "bubbles": {
+        "A": {
+          "cx": 940,
+          "cy": 1146,
+          "radius": 13
+        },
+        "B": {
+          "cx": 984,
+          "cy": 1146,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1028,
+          "cy": 1146,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1072,
+          "cy": 1146,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 60,
+      "section": "Section C (Mathematics)",
+      "bubbles": {
+        "A": {
+          "cx": 940,
+          "cy": 1208,
+          "radius": 13
+        },
+        "B": {
+          "cx": 984,
+          "cy": 1208,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1028,
+          "cy": 1208,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1072,
+          "cy": 1208,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 61,
+      "section": "Section C (Mathematics)",
+      "bubbles": {
+        "A": {
+          "cx": 940,
+          "cy": 1270,
+          "radius": 13
+        },
+        "B": {
+          "cx": 984,
+          "cy": 1270,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1028,
+          "cy": 1270,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1072,
+          "cy": 1270,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 62,
+      "section": "Section C (Mathematics)",
+      "bubbles": {
+        "A": {
+          "cx": 940,
+          "cy": 1332,
+          "radius": 13
+        },
+        "B": {
+          "cx": 984,
+          "cy": 1332,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1028,
+          "cy": 1332,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1072,
+          "cy": 1332,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 63,
+      "section": "Section C (Mathematics)",
+      "bubbles": {
+        "A": {
+          "cx": 940,
+          "cy": 1394,
+          "radius": 13
+        },
+        "B": {
+          "cx": 984,
+          "cy": 1394,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1028,
+          "cy": 1394,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1072,
+          "cy": 1394,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 64,
+      "section": "Section C (Mathematics)",
+      "bubbles": {
+        "A": {
+          "cx": 940,
+          "cy": 1456,
+          "radius": 13
+        },
+        "B": {
+          "cx": 984,
+          "cy": 1456,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1028,
+          "cy": 1456,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1072,
+          "cy": 1456,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 65,
+      "section": "Section C (Mathematics)",
+      "bubbles": {
+        "A": {
+          "cx": 940,
+          "cy": 1518,
+          "radius": 13
+        },
+        "B": {
+          "cx": 984,
+          "cy": 1518,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1028,
+          "cy": 1518,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1072,
+          "cy": 1518,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 66,
+      "section": "Section C (Mathematics)",
+      "bubbles": {
+        "A": {
+          "cx": 940,
+          "cy": 1580,
+          "radius": 13
+        },
+        "B": {
+          "cx": 984,
+          "cy": 1580,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1028,
+          "cy": 1580,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1072,
+          "cy": 1580,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 67,
+      "section": "Section C (Mathematics)",
+      "bubbles": {
+        "A": {
+          "cx": 940,
+          "cy": 1642,
+          "radius": 13
+        },
+        "B": {
+          "cx": 984,
+          "cy": 1642,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1028,
+          "cy": 1642,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1072,
+          "cy": 1642,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 68,
+      "section": "Section C (Mathematics)",
+      "bubbles": {
+        "A": {
+          "cx": 940,
+          "cy": 1704,
+          "radius": 13
+        },
+        "B": {
+          "cx": 984,
+          "cy": 1704,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1028,
+          "cy": 1704,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1072,
+          "cy": 1704,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 69,
+      "section": "Section C (Mathematics)",
+      "bubbles": {
+        "A": {
+          "cx": 940,
+          "cy": 1766,
+          "radius": 13
+        },
+        "B": {
+          "cx": 984,
+          "cy": 1766,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1028,
+          "cy": 1766,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1072,
+          "cy": 1766,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 70,
+      "section": "Section C (Mathematics)",
+      "bubbles": {
+        "A": {
+          "cx": 940,
+          "cy": 1828,
+          "radius": 13
+        },
+        "B": {
+          "cx": 984,
+          "cy": 1828,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1028,
+          "cy": 1828,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1072,
+          "cy": 1828,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 71,
+      "section": "Section C (Mathematics)",
+      "bubbles": {
+        "A": {
+          "cx": 940,
+          "cy": 1890,
+          "radius": 13
+        },
+        "B": {
+          "cx": 984,
+          "cy": 1890,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1028,
+          "cy": 1890,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1072,
+          "cy": 1890,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 72,
+      "section": "Section C (Mathematics)",
+      "bubbles": {
+        "A": {
+          "cx": 940,
+          "cy": 1952,
+          "radius": 13
+        },
+        "B": {
+          "cx": 984,
+          "cy": 1952,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1028,
+          "cy": 1952,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1072,
+          "cy": 1952,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 73,
+      "section": "Section C (Mathematics)",
+      "bubbles": {
+        "A": {
+          "cx": 940,
+          "cy": 2014,
+          "radius": 13
+        },
+        "B": {
+          "cx": 984,
+          "cy": 2014,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1028,
+          "cy": 2014,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1072,
+          "cy": 2014,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 74,
+      "section": "Section C (Mathematics)",
+      "bubbles": {
+        "A": {
+          "cx": 940,
+          "cy": 2076,
+          "radius": 13
+        },
+        "B": {
+          "cx": 984,
+          "cy": 2076,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1028,
+          "cy": 2076,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1072,
+          "cy": 2076,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 75,
+      "section": "Section C (Mathematics)",
+      "bubbles": {
+        "A": {
+          "cx": 940,
+          "cy": 2138,
+          "radius": 13
+        },
+        "B": {
+          "cx": 984,
+          "cy": 2138,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1028,
+          "cy": 2138,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1072,
+          "cy": 2138,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 76,
+      "section": "Section D (Biology)",
+      "bubbles": {
+        "A": {
+          "cx": 1320,
+          "cy": 650,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1364,
+          "cy": 650,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1408,
+          "cy": 650,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1452,
+          "cy": 650,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 77,
+      "section": "Section D (Biology)",
+      "bubbles": {
+        "A": {
+          "cx": 1320,
+          "cy": 712,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1364,
+          "cy": 712,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1408,
+          "cy": 712,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1452,
+          "cy": 712,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 78,
+      "section": "Section D (Biology)",
+      "bubbles": {
+        "A": {
+          "cx": 1320,
+          "cy": 774,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1364,
+          "cy": 774,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1408,
+          "cy": 774,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1452,
+          "cy": 774,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 79,
+      "section": "Section D (Biology)",
+      "bubbles": {
+        "A": {
+          "cx": 1320,
+          "cy": 836,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1364,
+          "cy": 836,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1408,
+          "cy": 836,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1452,
+          "cy": 836,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 80,
+      "section": "Section D (Biology)",
+      "bubbles": {
+        "A": {
+          "cx": 1320,
+          "cy": 898,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1364,
+          "cy": 898,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1408,
+          "cy": 898,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1452,
+          "cy": 898,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 81,
+      "section": "Section D (Biology)",
+      "bubbles": {
+        "A": {
+          "cx": 1320,
+          "cy": 960,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1364,
+          "cy": 960,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1408,
+          "cy": 960,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1452,
+          "cy": 960,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 82,
+      "section": "Section D (Biology)",
+      "bubbles": {
+        "A": {
+          "cx": 1320,
+          "cy": 1022,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1364,
+          "cy": 1022,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1408,
+          "cy": 1022,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1452,
+          "cy": 1022,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 83,
+      "section": "Section D (Biology)",
+      "bubbles": {
+        "A": {
+          "cx": 1320,
+          "cy": 1084,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1364,
+          "cy": 1084,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1408,
+          "cy": 1084,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1452,
+          "cy": 1084,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 84,
+      "section": "Section D (Biology)",
+      "bubbles": {
+        "A": {
+          "cx": 1320,
+          "cy": 1146,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1364,
+          "cy": 1146,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1408,
+          "cy": 1146,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1452,
+          "cy": 1146,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 85,
+      "section": "Section D (Biology)",
+      "bubbles": {
+        "A": {
+          "cx": 1320,
+          "cy": 1208,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1364,
+          "cy": 1208,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1408,
+          "cy": 1208,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1452,
+          "cy": 1208,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 86,
+      "section": "Section D (Biology)",
+      "bubbles": {
+        "A": {
+          "cx": 1320,
+          "cy": 1270,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1364,
+          "cy": 1270,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1408,
+          "cy": 1270,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1452,
+          "cy": 1270,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 87,
+      "section": "Section D (Biology)",
+      "bubbles": {
+        "A": {
+          "cx": 1320,
+          "cy": 1332,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1364,
+          "cy": 1332,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1408,
+          "cy": 1332,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1452,
+          "cy": 1332,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 88,
+      "section": "Section D (Biology)",
+      "bubbles": {
+        "A": {
+          "cx": 1320,
+          "cy": 1394,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1364,
+          "cy": 1394,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1408,
+          "cy": 1394,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1452,
+          "cy": 1394,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 89,
+      "section": "Section D (Biology)",
+      "bubbles": {
+        "A": {
+          "cx": 1320,
+          "cy": 1456,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1364,
+          "cy": 1456,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1408,
+          "cy": 1456,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1452,
+          "cy": 1456,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 90,
+      "section": "Section D (Biology)",
+      "bubbles": {
+        "A": {
+          "cx": 1320,
+          "cy": 1518,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1364,
+          "cy": 1518,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1408,
+          "cy": 1518,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1452,
+          "cy": 1518,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 91,
+      "section": "Section D (Biology)",
+      "bubbles": {
+        "A": {
+          "cx": 1320,
+          "cy": 1580,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1364,
+          "cy": 1580,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1408,
+          "cy": 1580,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1452,
+          "cy": 1580,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 92,
+      "section": "Section D (Biology)",
+      "bubbles": {
+        "A": {
+          "cx": 1320,
+          "cy": 1642,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1364,
+          "cy": 1642,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1408,
+          "cy": 1642,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1452,
+          "cy": 1642,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 93,
+      "section": "Section D (Biology)",
+      "bubbles": {
+        "A": {
+          "cx": 1320,
+          "cy": 1704,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1364,
+          "cy": 1704,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1408,
+          "cy": 1704,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1452,
+          "cy": 1704,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 94,
+      "section": "Section D (Biology)",
+      "bubbles": {
+        "A": {
+          "cx": 1320,
+          "cy": 1766,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1364,
+          "cy": 1766,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1408,
+          "cy": 1766,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1452,
+          "cy": 1766,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 95,
+      "section": "Section D (Biology)",
+      "bubbles": {
+        "A": {
+          "cx": 1320,
+          "cy": 1828,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1364,
+          "cy": 1828,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1408,
+          "cy": 1828,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1452,
+          "cy": 1828,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 96,
+      "section": "Section D (Biology)",
+      "bubbles": {
+        "A": {
+          "cx": 1320,
+          "cy": 1890,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1364,
+          "cy": 1890,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1408,
+          "cy": 1890,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1452,
+          "cy": 1890,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 97,
+      "section": "Section D (Biology)",
+      "bubbles": {
+        "A": {
+          "cx": 1320,
+          "cy": 1952,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1364,
+          "cy": 1952,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1408,
+          "cy": 1952,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1452,
+          "cy": 1952,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 98,
+      "section": "Section D (Biology)",
+      "bubbles": {
+        "A": {
+          "cx": 1320,
+          "cy": 2014,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1364,
+          "cy": 2014,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1408,
+          "cy": 2014,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1452,
+          "cy": 2014,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 99,
+      "section": "Section D (Biology)",
+      "bubbles": {
+        "A": {
+          "cx": 1320,
+          "cy": 2076,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1364,
+          "cy": 2076,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1408,
+          "cy": 2076,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1452,
+          "cy": 2076,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 100,
+      "section": "Section D (Biology)",
+      "bubbles": {
+        "A": {
+          "cx": 1320,
+          "cy": 2138,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1364,
+          "cy": 2138,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1408,
+          "cy": 2138,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1452,
+          "cy": 2138,
+          "radius": 13
+        }
+      }
+    }
+  ],
+  "id_grid_layout": {
+    "col_0_digit_0": {
+      "cx": 200,
+      "cy": 285,
+      "r": 11,
+      "digit": 0,
+      "col": 0
+    },
+    "col_0_digit_1": {
+      "cx": 200,
+      "cy": 315,
+      "r": 11,
+      "digit": 1,
+      "col": 0
+    },
+    "col_0_digit_2": {
+      "cx": 200,
+      "cy": 345,
+      "r": 11,
+      "digit": 2,
+      "col": 0
+    },
+    "col_0_digit_3": {
+      "cx": 200,
+      "cy": 375,
+      "r": 11,
+      "digit": 3,
+      "col": 0
+    },
+    "col_0_digit_4": {
+      "cx": 200,
+      "cy": 405,
+      "r": 11,
+      "digit": 4,
+      "col": 0
+    },
+    "col_0_digit_5": {
+      "cx": 200,
+      "cy": 435,
+      "r": 11,
+      "digit": 5,
+      "col": 0
+    },
+    "col_0_digit_6": {
+      "cx": 200,
+      "cy": 465,
+      "r": 11,
+      "digit": 6,
+      "col": 0
+    },
+    "col_0_digit_7": {
+      "cx": 200,
+      "cy": 495,
+      "r": 11,
+      "digit": 7,
+      "col": 0
+    },
+    "col_0_digit_8": {
+      "cx": 200,
+      "cy": 525,
+      "r": 11,
+      "digit": 8,
+      "col": 0
+    },
+    "col_0_digit_9": {
+      "cx": 200,
+      "cy": 555,
+      "r": 11,
+      "digit": 9,
+      "col": 0
+    },
+    "col_1_digit_0": {
+      "cx": 238,
+      "cy": 285,
+      "r": 11,
+      "digit": 0,
+      "col": 1
+    },
+    "col_1_digit_1": {
+      "cx": 238,
+      "cy": 315,
+      "r": 11,
+      "digit": 1,
+      "col": 1
+    },
+    "col_1_digit_2": {
+      "cx": 238,
+      "cy": 345,
+      "r": 11,
+      "digit": 2,
+      "col": 1
+    },
+    "col_1_digit_3": {
+      "cx": 238,
+      "cy": 375,
+      "r": 11,
+      "digit": 3,
+      "col": 1
+    },
+    "col_1_digit_4": {
+      "cx": 238,
+      "cy": 405,
+      "r": 11,
+      "digit": 4,
+      "col": 1
+    },
+    "col_1_digit_5": {
+      "cx": 238,
+      "cy": 435,
+      "r": 11,
+      "digit": 5,
+      "col": 1
+    },
+    "col_1_digit_6": {
+      "cx": 238,
+      "cy": 465,
+      "r": 11,
+      "digit": 6,
+      "col": 1
+    },
+    "col_1_digit_7": {
+      "cx": 238,
+      "cy": 495,
+      "r": 11,
+      "digit": 7,
+      "col": 1
+    },
+    "col_1_digit_8": {
+      "cx": 238,
+      "cy": 525,
+      "r": 11,
+      "digit": 8,
+      "col": 1
+    },
+    "col_1_digit_9": {
+      "cx": 238,
+      "cy": 555,
+      "r": 11,
+      "digit": 9,
+      "col": 1
+    },
+    "col_2_digit_0": {
+      "cx": 276,
+      "cy": 285,
+      "r": 11,
+      "digit": 0,
+      "col": 2
+    },
+    "col_2_digit_1": {
+      "cx": 276,
+      "cy": 315,
+      "r": 11,
+      "digit": 1,
+      "col": 2
+    },
+    "col_2_digit_2": {
+      "cx": 276,
+      "cy": 345,
+      "r": 11,
+      "digit": 2,
+      "col": 2
+    },
+    "col_2_digit_3": {
+      "cx": 276,
+      "cy": 375,
+      "r": 11,
+      "digit": 3,
+      "col": 2
+    },
+    "col_2_digit_4": {
+      "cx": 276,
+      "cy": 405,
+      "r": 11,
+      "digit": 4,
+      "col": 2
+    },
+    "col_2_digit_5": {
+      "cx": 276,
+      "cy": 435,
+      "r": 11,
+      "digit": 5,
+      "col": 2
+    },
+    "col_2_digit_6": {
+      "cx": 276,
+      "cy": 465,
+      "r": 11,
+      "digit": 6,
+      "col": 2
+    },
+    "col_2_digit_7": {
+      "cx": 276,
+      "cy": 495,
+      "r": 11,
+      "digit": 7,
+      "col": 2
+    },
+    "col_2_digit_8": {
+      "cx": 276,
+      "cy": 525,
+      "r": 11,
+      "digit": 8,
+      "col": 2
+    },
+    "col_2_digit_9": {
+      "cx": 276,
+      "cy": 555,
+      "r": 11,
+      "digit": 9,
+      "col": 2
+    },
+    "col_3_digit_0": {
+      "cx": 314,
+      "cy": 285,
+      "r": 11,
+      "digit": 0,
+      "col": 3
+    },
+    "col_3_digit_1": {
+      "cx": 314,
+      "cy": 315,
+      "r": 11,
+      "digit": 1,
+      "col": 3
+    },
+    "col_3_digit_2": {
+      "cx": 314,
+      "cy": 345,
+      "r": 11,
+      "digit": 2,
+      "col": 3
+    },
+    "col_3_digit_3": {
+      "cx": 314,
+      "cy": 375,
+      "r": 11,
+      "digit": 3,
+      "col": 3
+    },
+    "col_3_digit_4": {
+      "cx": 314,
+      "cy": 405,
+      "r": 11,
+      "digit": 4,
+      "col": 3
+    },
+    "col_3_digit_5": {
+      "cx": 314,
+      "cy": 435,
+      "r": 11,
+      "digit": 5,
+      "col": 3
+    },
+    "col_3_digit_6": {
+      "cx": 314,
+      "cy": 465,
+      "r": 11,
+      "digit": 6,
+      "col": 3
+    },
+    "col_3_digit_7": {
+      "cx": 314,
+      "cy": 495,
+      "r": 11,
+      "digit": 7,
+      "col": 3
+    },
+    "col_3_digit_8": {
+      "cx": 314,
+      "cy": 525,
+      "r": 11,
+      "digit": 8,
+      "col": 3
+    },
+    "col_3_digit_9": {
+      "cx": 314,
+      "cy": 555,
+      "r": 11,
+      "digit": 9,
+      "col": 3
+    },
+    "col_4_digit_0": {
+      "cx": 352,
+      "cy": 285,
+      "r": 11,
+      "digit": 0,
+      "col": 4
+    },
+    "col_4_digit_1": {
+      "cx": 352,
+      "cy": 315,
+      "r": 11,
+      "digit": 1,
+      "col": 4
+    },
+    "col_4_digit_2": {
+      "cx": 352,
+      "cy": 345,
+      "r": 11,
+      "digit": 2,
+      "col": 4
+    },
+    "col_4_digit_3": {
+      "cx": 352,
+      "cy": 375,
+      "r": 11,
+      "digit": 3,
+      "col": 4
+    },
+    "col_4_digit_4": {
+      "cx": 352,
+      "cy": 405,
+      "r": 11,
+      "digit": 4,
+      "col": 4
+    },
+    "col_4_digit_5": {
+      "cx": 352,
+      "cy": 435,
+      "r": 11,
+      "digit": 5,
+      "col": 4
+    },
+    "col_4_digit_6": {
+      "cx": 352,
+      "cy": 465,
+      "r": 11,
+      "digit": 6,
+      "col": 4
+    },
+    "col_4_digit_7": {
+      "cx": 352,
+      "cy": 495,
+      "r": 11,
+      "digit": 7,
+      "col": 4
+    },
+    "col_4_digit_8": {
+      "cx": 352,
+      "cy": 525,
+      "r": 11,
+      "digit": 8,
+      "col": 4
+    },
+    "col_4_digit_9": {
+      "cx": 352,
+      "cy": 555,
+      "r": 11,
+      "digit": 9,
+      "col": 4
+    },
+    "col_5_digit_0": {
+      "cx": 390,
+      "cy": 285,
+      "r": 11,
+      "digit": 0,
+      "col": 5
+    },
+    "col_5_digit_1": {
+      "cx": 390,
+      "cy": 315,
+      "r": 11,
+      "digit": 1,
+      "col": 5
+    },
+    "col_5_digit_2": {
+      "cx": 390,
+      "cy": 345,
+      "r": 11,
+      "digit": 2,
+      "col": 5
+    },
+    "col_5_digit_3": {
+      "cx": 390,
+      "cy": 375,
+      "r": 11,
+      "digit": 3,
+      "col": 5
+    },
+    "col_5_digit_4": {
+      "cx": 390,
+      "cy": 405,
+      "r": 11,
+      "digit": 4,
+      "col": 5
+    },
+    "col_5_digit_5": {
+      "cx": 390,
+      "cy": 435,
+      "r": 11,
+      "digit": 5,
+      "col": 5
+    },
+    "col_5_digit_6": {
+      "cx": 390,
+      "cy": 465,
+      "r": 11,
+      "digit": 6,
+      "col": 5
+    },
+    "col_5_digit_7": {
+      "cx": 390,
+      "cy": 495,
+      "r": 11,
+      "digit": 7,
+      "col": 5
+    },
+    "col_5_digit_8": {
+      "cx": 390,
+      "cy": 525,
+      "r": 11,
+      "digit": 8,
+      "col": 5
+    },
+    "col_5_digit_9": {
+      "cx": 390,
+      "cy": 555,
+      "r": 11,
+      "digit": 9,
+      "col": 5
+    }
+  }
+}

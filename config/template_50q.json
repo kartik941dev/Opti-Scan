@@ -1,0 +1,1730 @@
+{
+  "name": "OptiScan_A4_50Q_Standard",
+  "canvas_width": 1654,
+  "canvas_height": 2339,
+  "dpi": 200,
+  "questions_layout": [
+    {
+      "question_number": 1,
+      "section": "Section A",
+      "bubbles": {
+        "A": {
+          "cx": 300,
+          "cy": 650,
+          "radius": 13
+        },
+        "B": {
+          "cx": 344,
+          "cy": 650,
+          "radius": 13
+        },
+        "C": {
+          "cx": 388,
+          "cy": 650,
+          "radius": 13
+        },
+        "D": {
+          "cx": 432,
+          "cy": 650,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 2,
+      "section": "Section A",
+      "bubbles": {
+        "A": {
+          "cx": 300,
+          "cy": 712,
+          "radius": 13
+        },
+        "B": {
+          "cx": 344,
+          "cy": 712,
+          "radius": 13
+        },
+        "C": {
+          "cx": 388,
+          "cy": 712,
+          "radius": 13
+        },
+        "D": {
+          "cx": 432,
+          "cy": 712,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 3,
+      "section": "Section A",
+      "bubbles": {
+        "A": {
+          "cx": 300,
+          "cy": 774,
+          "radius": 13
+        },
+        "B": {
+          "cx": 344,
+          "cy": 774,
+          "radius": 13
+        },
+        "C": {
+          "cx": 388,
+          "cy": 774,
+          "radius": 13
+        },
+        "D": {
+          "cx": 432,
+          "cy": 774,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 4,
+      "section": "Section A",
+      "bubbles": {
+        "A": {
+          "cx": 300,
+          "cy": 836,
+          "radius": 13
+        },
+        "B": {
+          "cx": 344,
+          "cy": 836,
+          "radius": 13
+        },
+        "C": {
+          "cx": 388,
+          "cy": 836,
+          "radius": 13
+        },
+        "D": {
+          "cx": 432,
+          "cy": 836,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 5,
+      "section": "Section A",
+      "bubbles": {
+        "A": {
+          "cx": 300,
+          "cy": 898,
+          "radius": 13
+        },
+        "B": {
+          "cx": 344,
+          "cy": 898,
+          "radius": 13
+        },
+        "C": {
+          "cx": 388,
+          "cy": 898,
+          "radius": 13
+        },
+        "D": {
+          "cx": 432,
+          "cy": 898,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 6,
+      "section": "Section A",
+      "bubbles": {
+        "A": {
+          "cx": 300,
+          "cy": 960,
+          "radius": 13
+        },
+        "B": {
+          "cx": 344,
+          "cy": 960,
+          "radius": 13
+        },
+        "C": {
+          "cx": 388,
+          "cy": 960,
+          "radius": 13
+        },
+        "D": {
+          "cx": 432,
+          "cy": 960,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 7,
+      "section": "Section A",
+      "bubbles": {
+        "A": {
+          "cx": 300,
+          "cy": 1022,
+          "radius": 13
+        },
+        "B": {
+          "cx": 344,
+          "cy": 1022,
+          "radius": 13
+        },
+        "C": {
+          "cx": 388,
+          "cy": 1022,
+          "radius": 13
+        },
+        "D": {
+          "cx": 432,
+          "cy": 1022,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 8,
+      "section": "Section A",
+      "bubbles": {
+        "A": {
+          "cx": 300,
+          "cy": 1084,
+          "radius": 13
+        },
+        "B": {
+          "cx": 344,
+          "cy": 1084,
+          "radius": 13
+        },
+        "C": {
+          "cx": 388,
+          "cy": 1084,
+          "radius": 13
+        },
+        "D": {
+          "cx": 432,
+          "cy": 1084,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 9,
+      "section": "Section A",
+      "bubbles": {
+        "A": {
+          "cx": 300,
+          "cy": 1146,
+          "radius": 13
+        },
+        "B": {
+          "cx": 344,
+          "cy": 1146,
+          "radius": 13
+        },
+        "C": {
+          "cx": 388,
+          "cy": 1146,
+          "radius": 13
+        },
+        "D": {
+          "cx": 432,
+          "cy": 1146,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 10,
+      "section": "Section A",
+      "bubbles": {
+        "A": {
+          "cx": 300,
+          "cy": 1208,
+          "radius": 13
+        },
+        "B": {
+          "cx": 344,
+          "cy": 1208,
+          "radius": 13
+        },
+        "C": {
+          "cx": 388,
+          "cy": 1208,
+          "radius": 13
+        },
+        "D": {
+          "cx": 432,
+          "cy": 1208,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 11,
+      "section": "Section A",
+      "bubbles": {
+        "A": {
+          "cx": 300,
+          "cy": 1270,
+          "radius": 13
+        },
+        "B": {
+          "cx": 344,
+          "cy": 1270,
+          "radius": 13
+        },
+        "C": {
+          "cx": 388,
+          "cy": 1270,
+          "radius": 13
+        },
+        "D": {
+          "cx": 432,
+          "cy": 1270,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 12,
+      "section": "Section A",
+      "bubbles": {
+        "A": {
+          "cx": 300,
+          "cy": 1332,
+          "radius": 13
+        },
+        "B": {
+          "cx": 344,
+          "cy": 1332,
+          "radius": 13
+        },
+        "C": {
+          "cx": 388,
+          "cy": 1332,
+          "radius": 13
+        },
+        "D": {
+          "cx": 432,
+          "cy": 1332,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 13,
+      "section": "Section A",
+      "bubbles": {
+        "A": {
+          "cx": 300,
+          "cy": 1394,
+          "radius": 13
+        },
+        "B": {
+          "cx": 344,
+          "cy": 1394,
+          "radius": 13
+        },
+        "C": {
+          "cx": 388,
+          "cy": 1394,
+          "radius": 13
+        },
+        "D": {
+          "cx": 432,
+          "cy": 1394,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 14,
+      "section": "Section A",
+      "bubbles": {
+        "A": {
+          "cx": 300,
+          "cy": 1456,
+          "radius": 13
+        },
+        "B": {
+          "cx": 344,
+          "cy": 1456,
+          "radius": 13
+        },
+        "C": {
+          "cx": 388,
+          "cy": 1456,
+          "radius": 13
+        },
+        "D": {
+          "cx": 432,
+          "cy": 1456,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 15,
+      "section": "Section A",
+      "bubbles": {
+        "A": {
+          "cx": 300,
+          "cy": 1518,
+          "radius": 13
+        },
+        "B": {
+          "cx": 344,
+          "cy": 1518,
+          "radius": 13
+        },
+        "C": {
+          "cx": 388,
+          "cy": 1518,
+          "radius": 13
+        },
+        "D": {
+          "cx": 432,
+          "cy": 1518,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 16,
+      "section": "Section A",
+      "bubbles": {
+        "A": {
+          "cx": 300,
+          "cy": 1580,
+          "radius": 13
+        },
+        "B": {
+          "cx": 344,
+          "cy": 1580,
+          "radius": 13
+        },
+        "C": {
+          "cx": 388,
+          "cy": 1580,
+          "radius": 13
+        },
+        "D": {
+          "cx": 432,
+          "cy": 1580,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 17,
+      "section": "Section A",
+      "bubbles": {
+        "A": {
+          "cx": 300,
+          "cy": 1642,
+          "radius": 13
+        },
+        "B": {
+          "cx": 344,
+          "cy": 1642,
+          "radius": 13
+        },
+        "C": {
+          "cx": 388,
+          "cy": 1642,
+          "radius": 13
+        },
+        "D": {
+          "cx": 432,
+          "cy": 1642,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 18,
+      "section": "Section A",
+      "bubbles": {
+        "A": {
+          "cx": 300,
+          "cy": 1704,
+          "radius": 13
+        },
+        "B": {
+          "cx": 344,
+          "cy": 1704,
+          "radius": 13
+        },
+        "C": {
+          "cx": 388,
+          "cy": 1704,
+          "radius": 13
+        },
+        "D": {
+          "cx": 432,
+          "cy": 1704,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 19,
+      "section": "Section A",
+      "bubbles": {
+        "A": {
+          "cx": 300,
+          "cy": 1766,
+          "radius": 13
+        },
+        "B": {
+          "cx": 344,
+          "cy": 1766,
+          "radius": 13
+        },
+        "C": {
+          "cx": 388,
+          "cy": 1766,
+          "radius": 13
+        },
+        "D": {
+          "cx": 432,
+          "cy": 1766,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 20,
+      "section": "Section A",
+      "bubbles": {
+        "A": {
+          "cx": 300,
+          "cy": 1828,
+          "radius": 13
+        },
+        "B": {
+          "cx": 344,
+          "cy": 1828,
+          "radius": 13
+        },
+        "C": {
+          "cx": 388,
+          "cy": 1828,
+          "radius": 13
+        },
+        "D": {
+          "cx": 432,
+          "cy": 1828,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 21,
+      "section": "Section A",
+      "bubbles": {
+        "A": {
+          "cx": 300,
+          "cy": 1890,
+          "radius": 13
+        },
+        "B": {
+          "cx": 344,
+          "cy": 1890,
+          "radius": 13
+        },
+        "C": {
+          "cx": 388,
+          "cy": 1890,
+          "radius": 13
+        },
+        "D": {
+          "cx": 432,
+          "cy": 1890,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 22,
+      "section": "Section A",
+      "bubbles": {
+        "A": {
+          "cx": 300,
+          "cy": 1952,
+          "radius": 13
+        },
+        "B": {
+          "cx": 344,
+          "cy": 1952,
+          "radius": 13
+        },
+        "C": {
+          "cx": 388,
+          "cy": 1952,
+          "radius": 13
+        },
+        "D": {
+          "cx": 432,
+          "cy": 1952,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 23,
+      "section": "Section A",
+      "bubbles": {
+        "A": {
+          "cx": 300,
+          "cy": 2014,
+          "radius": 13
+        },
+        "B": {
+          "cx": 344,
+          "cy": 2014,
+          "radius": 13
+        },
+        "C": {
+          "cx": 388,
+          "cy": 2014,
+          "radius": 13
+        },
+        "D": {
+          "cx": 432,
+          "cy": 2014,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 24,
+      "section": "Section A",
+      "bubbles": {
+        "A": {
+          "cx": 300,
+          "cy": 2076,
+          "radius": 13
+        },
+        "B": {
+          "cx": 344,
+          "cy": 2076,
+          "radius": 13
+        },
+        "C": {
+          "cx": 388,
+          "cy": 2076,
+          "radius": 13
+        },
+        "D": {
+          "cx": 432,
+          "cy": 2076,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 25,
+      "section": "Section A",
+      "bubbles": {
+        "A": {
+          "cx": 300,
+          "cy": 2138,
+          "radius": 13
+        },
+        "B": {
+          "cx": 344,
+          "cy": 2138,
+          "radius": 13
+        },
+        "C": {
+          "cx": 388,
+          "cy": 2138,
+          "radius": 13
+        },
+        "D": {
+          "cx": 432,
+          "cy": 2138,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 26,
+      "section": "Section B",
+      "bubbles": {
+        "A": {
+          "cx": 1000,
+          "cy": 650,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1044,
+          "cy": 650,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1088,
+          "cy": 650,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1132,
+          "cy": 650,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 27,
+      "section": "Section B",
+      "bubbles": {
+        "A": {
+          "cx": 1000,
+          "cy": 712,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1044,
+          "cy": 712,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1088,
+          "cy": 712,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1132,
+          "cy": 712,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 28,
+      "section": "Section B",
+      "bubbles": {
+        "A": {
+          "cx": 1000,
+          "cy": 774,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1044,
+          "cy": 774,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1088,
+          "cy": 774,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1132,
+          "cy": 774,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 29,
+      "section": "Section B",
+      "bubbles": {
+        "A": {
+          "cx": 1000,
+          "cy": 836,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1044,
+          "cy": 836,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1088,
+          "cy": 836,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1132,
+          "cy": 836,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 30,
+      "section": "Section B",
+      "bubbles": {
+        "A": {
+          "cx": 1000,
+          "cy": 898,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1044,
+          "cy": 898,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1088,
+          "cy": 898,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1132,
+          "cy": 898,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 31,
+      "section": "Section B",
+      "bubbles": {
+        "A": {
+          "cx": 1000,
+          "cy": 960,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1044,
+          "cy": 960,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1088,
+          "cy": 960,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1132,
+          "cy": 960,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 32,
+      "section": "Section B",
+      "bubbles": {
+        "A": {
+          "cx": 1000,
+          "cy": 1022,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1044,
+          "cy": 1022,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1088,
+          "cy": 1022,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1132,
+          "cy": 1022,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 33,
+      "section": "Section B",
+      "bubbles": {
+        "A": {
+          "cx": 1000,
+          "cy": 1084,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1044,
+          "cy": 1084,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1088,
+          "cy": 1084,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1132,
+          "cy": 1084,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 34,
+      "section": "Section B",
+      "bubbles": {
+        "A": {
+          "cx": 1000,
+          "cy": 1146,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1044,
+          "cy": 1146,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1088,
+          "cy": 1146,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1132,
+          "cy": 1146,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 35,
+      "section": "Section B",
+      "bubbles": {
+        "A": {
+          "cx": 1000,
+          "cy": 1208,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1044,
+          "cy": 1208,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1088,
+          "cy": 1208,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1132,
+          "cy": 1208,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 36,
+      "section": "Section B",
+      "bubbles": {
+        "A": {
+          "cx": 1000,
+          "cy": 1270,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1044,
+          "cy": 1270,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1088,
+          "cy": 1270,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1132,
+          "cy": 1270,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 37,
+      "section": "Section B",
+      "bubbles": {
+        "A": {
+          "cx": 1000,
+          "cy": 1332,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1044,
+          "cy": 1332,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1088,
+          "cy": 1332,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1132,
+          "cy": 1332,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 38,
+      "section": "Section B",
+      "bubbles": {
+        "A": {
+          "cx": 1000,
+          "cy": 1394,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1044,
+          "cy": 1394,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1088,
+          "cy": 1394,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1132,
+          "cy": 1394,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 39,
+      "section": "Section B",
+      "bubbles": {
+        "A": {
+          "cx": 1000,
+          "cy": 1456,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1044,
+          "cy": 1456,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1088,
+          "cy": 1456,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1132,
+          "cy": 1456,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 40,
+      "section": "Section B",
+      "bubbles": {
+        "A": {
+          "cx": 1000,
+          "cy": 1518,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1044,
+          "cy": 1518,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1088,
+          "cy": 1518,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1132,
+          "cy": 1518,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 41,
+      "section": "Section B",
+      "bubbles": {
+        "A": {
+          "cx": 1000,
+          "cy": 1580,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1044,
+          "cy": 1580,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1088,
+          "cy": 1580,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1132,
+          "cy": 1580,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 42,
+      "section": "Section B",
+      "bubbles": {
+        "A": {
+          "cx": 1000,
+          "cy": 1642,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1044,
+          "cy": 1642,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1088,
+          "cy": 1642,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1132,
+          "cy": 1642,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 43,
+      "section": "Section B",
+      "bubbles": {
+        "A": {
+          "cx": 1000,
+          "cy": 1704,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1044,
+          "cy": 1704,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1088,
+          "cy": 1704,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1132,
+          "cy": 1704,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 44,
+      "section": "Section B",
+      "bubbles": {
+        "A": {
+          "cx": 1000,
+          "cy": 1766,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1044,
+          "cy": 1766,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1088,
+          "cy": 1766,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1132,
+          "cy": 1766,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 45,
+      "section": "Section B",
+      "bubbles": {
+        "A": {
+          "cx": 1000,
+          "cy": 1828,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1044,
+          "cy": 1828,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1088,
+          "cy": 1828,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1132,
+          "cy": 1828,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 46,
+      "section": "Section B",
+      "bubbles": {
+        "A": {
+          "cx": 1000,
+          "cy": 1890,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1044,
+          "cy": 1890,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1088,
+          "cy": 1890,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1132,
+          "cy": 1890,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 47,
+      "section": "Section B",
+      "bubbles": {
+        "A": {
+          "cx": 1000,
+          "cy": 1952,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1044,
+          "cy": 1952,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1088,
+          "cy": 1952,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1132,
+          "cy": 1952,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 48,
+      "section": "Section B",
+      "bubbles": {
+        "A": {
+          "cx": 1000,
+          "cy": 2014,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1044,
+          "cy": 2014,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1088,
+          "cy": 2014,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1132,
+          "cy": 2014,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 49,
+      "section": "Section B",
+      "bubbles": {
+        "A": {
+          "cx": 1000,
+          "cy": 2076,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1044,
+          "cy": 2076,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1088,
+          "cy": 2076,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1132,
+          "cy": 2076,
+          "radius": 13
+        }
+      }
+    },
+    {
+      "question_number": 50,
+      "section": "Section B",
+      "bubbles": {
+        "A": {
+          "cx": 1000,
+          "cy": 2138,
+          "radius": 13
+        },
+        "B": {
+          "cx": 1044,
+          "cy": 2138,
+          "radius": 13
+        },
+        "C": {
+          "cx": 1088,
+          "cy": 2138,
+          "radius": 13
+        },
+        "D": {
+          "cx": 1132,
+          "cy": 2138,
+          "radius": 13
+        }
+      }
+    }
+  ],
+  "id_grid_layout": {
+    "col_0_digit_0": {
+      "cx": 200,
+      "cy": 285,
+      "r": 11,
+      "digit": 0,
+      "col": 0
+    },
+    "col_0_digit_1": {
+      "cx": 200,
+      "cy": 315,
+      "r": 11,
+      "digit": 1,
+      "col": 0
+    },
+    "col_0_digit_2": {
+      "cx": 200,
+      "cy": 345,
+      "r": 11,
+      "digit": 2,
+      "col": 0
+    },
+    "col_0_digit_3": {
+      "cx": 200,
+      "cy": 375,
+      "r": 11,
+      "digit": 3,
+      "col": 0
+    },
+    "col_0_digit_4": {
+      "cx": 200,
+      "cy": 405,
+      "r": 11,
+      "digit": 4,
+      "col": 0
+    },
+    "col_0_digit_5": {
+      "cx": 200,
+      "cy": 435,
+      "r": 11,
+      "digit": 5,
+      "col": 0
+    },
+    "col_0_digit_6": {
+      "cx": 200,
+      "cy": 465,
+      "r": 11,
+      "digit": 6,
+      "col": 0
+    },
+    "col_0_digit_7": {
+      "cx": 200,
+      "cy": 495,
+      "r": 11,
+      "digit": 7,
+      "col": 0
+    },
+    "col_0_digit_8": {
+      "cx": 200,
+      "cy": 525,
+      "r": 11,
+      "digit": 8,
+      "col": 0
+    },
+    "col_0_digit_9": {
+      "cx": 200,
+      "cy": 555,
+      "r": 11,
+      "digit": 9,
+      "col": 0
+    },
+    "col_1_digit_0": {
+      "cx": 238,
+      "cy": 285,
+      "r": 11,
+      "digit": 0,
+      "col": 1
+    },
+    "col_1_digit_1": {
+      "cx": 238,
+      "cy": 315,
+      "r": 11,
+      "digit": 1,
+      "col": 1
+    },
+    "col_1_digit_2": {
+      "cx": 238,
+      "cy": 345,
+      "r": 11,
+      "digit": 2,
+      "col": 1
+    },
+    "col_1_digit_3": {
+      "cx": 238,
+      "cy": 375,
+      "r": 11,
+      "digit": 3,
+      "col": 1
+    },
+    "col_1_digit_4": {
+      "cx": 238,
+      "cy": 405,
+      "r": 11,
+      "digit": 4,
+      "col": 1
+    },
+    "col_1_digit_5": {
+      "cx": 238,
+      "cy": 435,
+      "r": 11,
+      "digit": 5,
+      "col": 1
+    },
+    "col_1_digit_6": {
+      "cx": 238,
+      "cy": 465,
+      "r": 11,
+      "digit": 6,
+      "col": 1
+    },
+    "col_1_digit_7": {
+      "cx": 238,
+      "cy": 495,
+      "r": 11,
+      "digit": 7,
+      "col": 1
+    },
+    "col_1_digit_8": {
+      "cx": 238,
+      "cy": 525,
+      "r": 11,
+      "digit": 8,
+      "col": 1
+    },
+    "col_1_digit_9": {
+      "cx": 238,
+      "cy": 555,
+      "r": 11,
+      "digit": 9,
+      "col": 1
+    },
+    "col_2_digit_0": {
+      "cx": 276,
+      "cy": 285,
+      "r": 11,
+      "digit": 0,
+      "col": 2
+    },
+    "col_2_digit_1": {
+      "cx": 276,
+      "cy": 315,
+      "r": 11,
+      "digit": 1,
+      "col": 2
+    },
+    "col_2_digit_2": {
+      "cx": 276,
+      "cy": 345,
+      "r": 11,
+      "digit": 2,
+      "col": 2
+    },
+    "col_2_digit_3": {
+      "cx": 276,
+      "cy": 375,
+      "r": 11,
+      "digit": 3,
+      "col": 2
+    },
+    "col_2_digit_4": {
+      "cx": 276,
+      "cy": 405,
+      "r": 11,
+      "digit": 4,
+      "col": 2
+    },
+    "col_2_digit_5": {
+      "cx": 276,
+      "cy": 435,
+      "r": 11,
+      "digit": 5,
+      "col": 2
+    },
+    "col_2_digit_6": {
+      "cx": 276,
+      "cy": 465,
+      "r": 11,
+      "digit": 6,
+      "col": 2
+    },
+    "col_2_digit_7": {
+      "cx": 276,
+      "cy": 495,
+      "r": 11,
+      "digit": 7,
+      "col": 2
+    },
+    "col_2_digit_8": {
+      "cx": 276,
+      "cy": 525,
+      "r": 11,
+      "digit": 8,
+      "col": 2
+    },
+    "col_2_digit_9": {
+      "cx": 276,
+      "cy": 555,
+      "r": 11,
+      "digit": 9,
+      "col": 2
+    },
+    "col_3_digit_0": {
+      "cx": 314,
+      "cy": 285,
+      "r": 11,
+      "digit": 0,
+      "col": 3
+    },
+    "col_3_digit_1": {
+      "cx": 314,
+      "cy": 315,
+      "r": 11,
+      "digit": 1,
+      "col": 3
+    },
+    "col_3_digit_2": {
+      "cx": 314,
+      "cy": 345,
+      "r": 11,
+      "digit": 2,
+      "col": 3
+    },
+    "col_3_digit_3": {
+      "cx": 314,
+      "cy": 375,
+      "r": 11,
+      "digit": 3,
+      "col": 3
+    },
+    "col_3_digit_4": {
+      "cx": 314,
+      "cy": 405,
+      "r": 11,
+      "digit": 4,
+      "col": 3
+    },
+    "col_3_digit_5": {
+      "cx": 314,
+      "cy": 435,
+      "r": 11,
+      "digit": 5,
+      "col": 3
+    },
+    "col_3_digit_6": {
+      "cx": 314,
+      "cy": 465,
+      "r": 11,
+      "digit": 6,
+      "col": 3
+    },
+    "col_3_digit_7": {
+      "cx": 314,
+      "cy": 495,
+      "r": 11,
+      "digit": 7,
+      "col": 3
+    },
+    "col_3_digit_8": {
+      "cx": 314,
+      "cy": 525,
+      "r": 11,
+      "digit": 8,
+      "col": 3
+    },
+    "col_3_digit_9": {
+      "cx": 314,
+      "cy": 555,
+      "r": 11,
+      "digit": 9,
+      "col": 3
+    },
+    "col_4_digit_0": {
+      "cx": 352,
+      "cy": 285,
+      "r": 11,
+      "digit": 0,
+      "col": 4
+    },
+    "col_4_digit_1": {
+      "cx": 352,
+      "cy": 315,
+      "r": 11,
+      "digit": 1,
+      "col": 4
+    },
+    "col_4_digit_2": {
+      "cx": 352,
+      "cy": 345,
+      "r": 11,
+      "digit": 2,
+      "col": 4
+    },
+    "col_4_digit_3": {
+      "cx": 352,
+      "cy": 375,
+      "r": 11,
+      "digit": 3,
+      "col": 4
+    },
+    "col_4_digit_4": {
+      "cx": 352,
+      "cy": 405,
+      "r": 11,
+      "digit": 4,
+      "col": 4
+    },
+    "col_4_digit_5": {
+      "cx": 352,
+      "cy": 435,
+      "r": 11,
+      "digit": 5,
+      "col": 4
+    },
+    "col_4_digit_6": {
+      "cx": 352,
+      "cy": 465,
+      "r": 11,
+      "digit": 6,
+      "col": 4
+    },
+    "col_4_digit_7": {
+      "cx": 352,
+      "cy": 495,
+      "r": 11,
+      "digit": 7,
+      "col": 4
+    },
+    "col_4_digit_8": {
+      "cx": 352,
+      "cy": 525,
+      "r": 11,
+      "digit": 8,
+      "col": 4
+    },
+    "col_4_digit_9": {
+      "cx": 352,
+      "cy": 555,
+      "r": 11,
+      "digit": 9,
+      "col": 4
+    },
+    "col_5_digit_0": {
+      "cx": 390,
+      "cy": 285,
+      "r": 11,
+      "digit": 0,
+      "col": 5
+    },
+    "col_5_digit_1": {
+      "cx": 390,
+      "cy": 315,
+      "r": 11,
+      "digit": 1,
+      "col": 5
+    },
+    "col_5_digit_2": {
+      "cx": 390,
+      "cy": 345,
+      "r": 11,
+      "digit": 2,
+      "col": 5
+    },
+    "col_5_digit_3": {
+      "cx": 390,
+      "cy": 375,
+      "r": 11,
+      "digit": 3,
+      "col": 5
+    },
+    "col_5_digit_4": {
+      "cx": 390,
+      "cy": 405,
+      "r": 11,
+      "digit": 4,
+      "col": 5
+    },
+    "col_5_digit_5": {
+      "cx": 390,
+      "cy": 435,
+      "r": 11,
+      "digit": 5,
+      "col": 5
+    },
+    "col_5_digit_6": {
+      "cx": 390,
+      "cy": 465,
+      "r": 11,
+      "digit": 6,
+      "col": 5
+    },
+    "col_5_digit_7": {
+      "cx": 390,
+      "cy": 495,
+      "r": 11,
+      "digit": 7,
+      "col": 5
+    },
+    "col_5_digit_8": {
+      "cx": 390,
+      "cy": 525,
+      "r": 11,
+      "digit": 8,
+      "col": 5
+    },
+    "col_5_digit_9": {
+      "cx": 390,
+      "cy": 555,
+      "r": 11,
+      "digit": 9,
+      "col": 5
+    }
+  }
+}
