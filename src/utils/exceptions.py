@@ -103,6 +103,23 @@ class TemplateMismatchError(TemplateError):
         self.error_code = "TEMPLATE_MISMATCH_ERROR"
 
 
+# --- Bubble Detection & Masking Errors ---
+
+class BubbleDetectionError(OptiScanException):
+    """Raised when bubble ROI slicing, mask generation, or fill detection fails."""
+
+    def __init__(self, message: str, details: Optional[dict[str, Any]] = None) -> None:
+        super().__init__(message, error_code="BUBBLE_DETECTION_ERROR", details=details)
+
+
+class MaskGenerationError(BubbleDetectionError):
+    """Raised when circular mask generation fails."""
+
+    def __init__(self, message: str, details: Optional[dict[str, Any]] = None) -> None:
+        super().__init__(message, details=details)
+        self.error_code = "MASK_GENERATION_ERROR"
+
+
 # --- Scoring & Evaluation Errors ---
 
 class EvaluationError(OptiScanException):
