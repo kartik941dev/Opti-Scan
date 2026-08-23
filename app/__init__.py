@@ -1,3 +1,0 @@
-"""
-OptiScan Web Application Package.
-"""
