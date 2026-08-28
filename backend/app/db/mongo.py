@@ -129,10 +129,117 @@ class InMemoryCollection:
             deleted_count = count
         return DeleteResult()
 
-    async def count_documents(self, filter_query: Dict[str, Any]) -> int:
+    async def insert_many(self, docs: List[Dict[str, Any]]):
+        inserted_ids = []
+        for doc in docs:
+            res = await self.insert_one(doc)
+            inserted_ids.append(res.inserted_id)
+
+        class ManyResult:
+            def __init__(self, ids):
+                self.inserted_ids = ids
+        return ManyResult(inserted_ids)
+
+    async def count_documents(self, filter_query: Optional[Dict[str, Any]] = None) -> int:
+        filter_query = filter_query or {}
         cursor = self.find(filter_query)
         items = await cursor.to_list()
         return len(items)
+
+
+class ResilientCollectionProxy:
+    """Proxies Motor collection calls; seamlessly falls back to InMemoryCollection on connection failures."""
+
+    def __init__(self, name: str, db_manager: "DatabaseManager"):
+        self.name = name
+        self.db_manager = db_manager
+
+    def _get_fallback(self) -> InMemoryCollection:
+        return self.db_manager.get_fallback_collection(self.name)
+
+    async def insert_one(self, *args, **kwargs):
+        if not self.db_manager.use_fallback and self.db_manager.db is not None:
+            try:
+                return await self.db_manager.db[self.name].insert_one(*args, **kwargs)
+            except Exception:
+                self.db_manager.use_fallback = True
+        return await self._get_fallback().insert_one(*args, **kwargs)
+
+    async def insert_many(self, *args, **kwargs):
+        if not self.db_manager.use_fallback and self.db_manager.db is not None:
+            try:
+                return await self.db_manager.db[self.name].insert_many(*args, **kwargs)
+            except Exception:
+                self.db_manager.use_fallback = True
+        return await self._get_fallback().insert_many(*args, **kwargs)
+
+    async def find_one(self, *args, **kwargs):
+        if not self.db_manager.use_fallback and self.db_manager.db is not None:
+            try:
+                return await self.db_manager.db[self.name].find_one(*args, **kwargs)
+            except Exception:
+                self.db_manager.use_fallback = True
+        return await self._get_fallback().find_one(*args, **kwargs)
+
+    def find(self, *args, **kwargs):
+        if not self.db_manager.use_fallback and self.db_manager.db is not None:
+            try:
+                motor_cursor = self.db_manager.db[self.name].find(*args, **kwargs)
+
+                class ResilientCursor:
+                    def __init__(self, m_cursor, fallback_fn, args, kwargs):
+                        self._m_cursor = m_cursor
+                        self._fallback_fn = fallback_fn
+                        self._args = args
+                        self._kwargs = kwargs
+
+                    async def to_list(self, length: Optional[int] = None):
+                        try:
+                            return await self._m_cursor.to_list(length)
+                        except Exception:
+                            fallback_col = self._fallback_fn()
+                            cursor = fallback_col.find(*self._args, **self._kwargs)
+                            return await cursor.to_list(length)
+
+                    def __aiter__(self):
+                        return self._m_cursor.__aiter__()
+
+                return ResilientCursor(motor_cursor, self._get_fallback, args, kwargs)
+            except Exception:
+                self.db_manager.use_fallback = True
+        return self._get_fallback().find(*args, **kwargs)
+
+    async def update_one(self, *args, **kwargs):
+        if not self.db_manager.use_fallback and self.db_manager.db is not None:
+            try:
+                return await self.db_manager.db[self.name].update_one(*args, **kwargs)
+            except Exception:
+                self.db_manager.use_fallback = True
+        return await self._get_fallback().update_one(*args, **kwargs)
+
+    async def delete_one(self, *args, **kwargs):
+        if not self.db_manager.use_fallback and self.db_manager.db is not None:
+            try:
+                return await self.db_manager.db[self.name].delete_one(*args, **kwargs)
+            except Exception:
+                self.db_manager.use_fallback = True
+        return await self._get_fallback().delete_one(*args, **kwargs)
+
+    async def delete_many(self, *args, **kwargs):
+        if not self.db_manager.use_fallback and self.db_manager.db is not None:
+            try:
+                return await self.db_manager.db[self.name].delete_many(*args, **kwargs)
+            except Exception:
+                self.db_manager.use_fallback = True
+        return await self._get_fallback().delete_many(*args, **kwargs)
+
+    async def count_documents(self, *args, **kwargs):
+        if not self.db_manager.use_fallback and self.db_manager.db is not None:
+            try:
+                return await self.db_manager.db[self.name].count_documents(*args, **kwargs)
+            except Exception:
+                self.db_manager.use_fallback = True
+        return await self._get_fallback().count_documents(*args, **kwargs)
 
 
 class DatabaseManager:
@@ -143,6 +250,7 @@ class DatabaseManager:
         self.db = None
         self.use_fallback = not HAS_MOTOR
         self.fallback_collections: Dict[str, InMemoryCollection] = {}
+        self.proxies: Dict[str, ResilientCollectionProxy] = {}
 
     def connect(self):
         if not HAS_MOTOR:
@@ -152,19 +260,22 @@ class DatabaseManager:
         try:
             self.client = motor.motor_asyncio.AsyncIOMotorClient(
                 MONGO_URI,
-                serverSelectionTimeoutMS=2000,
+                serverSelectionTimeoutMS=1000,
             )
             self.db = self.client[DB_NAME]
             self.use_fallback = False
         except Exception:
             self.use_fallback = True
 
+    def get_fallback_collection(self, collection_name: str) -> InMemoryCollection:
+        if collection_name not in self.fallback_collections:
+            self.fallback_collections[collection_name] = InMemoryCollection(collection_name)
+        return self.fallback_collections[collection_name]
+
     def get_collection(self, collection_name: str):
-        if self.use_fallback or self.db is None:
-            if collection_name not in self.fallback_collections:
-                self.fallback_collections[collection_name] = InMemoryCollection(collection_name)
-            return self.fallback_collections[collection_name]
-        return self.db[collection_name]
+        if collection_name not in self.proxies:
+            self.proxies[collection_name] = ResilientCollectionProxy(collection_name, self)
+        return self.proxies[collection_name]
 
     def close(self):
         if self.client:
@@ -177,3 +288,4 @@ db_manager.connect()
 
 def get_collection(name: str):
     return db_manager.get_collection(name)
+
