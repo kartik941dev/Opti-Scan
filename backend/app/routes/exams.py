@@ -64,21 +64,45 @@ async def list_exams():
 @router.post("", response_model=dict, status_code=status.HTTP_201_CREATED)
 async def create_exam(exam_in: ExamCreate):
     exams_col = get_collection("exams")
+    keys_col = get_collection("answer_keys")
     exam_id = f"exam_{uuid.uuid4().hex[:8]}"
+
+    total_q = min(1000, max(1, exam_in.total_questions))
 
     exam_dict = {
         "_id": exam_id,
         "title": exam_in.title,
         "code": exam_in.code,
         "description": exam_in.description or "",
-        "total_questions": exam_in.total_questions,
+        "total_questions": total_q,
         "template_name": exam_in.template_name or "omr_template.json",
         "created_at": datetime.utcnow(),
         "updated_at": datetime.utcnow(),
     }
     await exams_col.insert_one(exam_dict)
+
+    # Initialize default answer key for new exam
+    default_answers = {}
+    opts = ["A", "B", "C", "D"]
+    for i in range(1, total_q + 1):
+        default_answers[str(i)] = opts[(i - 1) % 4]
+
+    key_doc = {
+        "_id": f"key_{exam_id}",
+        "exam_id": exam_id,
+        "exam_title": exam_in.title,
+        "total_questions": total_q,
+        "answers": default_answers,
+        "default_rule": {"correct": 4.0, "incorrect": -1.0, "unattempted": 0.0, "multi_mark": -1.0, "bonus": 4.0},
+        "sections": [],
+        "created_at": datetime.utcnow(),
+        "updated_at": datetime.utcnow(),
+    }
+    await keys_col.insert_one(key_doc)
+
     exam_dict["id"] = exam_id
     return exam_dict
+
 
 
 @router.get("/{exam_id}", response_model=dict)
