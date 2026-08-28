@@ -168,17 +168,48 @@ const ExamsPage = () => {
               </div>
 
               <div>
-                <label style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text-secondary)', display: 'block', marginBottom: '6px' }}>
-                  Total Questions
-                </label>
-                <select
-                  className="input-field"
-                  value={totalQuestions}
-                  onChange={(e) => setTotalQuestions(e.target.value)}
-                >
-                  <option value={100}>100 Questions (Standard 4-Column A4)</option>
-                  <option value={50}>50 Questions (2-Column A4)</option>
-                </select>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px' }}>
+                  <label style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text-secondary)' }}>
+                    Total Questions Limit (1 - 1,000)
+                  </label>
+                  <span style={{ fontSize: '12px', fontWeight: 700, color: 'var(--accent-cyan)' }}>
+                    {totalQuestions} Questions
+                  </span>
+                </div>
+                <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap', alignItems: 'center' }}>
+                  {[25, 50, 100, 180, 200, 500, 1000].map((preset) => (
+                    <button
+                      key={preset}
+                      type="button"
+                      onClick={() => setTotalQuestions(preset)}
+                      style={{
+                        padding: '4px 8px',
+                        borderRadius: '4px',
+                        fontSize: '11px',
+                        fontWeight: 600,
+                        border: totalQuestions === preset ? '1px solid #6366f1' : '1px solid rgba(255, 255, 255, 0.1)',
+                        background: totalQuestions === preset ? 'rgba(99, 102, 241, 0.2)' : 'rgba(255, 255, 255, 0.03)',
+                        color: totalQuestions === preset ? '#ffffff' : 'var(--text-secondary)',
+                        cursor: 'pointer',
+                      }}
+                    >
+                      {preset}Q
+                    </button>
+                  ))}
+                  <input
+                    type="number"
+                    min="1"
+                    max="1000"
+                    value={totalQuestions}
+                    onChange={(e) => {
+                      const val = parseInt(e.target.value, 10) || 1;
+                      setTotalQuestions(Math.min(1000, Math.max(1, val)));
+                    }}
+                    className="input-field"
+                    style={{ width: '80px', padding: '3px 8px', fontSize: '11px', height: '28px' }}
+                    title="Custom question limit (up to 1,000)"
+                  />
+                </div>
               </div>
 
               <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '10px', marginTop: '12px' }}>
