@@ -52,8 +52,10 @@ async def root():
 
 
 @app.get("/health", tags=["Health"])
+@app.get(f"{settings.API_V1_STR}/health", tags=["Health"])
 async def health_check():
     return {"status": "healthy", "service": "optiscan-backend"}
+
 
 
 if __name__ == "__main__":

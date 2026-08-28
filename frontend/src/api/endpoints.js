@@ -20,6 +20,8 @@ export const answerKeyAPI = {
   get: (examId) => apiClient.get(`/answer-keys/${examId}`),
   save: (data) => apiClient.post('/answer-keys', data),
   uploadJson: (formData) => apiClient.post('/answer-keys/upload-json', formData),
+  pasteText: (data) => apiClient.post('/answer-keys/paste-text', data),
+  exportCsvUrl: (examId) => `http://localhost:8000/api/v1/answer-keys/${examId}/export-csv`,
 };
 
 export const omrAPI = {
