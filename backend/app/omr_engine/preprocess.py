@@ -10,21 +10,47 @@ import numpy as np
 
 def load_image(image_input: Union[str, Path, bytes, np.ndarray]) -> np.ndarray:
     """
-    Load image from file path, raw bytes, or numpy array into 3-channel BGR image.
+    Load image from file path, raw bytes (including PDF), or numpy array into 3-channel BGR image.
     """
     if isinstance(image_input, np.ndarray):
         if image_input.ndim == 2:
             return cv2.cvtColor(image_input, cv2.COLOR_GRAY2BGR)
         return image_input.copy()
 
+    # If input is a path or filename
     if isinstance(image_input, (str, Path)):
         path_str = str(image_input)
+        if path_str.lower().endswith(".pdf"):
+            try:
+                import pypdfium2 as pdfium
+                pdf = pdfium.PdfDocument(path_str)
+                page = pdf[0]
+                bitmap = page.render(scale=200 / 72.0)
+                pil_image = bitmap.to_pil()
+                rgb = np.array(pil_image)
+                return cv2.cvtColor(rgb, cv2.COLOR_RGB2BGR)
+            except Exception as e:
+                raise ValueError(f"Failed to render PDF page from {path_str}: {e}")
+
         img = cv2.imread(path_str)
         if img is None:
             raise ValueError(f"Failed to load image from path: {path_str}")
         return img
 
     if isinstance(image_input, bytes):
+        # Check if bytes are a PDF file (starts with %PDF)
+        if image_input.startswith(b"%PDF") or b"%PDF" in image_input[:32]:
+            try:
+                import pypdfium2 as pdfium
+                pdf = pdfium.PdfDocument(image_input)
+                page = pdf[0]
+                bitmap = page.render(scale=200 / 72.0)
+                pil_image = bitmap.to_pil()
+                rgb = np.array(pil_image)
+                return cv2.cvtColor(rgb, cv2.COLOR_RGB2BGR)
+            except Exception as e:
+                raise ValueError(f"Failed to render PDF page from bytes: {e}")
+
         nparr = np.frombuffer(image_input, np.uint8)
         img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
         if img is None:
@@ -32,6 +58,7 @@ def load_image(image_input: Union[str, Path, bytes, np.ndarray]) -> np.ndarray:
         return img
 
     raise TypeError(f"Unsupported image input type: {type(image_input)}")
+
 
 
 def preprocess_pipeline(
