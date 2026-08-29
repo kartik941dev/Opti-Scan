@@ -9,11 +9,11 @@ import numpy as np
 
 def find_fiducial_markers(
     binary_mask: np.ndarray,
-    min_area: float = 1000.0,
-    max_area: float = 35000.0,
-    min_aspect_ratio: float = 0.70,
-    max_aspect_ratio: float = 1.30,
-    min_solidity: float = 0.80,
+    min_area: float = 400.0,
+    max_area: float = 45000.0,
+    min_aspect_ratio: float = 0.65,
+    max_aspect_ratio: float = 1.35,
+    min_solidity: float = 0.75,
 ) -> List[dict]:
     """
     Detect square fiducial registration corner markers on inverted binary sheet.
@@ -106,15 +106,15 @@ def get_four_corners(
     """
     Select the optimal 4 corner registration coordinates.
     """
+    h, w = image_shape[:2]
     n_found = len(marker_candidates)
     if n_found < 3:
-        # Fallback to sheet boundaries if fiducials are obscured
-        h, w = image_shape[:2]
+        # Fallback to standard fiducial positions if not enough markers found
         return np.array([
-            [80.0, 80.0],
-            [w - 80.0, 80.0],
-            [w - 80.0, h - 80.0],
-            [80.0, h - 80.0],
+            [64.0, 64.0],
+            [w - 64.0, 64.0],
+            [w - 64.0, h - 65.0],
+            [64.0, h - 65.0],
         ], dtype=np.float32)
 
     centers = np.array([m["center"] for m in marker_candidates], dtype=np.float32)
@@ -124,12 +124,17 @@ def get_four_corners(
     if n_found == 3:
         return extrapolate_missing_corner(centers)
 
-    rect = cv2.minAreaRect(centers)
-    box_corners = cv2.boxPoints(rect)
+    # When > 4 candidates are detected, choose the 4 candidates closest to the 4 corners of the sheet
+    target_corners = np.array([
+        [0.0, 0.0],          # Top-Left
+        [float(w), 0.0],     # Top-Right
+        [float(w), float(h)], # Bottom-Right
+        [0.0, float(h)],     # Bottom-Left
+    ], dtype=np.float32)
 
     selected_points = []
     selected_indices = set()
-    for corner in box_corners:
+    for corner in target_corners:
         dists = np.linalg.norm(centers - corner, axis=1)
         for idx in np.argsort(dists):
             if idx not in selected_indices:
@@ -151,22 +156,42 @@ def align_pipeline(
 ) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
     """
     Detect fiducials and compute homography perspective warp.
+    If fiducials are not present (e.g. digital PDF, screenshots, cropped photos),
+    scales cleanly to target canvas dimensions without shearing.
     """
     markers = find_fiducial_markers(binary_mask)
-    src_corners = get_four_corners(markers, binary_mask.shape)
 
-    dst_corners = np.array([
-        [110.0, 110.0],                          # Top-Left center
-        [target_width - 110.0, 110.0],           # Top-Right center
-        [target_width - 110.0, target_height - 110.0],  # Bottom-Right center
-        [110.0, target_height - 110.0],          # Bottom-Left center
-    ], dtype=np.float32)
+    if len(markers) >= 3:
+        src_corners = get_four_corners(markers, binary_mask.shape)
+        # Determine whether markers are outer margin (64px) or inner margin (126px)
+        tl_x, tl_y = src_corners[0]
+        if tl_x < 95 and tl_y < 95:
+            dst_corners = np.array([
+                [64.0, 64.0],
+                [target_width - 64.0, 64.0],
+                [target_width - 64.0, target_height - 65.0],
+                [64.0, target_height - 65.0],
+            ], dtype=np.float32)
+        else:
+            dst_corners = np.array([
+                [126.0, 126.0],
+                [target_width - 126.0, 126.0],
+                [target_width - 126.0, target_height - 126.0],
+                [126.0, target_height - 126.0],
+            ], dtype=np.float32)
 
-    matrix, _ = cv2.findHomography(src_corners, dst_corners, cv2.RANSAC, 5.0)
-    if matrix is None:
-        matrix = cv2.getPerspectiveTransform(src_corners, dst_corners)
+        matrix, _ = cv2.findHomography(src_corners, dst_corners, cv2.RANSAC, 5.0)
+        if matrix is None:
+            matrix = cv2.getPerspectiveTransform(src_corners, dst_corners)
 
-    warped_bgr = cv2.warpPerspective(bgr_image, matrix, (target_width, target_height), flags=cv2.INTER_LINEAR)
-    warped_binary = cv2.warpPerspective(binary_mask, matrix, (target_width, target_height), flags=cv2.INTER_NEAREST)
+        warped_bgr = cv2.warpPerspective(bgr_image, matrix, (target_width, target_height), flags=cv2.INTER_LINEAR)
+        warped_binary = cv2.warpPerspective(binary_mask, matrix, (target_width, target_height), flags=cv2.INTER_NEAREST)
+        return warped_bgr, warped_binary, matrix
+
+    # Direct high-quality scaling when corner fiducials are absent
+    warped_bgr = cv2.resize(bgr_image, (target_width, target_height), interpolation=cv2.INTER_LINEAR)
+    warped_binary = cv2.resize(binary_mask, (target_width, target_height), interpolation=cv2.INTER_NEAREST)
+    matrix = np.eye(3, dtype=np.float32)
 
     return warped_bgr, warped_binary, matrix
+
