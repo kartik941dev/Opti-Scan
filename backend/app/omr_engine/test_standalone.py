@@ -28,59 +28,59 @@ def create_test_omr_sheet(
     noise_level: float = 2.0,
 ) -> np.ndarray:
     """Generate realistic high-resolution test OMR sheet image."""
-    cw, ch = 1654, 2339
+    template_config = load_template_config()
+    cw = template_config.get("canvas_width", 1654)
+    ch = template_config.get("canvas_height", 2339)
     img = np.full((ch, cw, 3), 255, dtype=np.uint8)
 
-    # 1. Draw 4 Fiducial Registration Corner Squares (55x55 black solid)
-    f_size = 55
-    offsets = [(110, 110), (cw - 110, 110), (cw - 110, ch - 110), (110, ch - 110)]
+    # 1. Draw 4 Fiducial Registration Corner Squares (63x63 black solid)
+    f_size = 63
+    offsets = [(126, 126), (cw - 126, 126), (cw - 126, ch - 126), (126, ch - 126)]
     for cx, cy in offsets:
         cv2.rectangle(img, (cx - f_size // 2, cy - f_size // 2), (cx + f_size // 2, cy + f_size // 2), (0, 0, 0), -1)
 
     # 2. Draw Header
-    cv2.putText(img, "OPTISCAN STANDALONE TEST SHEET", (380, 95), cv2.FONT_HERSHEY_DUPLEX, 0.9, (15, 23, 42), 2)
-    cv2.line(img, (110, 140), (cw - 110, 140), (100, 116, 139), 2)
+    cv2.putText(img, "OPTISCAN STANDALONE TEST SHEET", (260, 95), cv2.FONT_HERSHEY_DUPLEX, 0.9, (15, 23, 42), 2)
+    cv2.line(img, (220, 140), (cw - 220, 140), (100, 116, 139), 2)
 
     # 3. Draw Student ID Grid (6 columns x 10 digits)
-    id_origin_x, id_origin_y = 200, 250
-    id_dx, id_dy = 38, 30
-    id_r = 11
+    id_grid = template_config.get("student_id_grid", {})
     id_digits = list(student_id.ljust(6, "0")[:6])
 
-    cv2.putText(img, "ROLL NO", (id_origin_x, id_origin_y - 15), cv2.FONT_HERSHEY_DUPLEX, 0.6, (0, 0, 0), 1)
-    for col in range(6):
-        col_x = id_origin_x + col * id_dx
-        for digit in range(10):
-            row_y = id_origin_y + 35 + digit * id_dy
-            cv2.circle(img, (col_x, row_y), id_r, (0, 0, 0), 2)
-            cv2.putText(img, str(digit), (col_x - 4, row_y + 4), cv2.FONT_HERSHEY_SIMPLEX, 0.35, (80, 80, 80), 1)
+    if id_grid:
+        first_id = list(id_grid.values())[0]
+        cv2.putText(img, "ROLL NO", (first_id["cx"] - 10, first_id["cy"] - 45), cv2.FONT_HERSHEY_DUPLEX, 0.6, (0, 0, 0), 1)
 
-            if col < len(id_digits) and id_digits[col] == str(digit):
-                # Darken student digit bubble
-                cv2.circle(img, (col_x, row_y), id_r - 1, (20, 20, 20), -1)
+    for key, coord in id_grid.items():
+        cx, cy, r = coord["cx"], coord["cy"], coord["r"]
+        col, digit = coord["col"], coord["digit"]
+
+        cv2.circle(img, (cx, cy), r, (0, 0, 0), 2)
+        cv2.putText(img, str(digit), (cx - 4, cy + 4), cv2.FONT_HERSHEY_SIMPLEX, 0.35, (80, 80, 80), 1)
+
+        if col < len(id_digits) and id_digits[col] == str(digit):
+            # Darken student digit bubble
+            cv2.circle(img, (cx, cy), r - 1, (20, 20, 20), -1)
 
     # 4. Draw Question Columns (4 columns of 25 questions)
-    col_x_starts = [120, 500, 880, 1260]
-    options = ["A", "B", "C", "D"]
-    bubble_r = 13
     answers = answers or {}
+    for q in template_config.get("questions_layout", []):
+        q_num = q["q_num"]
+        opts = q["options"]
 
-    q_num = 1
-    for col_x in col_x_starts:
-        for row in range(25):
-            q_y = 650 + row * 62
-            cv2.putText(img, f"Q{q_num:02d}", (col_x + 10, q_y + 4), cv2.FONT_HERSHEY_SIMPLEX, 0.45, (15, 23, 42), 1)
+        first_opt = list(opts.values())[0]
+        lbl_x = first_opt["cx"] - 50
+        lbl_y = first_opt["cy"] + 4
+        cv2.putText(img, f"Q{q_num:02d}", (lbl_x, lbl_y), cv2.FONT_HERSHEY_SIMPLEX, 0.45, (15, 23, 42), 1)
 
-            chosen = answers.get(q_num)
-            for opt_idx, opt in enumerate(options):
-                opt_x = col_x + 60 + opt_idx * 44
-                cv2.circle(img, (opt_x, q_y), bubble_r, (0, 0, 0), 2)
-                cv2.putText(img, opt, (opt_x - 4, q_y + 4), cv2.FONT_HERSHEY_SIMPLEX, 0.35, (80, 80, 80), 1)
+        chosen = answers.get(q_num)
+        for opt_key, coord in opts.items():
+            cx, cy, r = coord["cx"], coord["cy"], coord["r"]
+            cv2.circle(img, (cx, cy), r, (0, 0, 0), 2)
+            cv2.putText(img, opt_key, (cx - 4, cy + 4), cv2.FONT_HERSHEY_SIMPLEX, 0.35, (80, 80, 80), 1)
 
-                if chosen == opt:
-                    cv2.circle(img, (opt_x, q_y), bubble_r - 1, (25, 25, 25), -1)
-
-            q_num += 1
+            if chosen == opt_key:
+                cv2.circle(img, (cx, cy), r - 1, (25, 25, 25), -1)
 
     # Apply slight rotation if requested
     if abs(rotation_deg) > 0.001:
