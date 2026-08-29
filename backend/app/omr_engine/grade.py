@@ -36,16 +36,17 @@ def decode_student_id_from_grid(
         col_items = sorted(cols[col_idx], key=lambda x: x[1], reverse=True)
         top_digit, top_dens = col_items[0]
         sec_digit, sec_dens = col_items[1] if len(col_items) > 1 else (0, 0.0)
+        separation = top_dens - sec_dens
 
-        if top_dens >= threshold and (top_dens - sec_dens) > 0.10:
+        if (top_dens >= threshold and separation > 0.08) or (top_dens >= 0.30 and separation > 0.12):
             digits.append(str(top_digit))
-            confs.append(float(top_dens))
-        elif top_dens >= 0.25:
+            confs.append(float(min(1.0, 0.75 + separation)))
+        elif top_dens >= 0.20 and separation > 0.08:
             digits.append(str(top_digit))
-            confs.append(0.6)
+            confs.append(0.70)
         else:
             digits.append("X")
-            confs.append(0.3)
+            confs.append(0.30)
 
     roll_num = "".join(digits) if digits else "UNKNOWN"
     mean_conf = float(np.mean(confs)) if confs else 0.5
