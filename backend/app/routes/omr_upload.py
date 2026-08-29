@@ -29,16 +29,16 @@ async def get_or_create_answer_key_model(exam_id: str) -> AnswerKeyModel:
     doc = await keys_col.find_one({"exam_id": exam_id})
     if not doc:
         answers = {
-            "1": "D", "2": "D", "3": "B", "4": "C", "5": "B", "6": "B", "7": "D", "8": "D", "9": "D", "10": "A",
-            "11": "A", "12": "C", "13": "B", "14": "B", "15": "B", "16": "A", "17": "A", "18": "B", "19": "D", "20": "B",
-            "21": "B", "22": "D", "23": "A", "24": "A", "25": "D", "26": "D", "27": "C", "28": "C", "29": "B", "30": "A",
-            "31": "B", "32": "B", "33": "B", "34": "C", "35": "C", "36": "A", "37": "C", "38": "D", "39": "D", "40": "D",
-            "41": "A", "42": "C", "43": "C", "44": "B", "45": "B", "46": "B", "47": "D", "48": "D", "49": "A", "50": "A",
-            "51": "A", "52": "B", "53": "B", "54": "A", "55": "A", "56": "B", "57": "A", "58": "B", "59": "D", "60": "B",
-            "61": "A", "62": "C", "63": "C", "64": "D", "65": "B", "66": "C", "67": "B", "68": "D", "69": "D", "70": "D",
-            "71": "C", "72": "C", "73": "D", "74": "B", "75": "D", "76": "B", "77": "A", "78": "A", "79": "D", "80": "D",
-            "81": "D", "82": "B", "83": "C", "84": "C", "85": "D", "86": "D", "87": "D", "88": "B", "89": "A", "90": "A",
-            "91": "C", "92": "A", "93": "C", "94": "B", "95": "A", "96": "A", "97": "D", "98": "C", "99": "B", "100": "C",
+            "1": "C", "2": "C", "3": "D", "4": "C", "5": "B", "6": "D", "7": "B", "8": "D", "9": "A", "10": "A",
+            "11": "D", "12": "A", "13": "B", "14": "D", "15": "D", "16": "C", "17": "A", "18": "D", "19": "D", "20": "A",
+            "21": "C", "22": "D", "23": "C", "24": "A", "25": "A", "26": "C", "27": "D", "28": "C", "29": "A", "30": "D",
+            "31": "B", "32": "B", "33": "C", "34": "A", "35": "D", "36": "D", "37": "B", "38": "D", "39": "D", "40": "B",
+            "41": "B", "42": "D", "43": "C", "44": "A", "45": "A", "46": "D", "47": "D", "48": "C", "49": "D", "50": "A",
+            "51": "C", "52": "A", "53": "D", "54": "B", "55": "B", "56": "D", "57": "A", "58": "D", "59": "C", "60": "A",
+            "61": "A", "62": "B", "63": "B", "64": "D", "65": "B", "66": "C", "67": "A", "68": "D", "69": "C", "70": "A",
+            "71": "D", "72": "D", "73": "A", "74": "A", "75": "A", "76": "A", "77": "A", "78": "A", "79": "A", "80": "C",
+            "81": "D", "82": "A", "83": "A", "84": "C", "85": "A", "86": "B", "87": "D", "88": "B", "89": "A", "90": "B",
+            "91": "A", "92": "B", "93": "C", "94": "A", "95": "B", "96": "D", "97": "C", "98": "D", "99": "D", "100": "A",
         }
         doc = {
             "_id": f"key_{exam_id}",
@@ -209,24 +209,27 @@ def draw_synthetic_omr_for_demo(
     template_config: dict,
 ) -> np.ndarray:
     """Helper to draw synthetic OMR sheet for quick live demo."""
-    cw = template_config["canvas_width"]
-    ch = template_config["canvas_height"]
+    cw = template_config.get("canvas_width", 1654)
+    ch = template_config.get("canvas_height", 2339)
     img = np.full((ch, cw, 3), 255, dtype=np.uint8)
 
-    # 1. Draw 4 Fiducial Registration Corner Squares (55x55 black solid)
-    f_size = 55
-    offsets = [(110, 110), (cw - 110, 110), (cw - 110, ch - 110), (110, ch - 110)]
+    # 1. Draw 4 Fiducial Registration Corner Squares (63x63 black solid)
+    f_size = 63
+    offsets = [(126, 126), (cw - 126, 126), (cw - 126, ch - 126), (126, ch - 126)]
     for cx, cy in offsets:
         cv2.rectangle(img, (cx - f_size // 2, cy - f_size // 2), (cx + f_size // 2, cy + f_size // 2), (0, 0, 0), -1)
 
     # 2. Draw Header Titles & Layout
     cv2.putText(img, "OPTISCAN HIGH-PRECISION ASSESSMENT SHEET", (260, 95), cv2.FONT_HERSHEY_DUPLEX, 1.0, (15, 23, 42), 2)
-    cv2.line(img, (110, 150), (cw - 110, 150), (100, 116, 139), 2)
+    cv2.line(img, (220, 150), (cw - 220, 150), (100, 116, 139), 2)
 
     # 3. Draw Student ID Matrix
-    cv2.putText(img, "STUDENT ROLL NUMBER", (200, 210), cv2.FONT_HERSHEY_DUPLEX, 0.7, (0, 0, 0), 2)
     id_grid = template_config.get("student_id_grid", {})
     id_digits = list(student_id.ljust(6, "0")[:6])
+
+    if id_grid:
+        first_id_item = list(id_grid.values())[0]
+        cv2.putText(img, "ROLL NUMBER", (first_id_item["cx"] - 10, first_id_item["cy"] - 45), cv2.FONT_HERSHEY_DUPLEX, 0.7, (0, 0, 0), 2)
 
     for key, coord in id_grid.items():
         cx, cy, r = coord["cx"], coord["cy"], coord["r"]
