@@ -43,7 +43,7 @@ async def get_exam_overview(exam_id: str):
             "lowest_score": 0.0,
             "average_percentage": 0.0,
             "pass_rate_pct": 0.0,
-            "kr20_reliability": 0.0,
+            "kr20_reliability": None,
             "score_distribution": [],
             "sectional_averages": {},
         }
