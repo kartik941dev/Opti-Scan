@@ -34,7 +34,7 @@ def test_fastapi_backend_endpoints():
     print("\n[TEST 2] Testing Educator Authentication (OAuth2 / JWT)...")
     res_login = client.post(
         "/api/v1/auth/login",
-        data={"username": "teacher@optiscan.ai", "password": "optiscan2026"},
+        data={"username": "teacher@optiscan.dev", "password": "optiscan2026"},
     )
     assert res_login.status_code == 200, f"Login failed: {res_login.text}"
     token_data = res_login.json()

@@ -99,11 +99,11 @@ async def get_current_user(token: str = Depends(oauth2_scheme)) -> User:
     user_doc = await users_col.find_one({"email": email})
     if user_doc is None:
         # Return fallback demo user if matching
-        if email == "teacher@optiscan.ai":
+        if email == "teacher@optiscan.dev":
             return User(
                 _id="demo-teacher-id",
-                email="teacher@optiscan.ai",
-                full_name="Prof. Alex Reed",
+                email="teacher@optiscan.dev",
+                full_name="Demo Educator",
                 hashed_password=hash_password("optiscan2026"),
                 role="teacher",
             )
@@ -151,11 +151,11 @@ async def login(form_data: OAuth2PasswordRequestForm = Depends()):
     user_doc = await users_col.find_one({"email": form_data.username})
 
     # Default demo teacher if no users exist
-    if not user_doc and form_data.username == "teacher@optiscan.ai":
+    if not user_doc and form_data.username == "teacher@optiscan.dev":
         user_doc = {
             "_id": "demo-teacher-id",
-            "email": "teacher@optiscan.ai",
-            "full_name": "Prof. Alex Reed",
+            "email": "teacher@optiscan.dev",
+            "full_name": "Demo Educator",
             "hashed_password": hash_password("optiscan2026"),
             "role": "teacher",
             "created_at": datetime.utcnow(),
