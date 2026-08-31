@@ -123,20 +123,41 @@ const ResultsAnalyticsPage = () => {
             Candidate percentile frequency curve (Class Average: {overview?.average_percentage || 0}%)
           </span>
 
-          <div style={{ width: '100%', height: '240px' }}>
-            <ResponsiveContainer>
-              <BarChart data={overview?.score_distribution || []}>
-                <CartesianGrid strokeDasharray="3 3" stroke="rgba(255, 255, 255, 0.06)" />
-                <XAxis dataKey="range" stroke="#94a3b8" fontSize={11} />
-                <YAxis stroke="#94a3b8" fontSize={11} />
-                <Tooltip
-                  contentStyle={{ background: '#0f172a', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '8px' }}
-                  itemStyle={{ color: '#06b6d4' }}
-                />
-                <Bar dataKey="count" fill="#6366f1" radius={[4, 4, 0, 0]} />
-              </BarChart>
-            </ResponsiveContainer>
-          </div>
+          {overview?.total_candidates > 0 && overview?.score_distribution?.length > 0 ? (
+            <div style={{ width: '100%', height: '240px' }}>
+              <ResponsiveContainer>
+                <BarChart data={overview.score_distribution}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="rgba(255, 255, 255, 0.06)" />
+                  <XAxis dataKey="range" stroke="#94a3b8" fontSize={11} />
+                  <YAxis stroke="#94a3b8" fontSize={11} />
+                  <Tooltip
+                    contentStyle={{ background: '#0f172a', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '8px' }}
+                    itemStyle={{ color: '#06b6d4' }}
+                  />
+                  <Bar dataKey="count" fill="#6366f1" radius={[4, 4, 0, 0]} />
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
+          ) : (
+            <div style={{
+              width: '100%',
+              height: '240px',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+              background: 'rgba(255, 255, 255, 0.02)',
+              borderRadius: '8px',
+              border: '1px dashed rgba(255, 255, 255, 0.08)',
+              color: 'var(--text-muted)',
+            }}>
+              <BarChart3 size={32} style={{ opacity: 0.35, marginBottom: '8px' }} />
+              <span style={{ fontSize: '13px', fontWeight: 500, color: 'var(--text-primary)' }}>No data available</span>
+              <span style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: '2px' }}>
+                Evaluate submissions to view score distribution
+              </span>
+            </div>
+          )}
         </div>
 
         {/* Sectional Performance Mastery */}
@@ -146,20 +167,41 @@ const ResultsAnalyticsPage = () => {
             Mean student accuracy by curriculum subject domain
           </span>
 
-          <div style={{ width: '100%', height: '240px' }}>
-            <ResponsiveContainer>
-              <BarChart data={sectionalData} layout="vertical">
-                <CartesianGrid strokeDasharray="3 3" stroke="rgba(255, 255, 255, 0.06)" />
-                <XAxis type="number" domain={[0, 100]} stroke="#94a3b8" fontSize={11} unit="%" />
-                <YAxis dataKey="name" type="category" stroke="#94a3b8" fontSize={11} width={90} />
-                <Tooltip
-                  contentStyle={{ background: '#0f172a', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '8px' }}
-                  itemStyle={{ color: '#10b981' }}
-                />
-                <Bar dataKey="accuracy" fill="#06b6d4" radius={[0, 4, 4, 0]} />
-              </BarChart>
-            </ResponsiveContainer>
-          </div>
+          {overview?.total_candidates > 0 && sectionalData.length > 0 ? (
+            <div style={{ width: '100%', height: '240px' }}>
+              <ResponsiveContainer>
+                <BarChart data={sectionalData} layout="vertical">
+                  <CartesianGrid strokeDasharray="3 3" stroke="rgba(255, 255, 255, 0.06)" />
+                  <XAxis type="number" domain={[0, 100]} stroke="#94a3b8" fontSize={11} unit="%" />
+                  <YAxis dataKey="name" type="category" stroke="#94a3b8" fontSize={11} width={90} />
+                  <Tooltip
+                    contentStyle={{ background: '#0f172a', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '8px' }}
+                    itemStyle={{ color: '#10b981' }}
+                  />
+                  <Bar dataKey="accuracy" fill="#06b6d4" radius={[0, 4, 4, 0]} />
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
+          ) : (
+            <div style={{
+              width: '100%',
+              height: '240px',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+              background: 'rgba(255, 255, 255, 0.02)',
+              borderRadius: '8px',
+              border: '1px dashed rgba(255, 255, 255, 0.08)',
+              color: 'var(--text-muted)',
+            }}>
+              <PieChart size={32} style={{ opacity: 0.35, marginBottom: '8px' }} />
+              <span style={{ fontSize: '13px', fontWeight: 500, color: 'var(--text-primary)' }}>No data available</span>
+              <span style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: '2px' }}>
+                Evaluate submissions to view sectional domain mastery
+              </span>
+            </div>
+          )}
         </div>
       </div>
 
@@ -175,8 +217,34 @@ const ResultsAnalyticsPage = () => {
         </div>
 
         {itemAnalysis.length === 0 ? (
-          <div style={{ textAlign: 'center', padding: '36px 0', color: 'var(--text-muted)' }}>
-            No item statistics available yet.
+          <div style={{
+            textAlign: 'center',
+            padding: '48px 20px',
+            color: 'var(--text-muted)',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}>
+            <div style={{
+              width: '48px',
+              height: '48px',
+              borderRadius: '50%',
+              background: 'rgba(255, 255, 255, 0.03)',
+              border: '1px solid rgba(255, 255, 255, 0.08)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              marginBottom: '12px',
+            }}>
+              <HelpCircle size={22} style={{ color: 'var(--accent-cyan)', opacity: 0.8 }} />
+            </div>
+            <h4 style={{ fontSize: '15px', fontWeight: 600, color: 'var(--text-primary)', margin: '0 0 6px 0' }}>
+              No item statistics available yet
+            </h4>
+            <p style={{ fontSize: '13px', color: 'var(--text-secondary)', margin: 0, maxWidth: '440px', lineHeight: 1.5 }}>
+              Item difficulty index (P), discrimination power (D), and distractor choice frequencies will be computed automatically once candidate OMR sheets are evaluated.
+            </p>
           </div>
         ) : (
           <div style={{ maxHeight: '450px', overflowY: 'auto' }}>
