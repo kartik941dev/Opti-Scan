@@ -2,6 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Plus, Trash2, Edit3, FileCheck2, Calendar, Hash } from 'lucide-react';
 import { examsAPI } from '../api/endpoints';
 
+const formatDate = (dateStr) => {
+  if (!dateStr) return '—';
+  const d = new Date(dateStr);
+  if (isNaN(d.getTime())) return '—';
+  return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+};
+
 const ExamsPage = () => {
   const [exams, setExams] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -103,7 +110,7 @@ const ExamsPage = () => {
               marginTop: '16px',
             }}>
               <span style={{ fontSize: '11px', color: 'var(--text-muted)' }}>
-                Created: {new Date(ex.created_at || Date.now()).toLocaleDateString()}
+                Created: {formatDate(ex.created_at || Date.now())}
               </span>
               <div style={{ display: 'flex', gap: '8px' }}>
                 <button
@@ -172,7 +179,7 @@ const ExamsPage = () => {
                   <label style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text-secondary)' }}>
                     Total Questions Limit (1 - 1,000)
                   </label>
-                  <span style={{ fontSize: '12px', fontWeight: 700, color: 'var(--accent-cyan)' }}>
+                  <span style={{ fontSize: '12px', fontWeight: 700, color: 'var(--accent-primary)' }}>
                     {totalQuestions} Questions
                   </span>
                 </div>
@@ -182,16 +189,8 @@ const ExamsPage = () => {
                       key={preset}
                       type="button"
                       onClick={() => setTotalQuestions(preset)}
-                      style={{
-                        padding: '4px 8px',
-                        borderRadius: '4px',
-                        fontSize: '11px',
-                        fontWeight: 600,
-                        border: totalQuestions === preset ? '1px solid #6366f1' : '1px solid rgba(255, 255, 255, 0.1)',
-                        background: totalQuestions === preset ? 'rgba(99, 102, 241, 0.2)' : 'rgba(255, 255, 255, 0.03)',
-                        color: totalQuestions === preset ? '#ffffff' : 'var(--text-secondary)',
-                        cursor: 'pointer',
-                      }}
+                      className={`toggle-pill ${totalQuestions === preset ? 'active' : 'inactive'}`}
+                      style={{ padding: '4px 8px', fontSize: '11px' }}
                     >
                       {preset}Q
                     </button>
@@ -206,8 +205,8 @@ const ExamsPage = () => {
                       setTotalQuestions(Math.min(1000, Math.max(1, val)));
                     }}
                     className="input-field"
-                    style={{ width: '80px', padding: '3px 8px', fontSize: '11px', height: '28px' }}
-                    title="Custom question limit (up to 1,000)"
+                    style={{ width: '70px', padding: '3px 6px', fontSize: '11px', height: '26px' }}
+                    title="Question limit (up to 1,000)"
                   />
                 </div>
               </div>
