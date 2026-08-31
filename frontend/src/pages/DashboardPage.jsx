@@ -86,40 +86,41 @@ const DashboardPage = () => {
     <div style={{ display: 'flex', flexDirection: 'column', gap: '28px' }}>
       {/* Top Banner Header */}
       <div className="glass-card" style={{
-        background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.25) 0%, rgba(6, 182, 212, 0.15) 100%)',
-        border: '1px solid rgba(99, 102, 241, 0.3)',
+        background: 'linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%)',
+        border: '1px solid #fed7aa',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
         padding: '28px',
       }}>
         <div>
-          <span style={{ fontSize: '12px', fontWeight: 700, color: 'var(--accent-cyan)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+          <span style={{ fontSize: '12px', fontWeight: 700, color: '#ea580c', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
             Production Grading Hub
           </span>
-          <h1 style={{ fontSize: '26px', margin: '4px 0 8px 0' }}>
+          <h1 style={{ fontSize: '26px', margin: '4px 0 8px 0', color: '#0f172a' }}>
             Automated OMR Grading & Performance Analytics
           </h1>
-          <p style={{ fontSize: '14px', color: 'var(--text-secondary)', margin: 0, maxWidth: '650px' }}>
+          <p style={{ fontSize: '14px', color: '#475569', margin: 0, maxWidth: '650px' }}>
             High-speed optical mark recognition with 4-point homography alignment, adaptive threshold calibration, and item psychometrics.
           </p>
         </div>
 
-        <div style={{ display: 'flex', gap: '12px' }}>
-          <button
-            onClick={handleGenerateDemo}
-            className="btn btn-secondary"
-            disabled={demoLoading}
-          >
-            <Sparkles size={16} color="#f59e0b" />
-            {demoLoading ? 'Grading Demo...' : '✨ Load 5 Sample Sheets'}
-          </button>
+        <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
           <button
             onClick={() => navigate('/evaluate')}
             className="btn btn-primary"
           >
             <ScanLine size={16} />
             Evaluate New Scans
+          </button>
+          <button
+            onClick={handleGenerateDemo}
+            className="btn btn-secondary"
+            style={{ fontSize: '13px', opacity: 0.9 }}
+            disabled={demoLoading}
+          >
+            <Sparkles size={15} color="#ea580c" />
+            {demoLoading ? 'Grading Demo...' : 'Load 5 Sample Sheets'}
           </button>
         </div>
       </div>
@@ -152,28 +153,28 @@ const DashboardPage = () => {
           value={overview?.total_candidates || 0}
           subtitle="Processed candidates"
           icon={Users}
-          color="#6366f1"
+          color="#f37021"
         />
         <MetricCard
           title="CLASS MEAN SCORE"
           value={`${overview?.average_score || 0}`}
           subtitle={`Out of ${overview?.max_possible_score || 400} pts`}
           icon={Award}
-          color="#06b6d4"
+          color="#ea580c"
         />
         <MetricCard
           title="AVERAGE ACCURACY"
           value={`${overview?.average_percentage || 0}%`}
           subtitle={`Pass Rate: ${overview?.pass_rate_pct || 0}%`}
           icon={CheckCircle2}
-          color="#10b981"
+          color="#16a34a"
         />
         <MetricCard
           title="TEST RELIABILITY (KR-20)"
-          value={overview?.kr20_reliability || '0.88'}
-          subtitle="Internal consistency index"
+          value={overview?.total_candidates > 0 && overview?.kr20_reliability != null ? overview.kr20_reliability : '—'}
+          subtitle={overview?.total_candidates > 0 ? "Internal consistency index" : "No data available"}
           icon={TrendingUp}
-          color="#8b5cf6"
+          color="#d97706"
         />
       </div>
 
@@ -206,10 +207,52 @@ const DashboardPage = () => {
         </div>
 
         {submissions.length === 0 ? (
-          <div style={{ textAlign: 'center', padding: '48px 0', color: 'var(--text-muted)' }}>
-            <ScanLine size={42} style={{ opacity: 0.4, marginBottom: '12px' }} />
-            <p style={{ margin: 0 }}>No sheets evaluated yet for this assessment.</p>
-            <p style={{ fontSize: '12px', marginTop: '6px' }}>Click "✨ Load 5 Sample Sheets" above to generate demo student records.</p>
+          <div style={{
+            textAlign: 'center',
+            padding: '56px 20px',
+            color: 'var(--text-muted)',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}>
+            <div style={{
+              width: '56px',
+              height: '56px',
+              borderRadius: '50%',
+              background: 'rgba(255, 255, 255, 0.03)',
+              border: '1px solid rgba(255, 255, 255, 0.08)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              marginBottom: '16px',
+            }}>
+              <ScanLine size={28} style={{ color: 'var(--accent-cyan)', opacity: 0.8 }} />
+            </div>
+            <h4 style={{ fontSize: '16px', fontWeight: 600, color: 'var(--text-primary)', margin: '0 0 6px 0' }}>
+              No submissions yet
+            </h4>
+            <p style={{ fontSize: '13px', color: 'var(--text-secondary)', margin: '0 0 16px 0', maxWidth: '440px', lineHeight: 1.5 }}>
+              Upload and evaluate candidate OMR sheets in the Evaluation tab, or load sample sheets to see real-time grading and psychometrics.
+            </p>
+            <div style={{ display: 'flex', gap: '10px' }}>
+              <button
+                onClick={() => navigate('/evaluate')}
+                className="btn btn-primary"
+                style={{ fontSize: '12px', padding: '6px 14px' }}
+              >
+                <ScanLine size={14} /> Upload & Evaluate Sheets
+              </button>
+              <button
+                onClick={handleGenerateDemo}
+                className="btn btn-secondary"
+                style={{ fontSize: '12px', padding: '6px 14px' }}
+                disabled={demoLoading}
+              >
+                <Sparkles size={14} color="#f59e0b" />
+                {demoLoading ? 'Grading Demo...' : 'Load Sample Sheets'}
+              </button>
+            </div>
           </div>
         ) : (
           <div style={{ overflowX: 'auto' }}>
