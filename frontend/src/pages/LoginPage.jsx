@@ -5,9 +5,9 @@ import { useAuth } from '../context/AuthContext';
 
 const LoginPage = () => {
   const [isRegister, setIsRegister] = useState(false);
-  const [email, setEmail] = useState('teacher@optiscan.ai');
+  const [email, setEmail] = useState('teacher@optiscan.dev');
   const [password, setPassword] = useState('optiscan2026');
-  const [fullName, setFullName] = useState('Prof. Alex Reed');
+  const [fullName, setFullName] = useState('Demo Educator');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -40,28 +40,28 @@ const LoginPage = () => {
       alignItems: 'center',
       justifyContent: 'center',
       padding: '24px',
-      background: 'radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.15) 0%, #090d16 100%)',
+      background: 'radial-gradient(circle at 50% 50%, #fff7ed 0%, #f8fafc 100%)',
     }}>
-      <div className="glass-card" style={{ maxWidth: '440px', width: '100%', padding: '36px' }}>
+      <div className="glass-card" style={{ maxWidth: '440px', width: '100%', padding: '36px', boxShadow: '0 10px 40px rgba(0, 0, 0, 0.06)' }}>
         {/* Brand Header */}
         <div style={{ textAlign: 'center', marginBottom: '28px' }}>
           <div style={{
             width: '48px',
             height: '48px',
             borderRadius: '14px',
-            background: 'linear-gradient(135deg, #6366f1, #06b6d4)',
+            background: 'linear-gradient(135deg, #f97316, #ea580c)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             margin: '0 auto 16px auto',
-            boxShadow: '0 0 20px rgba(99, 102, 241, 0.5)',
+            boxShadow: '0 4px 15px rgba(243, 112, 33, 0.35)',
           }}>
             <Sparkles size={26} color="#ffffff" />
           </div>
-          <h1 style={{ fontSize: '24px', margin: '0 0 6px 0' }}>
-            Welcome to <span className="brand-gradient-text">OptiScan</span>
+          <h1 style={{ fontSize: '24px', margin: '0 0 6px 0', color: '#0f172a' }}>
+            Welcome to <span style={{ color: '#f37021' }}>OptiScan</span>
           </h1>
-          <p style={{ fontSize: '13px', color: 'var(--text-secondary)', margin: 0 }}>
+          <p style={{ fontSize: '13px', color: '#64748b', margin: 0 }}>
             Automated OMR Grading & Psychometric Analytics
           </p>
         </div>
@@ -91,7 +91,7 @@ const LoginPage = () => {
                 className="input-field"
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
-                placeholder="Prof. Alex Reed"
+                placeholder="Demo Educator"
                 required
               />
             </div>
