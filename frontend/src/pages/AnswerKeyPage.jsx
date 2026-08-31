@@ -409,7 +409,7 @@ const AnswerKeyPage = () => {
     setActiveTabRange(0);
     setNotification({
       type: 'success',
-      text: '✨ Loaded exact 100-Question dataset from screenshots (Physics Q1-25, Chemistry Q26-50, Math Q51-75, Biology Q76-100)!',
+      text: '✨ Loaded standard 100-Question demo answer key (Physics Q1-25, Chemistry Q26-50, Math Q51-75, Biology Q76-100)!',
     });
     setTimeout(() => setNotification(null), 5000);
   };
@@ -533,7 +533,7 @@ const AnswerKeyPage = () => {
       >
         <div>
           <h1 style={{ fontSize: '24px', margin: '0 0 4px 0', display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <KeyRound size={24} color="var(--accent-cyan)" /> Master Answer Key & Assessment Config
+            <KeyRound size={24} color="#ea580c" /> Master Answer Key & Assessment Config
           </h1>
           <p style={{ fontSize: '13px', color: 'var(--text-secondary)', margin: 0 }}>
             Configurable question limits (up to 1,000 Qs), optional subject sections, CSV & Excel upload
@@ -547,14 +547,13 @@ const AnswerKeyPage = () => {
             style={{
               display: 'flex',
               alignItems: 'center',
-              gap: '8px',
-              border: '1px solid rgba(245, 158, 11, 0.4)',
-              background: 'rgba(245, 158, 11, 0.1)',
-              color: '#f59e0b',
+              gap: '6px',
+              fontSize: '12px',
+              padding: '6px 12px',
             }}
-            title="Load the exact 100-Question answer key from uploaded screenshots"
+            title="Load standard demo answer key with 4 sections"
           >
-            <Sparkles size={15} /> ✨ Screenshot Demo Key
+            <Sparkles size={14} color="#ea580c" /> Load Demo Answer Key
           </button>
 
           <button
@@ -583,7 +582,7 @@ const AnswerKeyPage = () => {
             onClick={handleDownloadCsvTemplate}
             className="btn btn-secondary"
             style={{ display: 'flex', alignItems: 'center', gap: '8px' }}
-            title="Download CSV Template matching Screenshot format"
+            title="Download CSV Template"
           >
             <Download size={15} /> Export CSV
           </button>
@@ -607,23 +606,23 @@ const AnswerKeyPage = () => {
             fontWeight: 600,
             background:
               notification.type === 'success'
-                ? 'rgba(16, 185, 129, 0.15)'
+                ? '#dcfce7'
                 : notification.type === 'error'
-                ? 'rgba(239, 68, 68, 0.15)'
-                : 'rgba(99, 102, 241, 0.15)',
+                ? '#fee2e2'
+                : '#ffedd5',
             border: `1px solid ${
               notification.type === 'success'
-                ? 'rgba(16, 185, 129, 0.3)'
+                ? '#bbf7d0'
                 : notification.type === 'error'
-                ? 'rgba(239, 68, 68, 0.3)'
-                : 'rgba(99, 102, 241, 0.3)'
+                ? '#fecaca'
+                : '#fed7aa'
             }`,
             color:
               notification.type === 'success'
-                ? '#10b981'
+                ? '#15803d'
                 : notification.type === 'error'
-                ? '#ef4444'
-                : '#6366f1',
+                ? '#b91c1c'
+                : '#c2410c',
           }}
         >
           {notification.type === 'success' ? (
@@ -661,7 +660,7 @@ const AnswerKeyPage = () => {
               <label style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text-secondary)' }}>
                 Total Questions Limit (1 - 1,000):
               </label>
-              <span style={{ fontSize: '12px', fontWeight: 700, color: 'var(--accent-cyan)' }}>
+              <span style={{ fontSize: '12px', fontWeight: 700, color: 'var(--accent-primary)' }}>
                 {totalQuestions} Questions
               </span>
             </div>
@@ -675,16 +674,8 @@ const AnswerKeyPage = () => {
                     setTotalQuestions(preset);
                     setActiveTabRange(0);
                   }}
-                  style={{
-                    padding: '4px 8px',
-                    borderRadius: '4px',
-                    fontSize: '11px',
-                    fontWeight: 600,
-                    border: totalQuestions === preset ? '1px solid #6366f1' : '1px solid rgba(255, 255, 255, 0.1)',
-                    background: totalQuestions === preset ? 'rgba(99, 102, 241, 0.2)' : 'rgba(255, 255, 255, 0.03)',
-                    color: totalQuestions === preset ? '#ffffff' : 'var(--text-secondary)',
-                    cursor: 'pointer',
-                  }}
+                  className={`toggle-pill ${totalQuestions === preset ? 'active' : 'inactive'}`}
+                  style={{ padding: '4px 8px', fontSize: '11px' }}
                 >
                   {preset}Q
                 </button>
@@ -701,7 +692,7 @@ const AnswerKeyPage = () => {
                   }}
                   className="input-field"
                   style={{ width: '70px', padding: '3px 6px', fontSize: '11px', height: '26px' }}
-                  title="Custom question limit (up to 1,000)"
+                  title="Question limit (up to 1,000)"
                 />
               </div>
             </div>
@@ -712,16 +703,16 @@ const AnswerKeyPage = () => {
         <div>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
             <label style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <Layers size={14} color="var(--accent-cyan)" /> Subject Sections:
+              <Layers size={14} color="#ea580c" /> Subject Sections:
             </label>
             <div style={{ display: 'flex', gap: '6px' }}>
               <button
                 type="button"
                 onClick={() => setEnableSections(!enableSections)}
                 style={{
-                  background: enableSections ? 'rgba(16, 185, 129, 0.2)' : 'rgba(255, 255, 255, 0.05)',
-                  border: enableSections ? '1px solid #10b981' : '1px solid rgba(255, 255, 255, 0.1)',
-                  color: enableSections ? '#10b981' : 'var(--text-muted)',
+                  background: enableSections ? '#dcfce7' : '#f1f5f9',
+                  border: enableSections ? '1px solid #bbf7d0' : '1px solid #e2e8f0',
+                  color: enableSections ? '#15803d' : '#64748b',
                   padding: '2px 8px',
                   borderRadius: '4px',
                   fontSize: '11px',
@@ -729,14 +720,14 @@ const AnswerKeyPage = () => {
                   cursor: 'pointer',
                 }}
               >
-                {enableSections ? 'Sections: ON' : 'Sections: OPTIONAL (OFF)'}
+                {enableSections ? 'Sections: ON' : 'Sections: OFF'}
               </button>
 
               <button
                 type="button"
                 onClick={() => setSectionsModalOpen(true)}
                 className="btn btn-secondary"
-                style={{ padding: '2px 8px', fontSize: '11px', height: '22px' }}
+                style={{ fontSize: '11px', padding: '2px 8px' }}
                 title="Manage and configure subject sections"
               >
                 <Sliders size={12} /> Configure
@@ -761,9 +752,10 @@ const AnswerKeyPage = () => {
             <span
               style={{
                 fontSize: '13px',
-                color: totalAnsweredCount === totalQuestions ? '#10b981' : 'var(--accent-cyan)',
+                color: totalAnsweredCount === totalQuestions ? '#15803d' : '#ea580c',
                 fontWeight: 700,
-                background: 'rgba(255, 255, 255, 0.05)',
+                background: totalAnsweredCount === totalQuestions ? '#dcfce7' : '#ffedd5',
+                border: totalAnsweredCount === totalQuestions ? '1px solid #bbf7d0' : '1px solid #fed7aa',
                 padding: '3px 10px',
                 borderRadius: '4px',
               }}
@@ -834,9 +826,10 @@ const AnswerKeyPage = () => {
           alignItems: 'center',
           justifyContent: 'space-between',
           padding: '12px 18px',
-          background: 'rgba(15, 23, 42, 0.6)',
+          background: '#ffffff',
           borderRadius: 'var(--radius-sm)',
           border: '1px solid var(--border-subtle)',
+          boxShadow: 'var(--shadow-sm)',
           flexWrap: 'wrap',
           gap: '12px',
         }}
@@ -908,7 +901,7 @@ const AnswerKeyPage = () => {
       {/* Interactive Matrix Grid */}
       <div className="glass-card">
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', flexWrap: 'wrap', gap: '10px' }}>
-          <h3 style={{ fontSize: '16px', margin: 0 }}>
+          <h3 style={{ fontSize: '16px', margin: 0, color: '#0f172a' }}>
             Master Answer Key Matrix ({totalQuestions} Questions Total)
           </h3>
           <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>
@@ -947,7 +940,7 @@ const AnswerKeyPage = () => {
               <div
                 key={colIndex}
                 style={{
-                  background: 'rgba(15, 23, 42, 0.5)',
+                  background: '#fbfcfd',
                   border: '1px solid var(--border-subtle)',
                   borderRadius: 'var(--radius-sm)',
                   padding: '14px',
@@ -963,10 +956,10 @@ const AnswerKeyPage = () => {
                     paddingBottom: '6px',
                   }}
                 >
-                  <span style={{ fontSize: '12px', fontWeight: 700, color: 'var(--accent-cyan)' }}>
+                  <span style={{ fontSize: '12px', fontWeight: 700, color: '#ea580c' }}>
                     {secLabel}
                   </span>
-                  <span style={{ fontSize: '11px', fontWeight: 600, color: colAnswered === colQuestions.length ? '#10b981' : 'var(--text-muted)' }}>
+                  <span style={{ fontSize: '11px', fontWeight: 600, color: colAnswered === colQuestions.length ? '#15803d' : 'var(--text-muted)' }}>
                     {colAnswered}/{colQuestions.length} Set
                   </span>
                 </div>
@@ -983,14 +976,14 @@ const AnswerKeyPage = () => {
                           justifyContent: 'space-between',
                           padding: '2px 4px',
                           borderRadius: '4px',
-                          background: selected ? 'rgba(255, 255, 255, 0.03)' : 'transparent',
+                          background: selected ? '#fff7ed' : 'transparent',
                         }}
                       >
                         <span
                           style={{
                             fontSize: '11px',
                             fontWeight: 600,
-                            color: selected ? 'var(--text-primary)' : 'var(--text-muted)',
+                            color: selected ? '#0f172a' : 'var(--text-muted)',
                             width: '40px',
                           }}
                         >
@@ -1008,19 +1001,19 @@ const AnswerKeyPage = () => {
                                 type="button"
                                 onClick={() => handleSelectOption(qNum, opt)}
                                 style={{
-                                  width: opt === 'BONUS' ? '44px' : '25px',
+                                  width: opt === 'BONUS' ? '46px' : '26px',
                                   height: '24px',
                                   borderRadius: '4px',
                                   fontSize: '10px',
                                   fontWeight: 700,
                                   border: isSelected
-                                    ? '1px solid #6366f1'
-                                    : '1px solid rgba(255, 255, 255, 0.08)',
+                                    ? '1px solid #ea580c'
+                                    : '1px solid #e2e8f0',
                                   background: isSelected
-                                    ? 'linear-gradient(135deg, #6366f1, #06b6d4)'
-                                    : 'rgba(255, 255, 255, 0.03)',
-                                  color: isSelected ? '#ffffff' : 'var(--text-secondary)',
-                                  boxShadow: isSelected ? '0 0 8px rgba(99, 102, 241, 0.4)' : 'none',
+                                    ? '#f37021'
+                                    : '#ffffff',
+                                  color: isSelected ? '#ffffff' : '#475569',
+                                  boxShadow: isSelected ? '0 1px 4px rgba(243, 112, 33, 0.35)' : 'none',
                                   cursor: 'pointer',
                                   transition: 'all 0.12s ease',
                                 }}
