@@ -9,9 +9,24 @@ import {
   Printer,
   LogOut,
   UserCheck,
-  Sparkles,
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
+
+const OMRLogoIcon = ({ size = 22, color = '#ffffff' }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    {/* Corner Fiducial Markers */}
+    <rect x="2" y="2" width="5" height="5" rx="1" fill={color} />
+    <rect x="17" y="2" width="5" height="5" rx="1" fill={color} />
+    <rect x="2" y="17" width="5" height="5" rx="1" fill={color} />
+    <rect x="17" y="17" width="5" height="5" rx="1" fill={color} />
+    {/* Bubble Matrix Elements */}
+    <circle cx="12" cy="4.5" r="1.5" fill={color} opacity="0.85" />
+    <circle cx="4.5" cy="12" r="1.5" fill={color} opacity="0.85" />
+    <circle cx="12" cy="12" r="2.2" fill={color} />
+    <circle cx="19.5" cy="12" r="1.5" fill={color} opacity="0.85" />
+    <circle cx="12" cy="19.5" r="1.5" fill={color} opacity="0.85" />
+  </svg>
+);
 
 const Sidebar = () => {
   const { user, logout } = useAuth();
@@ -58,7 +73,7 @@ const Sidebar = () => {
           justifyContent: 'center',
           boxShadow: '0 2px 10px rgba(243, 112, 33, 0.35)',
         }}>
-          <Sparkles size={22} color="#ffffff" />
+          <OMRLogoIcon size={22} color="#ffffff" />
         </div>
         <div>
           <h2 style={{ fontSize: '18px', fontWeight: 800, letterSpacing: '-0.03em', margin: 0, color: '#0f172a' }}>

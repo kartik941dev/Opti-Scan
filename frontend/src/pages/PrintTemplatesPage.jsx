@@ -1,5 +1,5 @@
 import React from 'react';
-import { Printer, Download, FileText, CheckCircle2, AlertTriangle, Sparkles } from 'lucide-react';
+import { Printer, Download, FileText, CheckCircle2, AlertTriangle } from 'lucide-react';
 
 const PrintTemplatesPage = () => {
   return (

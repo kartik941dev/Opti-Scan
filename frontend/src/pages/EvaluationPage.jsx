@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {
   UploadCloud,
   FileImage,
-  Sparkles,
+  FolderOpen,
   CheckCircle2,
   AlertCircle,
   Eye,
@@ -356,7 +356,7 @@ const EvaluationPage = () => {
                 }}
                 disabled={uploading}
               >
-                <Sparkles size={15} />
+                <FolderOpen size={15} />
                 {uploading ? 'Processing...' : 'Load Demo Sheets'}
               </button>
             </div>

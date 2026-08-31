@@ -4,7 +4,7 @@ import {
   Save,
   Upload,
   Download,
-  Sparkles,
+  Info,
   Check,
   RefreshCw,
   Trash2,
@@ -553,7 +553,7 @@ const AnswerKeyPage = () => {
             }}
             title="Load standard demo answer key with 4 sections"
           >
-            <Sparkles size={14} color="#ea580c" /> Load Demo Answer Key
+            <FileSpreadsheet size={14} color="#ea580c" /> Load Demo Answer Key
           </button>
 
           <button
@@ -630,7 +630,7 @@ const AnswerKeyPage = () => {
           ) : notification.type === 'error' ? (
             <AlertCircle size={18} />
           ) : (
-            <Sparkles size={18} />
+            <Info size={18} />
           )}
           <span>{notification.text}</span>
         </div>

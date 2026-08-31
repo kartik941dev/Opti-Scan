@@ -8,7 +8,7 @@ import {
   ScanLine,
   FileSpreadsheet,
   FileCheck2,
-  Sparkles,
+  FolderOpen,
   Eye,
   Download,
 } from 'lucide-react';
@@ -119,7 +119,7 @@ const DashboardPage = () => {
             style={{ fontSize: '13px', opacity: 0.9 }}
             disabled={demoLoading}
           >
-            <Sparkles size={15} color="#ea580c" />
+            <FolderOpen size={15} color="#ea580c" />
             {demoLoading ? 'Grading Demo...' : 'Load 5 Sample Sheets'}
           </button>
         </div>
@@ -249,7 +249,7 @@ const DashboardPage = () => {
                 style={{ fontSize: '12px', padding: '6px 14px' }}
                 disabled={demoLoading}
               >
-                <Sparkles size={14} color="#f59e0b" />
+                <FolderOpen size={14} color="#ea580c" />
                 {demoLoading ? 'Grading Demo...' : 'Load Sample Sheets'}
               </button>
             </div>

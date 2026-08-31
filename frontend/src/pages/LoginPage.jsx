@@ -1,7 +1,21 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Sparkles, ArrowRight, ShieldCheck, Zap } from 'lucide-react';
+import { ArrowRight, ShieldCheck } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
+
+const OMRLogoIcon = ({ size = 26, color = '#ffffff' }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="2" y="2" width="5" height="5" rx="1" fill={color} />
+    <rect x="17" y="2" width="5" height="5" rx="1" fill={color} />
+    <rect x="2" y="17" width="5" height="5" rx="1" fill={color} />
+    <rect x="17" y="17" width="5" height="5" rx="1" fill={color} />
+    <circle cx="12" cy="4.5" r="1.5" fill={color} opacity="0.85" />
+    <circle cx="4.5" cy="12" r="1.5" fill={color} opacity="0.85" />
+    <circle cx="12" cy="12" r="2.2" fill={color} />
+    <circle cx="19.5" cy="12" r="1.5" fill={color} opacity="0.85" />
+    <circle cx="12" cy="19.5" r="1.5" fill={color} opacity="0.85" />
+  </svg>
+);
 
 const LoginPage = () => {
   const [isRegister, setIsRegister] = useState(false);
@@ -56,7 +70,7 @@ const LoginPage = () => {
             margin: '0 auto 16px auto',
             boxShadow: '0 4px 15px rgba(243, 112, 33, 0.35)',
           }}>
-            <Sparkles size={26} color="#ffffff" />
+            <OMRLogoIcon size={26} color="#ffffff" />
           </div>
           <h1 style={{ fontSize: '24px', margin: '0 0 6px 0', color: '#0f172a' }}>
             Welcome to <span style={{ color: '#f37021' }}>OptiScan</span>
