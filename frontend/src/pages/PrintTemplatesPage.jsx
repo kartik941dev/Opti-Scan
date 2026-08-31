@@ -19,7 +19,7 @@ const PrintTemplatesPage = () => {
           <div>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
               <span className="badge badge-success">A4 Form Factor</span>
-              <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>4 Columns x 25 Questions</span>
+              <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>4 Columns × 25 Questions</span>
             </div>
 
             <h3 style={{ fontSize: '18px', margin: '0 0 8px 0' }}>
