@@ -6,7 +6,7 @@ from typing import Any, Dict, List, Optional, Tuple, Union
 import cv2
 import numpy as np
 
-from backend.app.db.models import AnswerKeyModel, MarkingRule, QuestionAudit, Submission
+from app.db.models import AnswerKeyModel, MarkingRule, QuestionAudit, Submission
 
 
 def decode_student_id_from_grid(

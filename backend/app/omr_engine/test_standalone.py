@@ -9,16 +9,16 @@ import cv2
 import numpy as np
 
 # Ensure project root is in sys.path
-root_dir = Path(__file__).resolve().parent.parent.parent.parent
-if str(root_dir) not in sys.path:
-    sys.path.insert(0, str(root_dir))
+backend_dir = Path(__file__).resolve().parent.parent.parent
+if str(backend_dir) not in sys.path:
+    sys.path.insert(0, str(backend_dir))
 
-from backend.app.omr_engine.preprocess import preprocess_pipeline
-from backend.app.omr_engine.align import align_pipeline, find_fiducial_markers, order_corner_points
-from backend.app.omr_engine.bubble_grid import load_template_config, create_standard_100q_grid
-from backend.app.omr_engine.detect_fill import extract_all_bubbles_and_fills, compute_fill_density, extract_bubble_roi
-from backend.app.omr_engine.grade import grade_submission, generate_annotated_overlay, decode_student_id_from_grid
-from backend.app.db.models import AnswerKeyModel, MarkingRule, SectionConfig
+from app.omr_engine.preprocess import preprocess_pipeline
+from app.omr_engine.align import align_pipeline, find_fiducial_markers, order_corner_points
+from app.omr_engine.bubble_grid import load_template_config, create_standard_100q_grid
+from app.omr_engine.detect_fill import extract_all_bubbles_and_fills, compute_fill_density, extract_bubble_roi
+from app.omr_engine.grade import grade_submission, generate_annotated_overlay, decode_student_id_from_grid
+from app.db.models import AnswerKeyModel, MarkingRule, SectionConfig
 
 
 def create_test_omr_sheet(
