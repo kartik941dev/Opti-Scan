@@ -22,7 +22,7 @@ class MarkingRule(BaseModel):
     correct: float = 4.0
     incorrect: float = -1.0
     unattempted: float = 0.0
-    multi_mark: float = -1.0
+    multi_mark: float = 0.0
     bonus: float = 4.0
 
 
