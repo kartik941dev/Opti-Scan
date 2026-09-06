@@ -8,8 +8,8 @@ from typing import List, Optional
 from fastapi import APIRouter, HTTPException, status
 from pydantic import BaseModel
 
-from backend.app.db.models import Exam
-from backend.app.db.mongo import get_collection
+from app.db.models import Exam
+from app.db.mongo import get_collection
 
 router = APIRouter(prefix="/exams", tags=["Exams"])
 
@@ -82,7 +82,7 @@ async def create_exam(exam_in: ExamCreate):
     await exams_col.insert_one(exam_dict)
 
     # Initialize default answer key for new exam
-    from backend.app.routes.answer_key import generate_default_100q_answers
+    from app.routes.answer_key import generate_default_100q_answers
     if total_q == 100:
         default_answers = generate_default_100q_answers()
         sections = [

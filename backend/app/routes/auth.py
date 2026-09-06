@@ -19,9 +19,9 @@ try:
 except ImportError:
     HAS_JOSE = False
 
-from backend.app.config import settings
-from backend.app.db.models import User
-from backend.app.db.mongo import get_collection
+from app.config import settings
+from app.db.models import User
+from app.db.mongo import get_collection
 
 router = APIRouter(prefix="/auth", tags=["Authentication"])
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl=f"{settings.API_V1_STR}/auth/login")
