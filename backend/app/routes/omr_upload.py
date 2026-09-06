@@ -12,14 +12,14 @@ import cv2
 from fastapi import APIRouter, File, Form, HTTPException, UploadFile, status
 import numpy as np
 
-from backend.app.config import settings
-from backend.app.db.models import AnswerKeyModel, MarkingRule, SectionConfig
-from backend.app.db.mongo import get_collection
-from backend.app.omr_engine.align import align_pipeline
-from backend.app.omr_engine.bubble_grid import load_template_config
-from backend.app.omr_engine.detect_fill import extract_all_bubbles_and_fills
-from backend.app.omr_engine.grade import decode_student_id_from_grid, generate_annotated_overlay, grade_submission
-from backend.app.omr_engine.preprocess import load_image, preprocess_pipeline
+from app.config import settings
+from app.db.models import AnswerKeyModel, MarkingRule, SectionConfig
+from app.db.mongo import get_collection
+from app.omr_engine.align import align_pipeline
+from app.omr_engine.bubble_grid import load_template_config
+from app.omr_engine.detect_fill import extract_all_bubbles_and_fills
+from app.omr_engine.grade import decode_student_id_from_grid, generate_annotated_overlay, grade_submission
+from app.omr_engine.preprocess import load_image, preprocess_pipeline
 
 router = APIRouter(prefix="/omr", tags=["OMR Evaluation"])
 
