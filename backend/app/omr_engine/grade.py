@@ -130,9 +130,12 @@ def grade_submission(
             total_unattempted += 1
         elif det_status == "MULTIPLE_MARKED":
             score_delta = active_rule.multi_mark
-            total_attempted += 1
             total_flagged += 1
-            total_incorrect += 1
+            if active_rule.multi_mark < 0:
+                total_attempted += 1
+                total_incorrect += 1
+            else:
+                total_unattempted += 1
         else:
             total_attempted += 1
             # Check correctness (single or list of acceptable options)
