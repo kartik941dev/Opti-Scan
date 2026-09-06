@@ -89,7 +89,10 @@ def process_omr_image(
     warped_rgb, warped_binary, _ = align_pipeline(rgb_scaled, binary_mask)
 
     # 3. Bubble Fill Extraction
-    q_results, id_results, thresh = extract_all_bubbles_and_fills(warped_binary, template_config)
+    warped_gray = cv2.cvtColor(warped_rgb, cv2.COLOR_BGR2GRAY)
+    q_results, id_results, thresh = extract_all_bubbles_and_fills(
+        warped_binary, template_config, warped_gray=warped_gray
+    )
 
     # 4. Decode Roll Number
     roll_num, roll_conf = decode_student_id_from_grid(id_results, threshold=thresh)

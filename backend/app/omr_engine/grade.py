@@ -179,6 +179,7 @@ def grade_submission(
             "is_bonus": is_bonus,
             "score_delta": float(score_delta),
             "confidence": float(conf),
+            "bubble_coords": detected.get("bubble_coords", {}),
         })
 
     # Compute Section Accuracy Percentages
@@ -244,10 +245,11 @@ def generate_annotated_overlay(
         status = audit_item.get("status")
 
         options = q_data.get("options", {})
+        coords_map = audit_item.get("bubble_coords") or options
 
         # Draw Candidate's selection
-        if selected_opt and selected_opt in options:
-            coord = options[selected_opt]
+        if selected_opt and selected_opt in coords_map:
+            coord = coords_map[selected_opt]
             cx, cy, r = int(coord["cx"]), int(coord["cy"]), int(coord["r"])
 
             if is_correct or is_bonus:
@@ -261,8 +263,8 @@ def generate_annotated_overlay(
                 cv2.circle(overlay, (cx, cy), r + 4, (239, 68, 68), -1)
 
         # Highlight ground-truth correct option if candidate was wrong
-        if not is_correct and not is_bonus and correct_key and correct_key in options:
-            corr_coord = options[correct_key]
+        if not is_correct and not is_bonus and correct_key and correct_key in coords_map:
+            corr_coord = coords_map[correct_key]
             ccx, ccy, cr = int(corr_coord["cx"]), int(corr_coord["cy"]), int(corr_coord["r"])
             cv2.circle(annotated, (ccx, ccy), cr + 4, (37, 99, 235), 3)
 
