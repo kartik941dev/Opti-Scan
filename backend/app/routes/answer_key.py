@@ -12,8 +12,8 @@ from fastapi import APIRouter, File, Form, HTTPException, UploadFile, status
 import pandas as pd
 from pydantic import BaseModel
 
-from backend.app.db.models import AnswerKeyModel, MarkingRule, SectionConfig
-from backend.app.db.mongo import get_collection
+from app.db.models import AnswerKeyModel, MarkingRule, SectionConfig
+from app.db.mongo import get_collection
 
 router = APIRouter(prefix="/answer-keys", tags=["Answer Key"])
 

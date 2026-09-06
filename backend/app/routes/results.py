@@ -14,7 +14,7 @@ from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
 from reportlab.lib.units import inch
 from reportlab.platypus import HRFlowable, PageBreak, Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle
 
-from backend.app.db.mongo import get_collection
+from app.db.mongo import get_collection
 
 router = APIRouter(prefix="/results", tags=["Results & Analytics"])
 
