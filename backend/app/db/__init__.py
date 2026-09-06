@@ -1,4 +1,4 @@
-from backend.app.db.models import (
+from app.db.models import (
     User,
     Exam,
     AnswerKeyModel,
@@ -7,7 +7,7 @@ from backend.app.db.models import (
     Submission,
     QuestionAudit,
 )
-from backend.app.db.mongo import get_collection, db_manager
+from app.db.mongo import get_collection, db_manager
 
 __all__ = [
     "User",
