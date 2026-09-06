@@ -6,12 +6,19 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
-from backend.app.config import settings
-from backend.app.routes.answer_key import router as answer_key_router
-from backend.app.routes.auth import router as auth_router
-from backend.app.routes.exams import router as exams_router
-from backend.app.routes.omr_upload import router as omr_upload_router
-from backend.app.routes.results import router as results_router
+# from backend.app.config import settings
+# from backend.app.routes.answer_key import router as answer_key_router
+# from backend.app.routes.auth import router as auth_router
+# from backend.app.routes.exams import router as exams_router
+# from backend.app.routes.omr_upload import router as omr_upload_router
+# from backend.app.routes.results import router as results_router
+
+from app.config import settings
+from app.routes.answer_key import router as answer_key_router
+from app.routes.auth import router as auth_router
+from app.routes.exams import router as exams_router
+from app.routes.omr_upload import router as omr_upload_router
+from app.routes.results import router as results_router
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
