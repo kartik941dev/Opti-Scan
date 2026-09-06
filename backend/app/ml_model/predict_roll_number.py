@@ -14,7 +14,7 @@ except ImportError:
     HAS_ONNX = False
 
 import torch
-from backend.app.ml_model.train_digit_model import DigitCNN
+from app.ml_model.train_digit_model import DigitCNN
 
 
 class DigitPredictor:

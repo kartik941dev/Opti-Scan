@@ -7,12 +7,12 @@ from pathlib import Path
 import torch
 from torch.utils.data import DataLoader
 
-root_dir = Path(__file__).resolve().parent.parent.parent.parent
-if str(root_dir) not in sys.path:
-    sys.path.insert(0, str(root_dir))
+backend_dir = Path(__file__).resolve().parent.parent.parent
+if str(backend_dir) not in sys.path:
+    sys.path.insert(0, str(backend_dir))
 
-from backend.app.ml_model.train_digit_model import DigitCNN, SyntheticDigitDataset
-from backend.app.ml_model.predict_roll_number import DigitPredictor
+from app.ml_model.train_digit_model import DigitCNN, SyntheticDigitDataset
+from app.ml_model.predict_roll_number import DigitPredictor
 
 
 def evaluate_digit_cnn():
