@@ -1,6 +1,11 @@
 import axios from 'axios';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/api/v1';
+// Backend Base URL configuration: prefer VITE_API_URL, fallback to Render in production, localhost in development
+const rawUrl = (import.meta.env.VITE_API_URL || (import.meta.env.MODE === 'development' ? 'http://localhost:8000' : 'https://opti-scan.onrender.com')).replace(/\/+$/, '');
+
+// Export both API base URL (guaranteed /api/v1) and root server URL (for static media assets)
+export const API_BASE_URL = rawUrl.endsWith('/api/v1') ? rawUrl : `${rawUrl}/api/v1`;
+export const SERVER_BASE_URL = rawUrl.replace(/\/api\/v1$/, '');
 
 const apiClient = axios.create({
   baseURL: API_BASE_URL,
