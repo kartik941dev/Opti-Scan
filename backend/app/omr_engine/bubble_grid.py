@@ -17,28 +17,24 @@ def create_standard_100q_grid(
     """
     # 1. Student ID Grid (6 columns x 10 digits centered at top)
     id_grid = {}
-    roll_col_start_x = 716.5
-    roll_col_step_x = 33.3
-    roll_row_start_y = 410.7
-    roll_row_step_y = 23.0
+    roll_xs = [694, 748, 800, 852, 906, 958]
+    roll_ys = [366, 402, 436, 472, 506, 542, 576, 612, 646, 682]
 
-    for col in range(6):
-        cx = int(round(roll_col_start_x + col * roll_col_step_x))
-        for digit in range(10):
-            cy = int(round(roll_row_start_y + digit * roll_row_step_y))
+    for col, cx in enumerate(roll_xs):
+        for digit, cy in enumerate(roll_ys):
             id_grid[f"col_{col}_digit_{digit}"] = {
                 "cx": cx,
                 "cy": cy,
-                "r": 10,
+                "r": 14,
                 "col": col,
                 "digit": digit,
             }
 
     # 2. 4 Columns x 25 Questions
-    col_opt_a = [183.0, 546.0, 910.0, 1273.0]
-    opt_step = 43.0
-    row_start_y = 741.0
-    row_step_y = 60.667
+    col_opt_a = [178.0, 544.0, 910.0, 1276.0]
+    opt_step = 48.0
+    row_start_y = 864.0
+    row_step_y = 55.1667
     sections = ["Section A (Physics)", "Section B (Chemistry)", "Section C (Mathematics)", "Section D (Biology)"]
     options = ["A", "B", "C", "D"]
 
@@ -70,10 +66,10 @@ def create_standard_100q_grid(
         "dpi": 200,
         "total_questions": 100,
         "fiducial_markers": [
-            {"corner": "TL", "cx": 64, "cy": 64, "size": 28},
-            {"corner": "TR", "cx": 1590, "cy": 64, "size": 28},
-            {"corner": "BR", "cx": 1590, "cy": 2274, "size": 28},
-            {"corner": "BL", "cx": 64, "cy": 2274, "size": 28},
+            {"corner": "TL", "cx": 60, "cy": 51, "size": 42},
+            {"corner": "TR", "cx": 1594, "cy": 51, "size": 42},
+            {"corner": "BR", "cx": 1594, "cy": 2235, "size": 42},
+            {"corner": "BL", "cx": 60, "cy": 2235, "size": 42},
         ],
         "questions_layout": questions,
         "student_id_grid": id_grid,
