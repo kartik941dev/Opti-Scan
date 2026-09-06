@@ -102,10 +102,12 @@ def parse_answer_key_from_bytes(content: bytes, filename: str) -> Dict[str, Any]
         try:
             data = json.loads(content.decode("utf-8-sig", errors="replace"))
             if isinstance(data, dict):
-                title = data.get("exam_title", title)
+                title = data.get("exam_title", data.get("exam", title))
                 raw_ans = data.get("answers", data.get("answer_key", data.get("key", {})))
-                if not raw_ans and not any(k in data for k in ["default_rule", "sections", "marking_rules"]):
+                if not raw_ans and not any(k in data for k in ["default_rule", "sections", "marking_rules", "scoring"]):
                     raw_ans = data
+
+                json_sections_map: Dict[str, List[int]] = {}
 
                 if isinstance(raw_ans, dict):
                     for k, v in raw_ans.items():
@@ -125,13 +127,37 @@ def parse_answer_key_from_bytes(content: bytes, filename: str) -> Dict[str, Any]
                             norm_v = normalize_answer_val(ans_val)
                             if norm_v:
                                 parsed_answers[clean_k] = norm_v
+                                sec_name = v.get("section", v.get("sec", v.get("subject")))
+                                if sec_name and str(sec_name).strip():
+                                    sec_clean = str(sec_name).strip()
+                                    if sec_clean not in json_sections_map:
+                                        json_sections_map[sec_clean] = []
+                                    json_sections_map[sec_clean].append(int(clean_k))
                         else:
                             norm_v = normalize_answer_val(v)
                             if norm_v:
                                 parsed_answers[str(idx)] = norm_v
 
-                parsed_rules = data.get("default_rule", data.get("marking_rules"))
+                raw_rule = data.get("default_rule", data.get("marking_rules", data.get("scoring")))
+                if isinstance(raw_rule, dict):
+                    parsed_rules = {
+                        "correct": float(raw_rule.get("correct", 4.0)),
+                        "incorrect": float(raw_rule.get("incorrect", -1.0)),
+                        "unattempted": float(raw_rule.get("unattempted", 0.0)),
+                        "multi_mark": float(raw_rule.get("multi_mark", 0.0)),
+                        "bonus": float(raw_rule.get("bonus", 4.0)),
+                    }
+
                 parsed_sections = data.get("sections")
+                if not parsed_sections and json_sections_map:
+                    parsed_sections = []
+                    for s_name, q_list in json_sections_map.items():
+                        parsed_sections.append({
+                            "name": s_name,
+                            "q_start": min(q_list),
+                            "q_end": max(q_list),
+                        })
+                    parsed_sections.sort(key=lambda s: s["q_start"])
             elif isinstance(data, list):
                 for idx, v in enumerate(data, start=1):
                     if isinstance(v, dict):
