@@ -1,4 +1,4 @@
-import apiClient from './client';
+import apiClient, { API_BASE_URL } from './client';
 
 export const authAPI = {
   login: (formData) => apiClient.post('/auth/login', formData, {
@@ -21,7 +21,7 @@ export const answerKeyAPI = {
   save: (data) => apiClient.post('/answer-keys', data),
   uploadJson: (formData) => apiClient.post('/answer-keys/upload-json', formData),
   pasteText: (data) => apiClient.post('/answer-keys/paste-text', data),
-  exportCsvUrl: (examId) => `http://localhost:8000/api/v1/answer-keys/${examId}/export-csv`,
+  exportCsvUrl: (examId) => `${API_BASE_URL}/answer-keys/${examId}/export-csv`,
 };
 
 export const omrAPI = {
@@ -34,7 +34,7 @@ export const resultsAPI = {
   getSubmissions: (examId) => apiClient.get(`/results/${examId}`),
   getOverview: (examId) => apiClient.get(`/results/${examId}/overview`),
   getItemAnalysis: (examId) => apiClient.get(`/results/${examId}/item-analysis`),
-  getExportCsvUrl: (examId) => `http://localhost:8000/api/v1/results/${examId}/export-csv`,
-  getExportExcelUrl: (examId) => `http://localhost:8000/api/v1/results/${examId}/export-excel`,
-  getScorecardPdfUrl: (examId, studentId) => `http://localhost:8000/api/v1/results/${examId}/scorecard/${studentId}`,
+  getExportCsvUrl: (examId) => `${API_BASE_URL}/results/${examId}/export-csv`,
+  getExportExcelUrl: (examId) => `${API_BASE_URL}/results/${examId}/export-excel`,
+  getScorecardPdfUrl: (examId, studentId) => `${API_BASE_URL}/results/${examId}/scorecard/${studentId}`,
 };
