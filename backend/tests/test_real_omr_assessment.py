@@ -5,9 +5,9 @@ Benchmark regression test for the 10 National Engineering & Science Assessment O
 import csv
 from pathlib import Path
 import pytest
-from backend.app.routes.omr_upload import process_omr_image, load_template_config
-from backend.app.db.models import AnswerKeyModel, MarkingRule, SectionConfig
-from backend.app.routes.answer_key import generate_default_100q_answers
+from app.routes.omr_upload import process_omr_image, load_template_config
+from app.db.models import AnswerKeyModel, MarkingRule, SectionConfig
+from app.routes.answer_key import generate_default_100q_answers
 
 
 def test_national_assessment_benchmark_10_sheets():

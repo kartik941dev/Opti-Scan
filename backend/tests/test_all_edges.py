@@ -13,15 +13,15 @@ import numpy as np
 
 sys.path.insert(0, ".")
 
-from backend.app.routes.answer_key import (
+from app.routes.answer_key import (
     parse_answer_key_from_bytes,
     normalize_answer_val,
     clean_col_header,
     generate_default_100q_answers,
 )
-from backend.app.omr_engine.grade import grade_submission, decode_student_id_from_grid
-from backend.app.db.models import AnswerKeyModel, MarkingRule, SectionConfig
-from backend.app.db.mongo import InMemoryCollection, _matches_filter
+from app.omr_engine.grade import grade_submission, decode_student_id_from_grid
+from app.db.models import AnswerKeyModel, MarkingRule, SectionConfig
+from app.db.mongo import InMemoryCollection, _matches_filter
 
 
 class TestAnswerKeyParserEdges(unittest.TestCase):

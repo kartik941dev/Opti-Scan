@@ -10,7 +10,7 @@ from fastapi.testclient import TestClient
 
 sys.path.insert(0, ".")
 
-from backend.app.main import app
+from app.main import app
 
 client = TestClient(app)
 

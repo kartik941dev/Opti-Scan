@@ -6,11 +6,11 @@ import sys
 from pathlib import Path
 from fastapi.testclient import TestClient
 
-root_dir = Path(__file__).resolve().parent.parent
-if str(root_dir) not in sys.path:
-    sys.path.insert(0, str(root_dir))
+backend_dir = Path(__file__).resolve().parent
+if str(backend_dir) not in sys.path:
+    sys.path.insert(0, str(backend_dir))
 
-from backend.app.main import app
+from app.main import app
 
 
 def test_fastapi_backend_endpoints():
