@@ -83,10 +83,10 @@ const LoginPage = () => {
         {error && (
           <div style={{
             padding: '10px 14px',
-            background: 'rgba(239, 68, 68, 0.15)',
-            border: '1px solid rgba(239, 68, 68, 0.3)',
+            background: '#fee2e2',
+            border: '1px solid #fecaca',
             borderRadius: '8px',
-            color: '#ef4444',
+            color: '#b91c1c',
             fontSize: '13px',
             marginBottom: '18px',
           }}>
@@ -151,10 +151,10 @@ const LoginPage = () => {
             style={{
               background: 'transparent',
               border: 'none',
-              color: 'var(--accent-cyan)',
+              color: '#ea580c',
               fontSize: '13px',
               cursor: 'pointer',
-              fontWeight: 500,
+              fontWeight: 600,
             }}
           >
             {isRegister ? 'Already have an account? Sign In' : "Don't have an account? Sign Up"}
@@ -165,16 +165,16 @@ const LoginPage = () => {
         <div style={{
           marginTop: '24px',
           padding: '12px',
-          background: 'rgba(255, 255, 255, 0.03)',
-          border: '1px solid rgba(255, 255, 255, 0.06)',
+          background: '#fff7ed',
+          border: '1px solid #fed7aa',
           borderRadius: '8px',
-          fontSize: '11px',
-          color: 'var(--text-muted)',
+          fontSize: '12px',
+          color: '#9a3412',
           display: 'flex',
           alignItems: 'center',
           gap: '8px',
         }}>
-          <Zap size={15} color="#f59e0b" />
+          <ShieldCheck size={16} color="#ea580c" />
           <span><b>Demo Mode:</b> One-click sign-in with prefilled credentials enabled.</span>
         </div>
       </div>
