@@ -82,10 +82,21 @@ async def create_exam(exam_in: ExamCreate):
     await exams_col.insert_one(exam_dict)
 
     # Initialize default answer key for new exam
-    default_answers = {}
-    opts = ["A", "B", "C", "D"]
-    for i in range(1, total_q + 1):
-        default_answers[str(i)] = opts[(i - 1) % 4]
+    from backend.app.routes.answer_key import generate_default_100q_answers
+    if total_q == 100:
+        default_answers = generate_default_100q_answers()
+        sections = [
+            {"name": "Section A (Physics)", "q_start": 1, "q_end": 25},
+            {"name": "Section B (Chemistry)", "q_start": 26, "q_end": 50},
+            {"name": "Section C (Mathematics)", "q_start": 51, "q_end": 75},
+            {"name": "Section D (Biology)", "q_start": 76, "q_end": 100},
+        ]
+    else:
+        default_answers = {}
+        opts = ["A", "B", "C", "D"]
+        for i in range(1, total_q + 1):
+            default_answers[str(i)] = opts[(i - 1) % 4]
+        sections = []
 
     key_doc = {
         "_id": f"key_{exam_id}",
@@ -93,8 +104,8 @@ async def create_exam(exam_in: ExamCreate):
         "exam_title": exam_in.title,
         "total_questions": total_q,
         "answers": default_answers,
-        "default_rule": {"correct": 4.0, "incorrect": -1.0, "unattempted": 0.0, "multi_mark": -1.0, "bonus": 4.0},
-        "sections": [],
+        "default_rule": {"correct": 4.0, "incorrect": -1.0, "unattempted": 0.0, "multi_mark": 0.0, "bonus": 4.0},
+        "sections": sections,
         "created_at": datetime.utcnow(),
         "updated_at": datetime.utcnow(),
     }
