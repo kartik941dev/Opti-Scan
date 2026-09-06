@@ -167,10 +167,10 @@ def align_pipeline(
         tl_x, tl_y = src_corners[0]
         if tl_x < 95 and tl_y < 95:
             dst_corners = np.array([
-                [64.0, 64.0],
-                [target_width - 64.0, 64.0],
-                [target_width - 64.0, target_height - 65.0],
-                [64.0, target_height - 65.0],
+                [60.0, 51.0],
+                [target_width - 60.0, 51.0],
+                [target_width - 60.0, target_height - 104.0],
+                [60.0, target_height - 104.0],
             ], dtype=np.float32)
         else:
             dst_corners = np.array([
