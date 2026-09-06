@@ -1,6 +1,7 @@
 import React from 'react';
 import { X, Download, CheckCircle2, XCircle, AlertTriangle, HelpCircle } from 'lucide-react';
 import { resultsAPI } from '../api/endpoints';
+import { SERVER_BASE_URL } from '../api/client';
 
 const SheetViewerModal = ({ submission, examId, onClose }) => {
   if (!submission) return null;
@@ -102,7 +103,7 @@ const SheetViewerModal = ({ submission, examId, onClose }) => {
             </span>
             {submission.annotated_image_url ? (
               <img
-                src={submission.annotated_image_url}
+                src={submission.annotated_image_url.startsWith('http') ? submission.annotated_image_url : `${SERVER_BASE_URL}${submission.annotated_image_url}`}
                 alt="Annotated OMR"
                 style={{ width: '100%', maxHeight: '480px', objectFit: 'contain', borderRadius: '4px' }}
               />
