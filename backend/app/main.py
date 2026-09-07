@@ -41,7 +41,7 @@ app.include_router(omr_upload_router, prefix=settings.API_V1_STR)
 app.include_router(results_router, prefix=settings.API_V1_STR)
 
 
-@app.get("/", tags=["Health"])
+@app.api_route("/", methods=["GET", "HEAD"], tags=["Health"])
 async def root():
     return {
         "status": "online",
@@ -51,8 +51,8 @@ async def root():
     }
 
 
-@app.get("/health", tags=["Health"])
-@app.get(f"{settings.API_V1_STR}/health", tags=["Health"])
+@app.api_route("/health", methods=["GET", "HEAD"], tags=["Health"])
+@app.api_route(f"{settings.API_V1_STR}/health", methods=["GET", "HEAD"], tags=["Health"])
 async def health_check():
     return {
         "status": "healthy",

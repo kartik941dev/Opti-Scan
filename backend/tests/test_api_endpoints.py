@@ -19,9 +19,23 @@ class TestAPIEndpoints(unittest.TestCase):
     """Test all API routes with edge cases."""
 
     def test_health_check(self):
+        # Test GET endpoints
         res = client.get("/api/v1/health")
         self.assertEqual(res.status_code, 200)
         self.assertEqual(res.json()["status"], "healthy")
+
+        root_res = client.get("/")
+        self.assertEqual(root_res.status_code, 200)
+
+        # Test HEAD endpoints (used by monitoring services like UptimeRobot)
+        head_root = client.head("/")
+        self.assertEqual(head_root.status_code, 200)
+
+        head_health = client.head("/health")
+        self.assertEqual(head_health.status_code, 200)
+
+        head_v1 = client.head("/api/v1/health")
+        self.assertEqual(head_v1.status_code, 200)
 
     def test_get_and_save_answer_key_1000q(self):
         # 1. Save 1000Q Answer Key with 5 custom sections
