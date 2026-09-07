@@ -2,6 +2,7 @@
 
 [![FastAPI](https://img.shields.io/badge/Backend-FastAPI%200.109+-009688.svg)](https://fastapi.tiangolo.com/)
 [![React + Vite](https://img.shields.io/badge/Frontend-React%2018%20(Vite)-61DAFB.svg)](https://vitejs.dev/)
+[![CI/CD](https://github.com/kartik941dev/Opti-Scan/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/kartik941dev/Opti-Scan/actions/workflows/ci-cd.yml)
 [![OpenCV](https://img.shields.io/badge/Computer%20Vision-OpenCV%204.8+-5C3EE8.svg)](https://opencv.org/)
 [![PyTorch](https://img.shields.io/badge/ML%20Digits-PyTorch%20%2F%20ONNX-EE4C2C.svg)](https://pytorch.org/)
 [![MongoDB](https://img.shields.io/badge/Database-MongoDB%20%2F%20Motor-47A248.svg)](https://www.mongodb.com/)
