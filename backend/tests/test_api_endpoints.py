@@ -24,6 +24,10 @@ class TestAPIEndpoints(unittest.TestCase):
         self.assertEqual(res.status_code, 200)
         self.assertEqual(res.json()["status"], "healthy")
 
+        health_res = client.get("/health")
+        self.assertEqual(health_res.status_code, 200)
+        self.assertEqual(health_res.json()["status"], "healthy")
+
         root_res = client.get("/")
         self.assertEqual(root_res.status_code, 200)
 
