@@ -56,7 +56,7 @@ const Sidebar = () => {
         borderBottom: '1px solid #1E3152',
         marginBottom: '20px',
       }}>
-        <Logo darkBg height={32} showLink to="/" />
+        <Logo darkBg height={48} showLink to="/" />
       </div>
 
       {/* Navigation Links */}
