@@ -392,3 +392,612 @@ svg text {
   -webkit-user-select: none;
 }
 
+/* ==========================================================================
+   OptiScan Production Authentication Architecture
+   Full-Screen Ambient Canvas + Cohesive 2-Column Responsive Workspace
+   ========================================================================== */
+
+.optiscan-auth-page {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  background-color: #070B1A;
+  font-family: var(--font-inter);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  padding: 44px 0;
+}
+
+/* Full-Screen Ambient Canvas (100vw x 100vh) */
+.optiscan-auth-bg-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* 2-Column Responsive Workspace */
+.optiscan-auth-layout {
+  position: relative;
+  z-index: 1;
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 36px 36px;
+  display: grid;
+  grid-template-columns: 1.22fr 1fr;
+  gap: 60px;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------------------
+   LEFT COLUMN: Premium Product Introduction & Tactile OMR Hero
+   -------------------------------------------------------------------------- */
+.optiscan-intro-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.optiscan-intro-logo {
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.optiscan-hero-logo {
+  width: 400px !important;
+  height: auto !important;
+  margin-left: -44px;
+  display: block;
+}
+
+.optiscan-intro-body {
+  max-width: 520px;
+}
+
+.optiscan-eyebrow-tag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #60A5FA;
+  background: rgba(37, 99, 235, 0.16);
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(96, 165, 250, 0.25);
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.optiscan-hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(38px, 3.4vw, 50px);
+  font-weight: 750;
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+  color: #FFFFFF;
+  margin: 0 0 16px 0;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.5);
+}
+
+.optiscan-hero-subtitle {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #94A3B8;
+  margin: 0 0 32px 0;
+  max-width: 480px;
+  font-weight: 400;
+}
+
+/* Subtle Feature Indicators (Teal #14B8A6 indicators) */
+.optiscan-feature-bullets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-top: 24px;
+}
+
+.optiscan-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #94A3B8;
+  font-weight: 500;
+}
+
+.optiscan-bullet-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #14B8A6;
+  box-shadow: 0 0 8px rgba(20, 184, 166, 0.7);
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Authentic Physical OMR Answer Sheet Visual (Navy + Blue + Teal)
+   -------------------------------------------------------------------------- */
+.optiscan-omr-artifact-card {
+  background: #FFFFFF;
+  border: 1px solid #D9E2F0;
+  border-radius: 14px;
+  padding: 24px 28px;
+  box-shadow: 0 24px 50px -12px rgba(0, 0, 0, 0.55), 0 4px 16px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 440px;
+  position: relative;
+  transform: rotate(-1.5deg);
+  transform-origin: top left;
+  user-select: none;
+  box-sizing: border-box;
+  margin-bottom: 24px;
+}
+
+/* 4 Corner Registration Fiducials */
+.optiscan-fiducial {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: var(--opti-deep-navy);
+}
+
+.optiscan-fiducial.tl { top: 8px; left: 8px; }
+.optiscan-fiducial.tr { top: 8px; right: 8px; }
+.optiscan-fiducial.bl { bottom: 8px; left: 8px; }
+.optiscan-fiducial.br { bottom: 8px; right: 8px; }
+
+.optiscan-omr-head-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #EEF2F6;
+  padding-bottom: 10px;
+  margin-bottom: 14px;
+}
+
+.optiscan-omr-form-id {
+  font-size: 11px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--opti-deep-navy);
+}
+
+.optiscan-omr-form-type {
+  font-size: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  color: var(--opti-text-muted);
+  letter-spacing: 0.06em;
+}
+
+.optiscan-omr-grid-body {
+  display: flex;
+  gap: 16px;
+  position: relative;
+}
+
+/* Timing Track on Left Edge */
+.optiscan-timing-rail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 0 2px 0;
+  width: 8px;
+}
+
+.optiscan-timing-notch {
+  width: 8px;
+  height: 4px;
+  background-color: var(--opti-deep-navy);
+  border-radius: 1px;
+}
+
+.optiscan-questions-container {
+  flex: 1;
+}
+
+.optiscan-col-headers {
+  display: flex;
+  justify-content: flex-end;
+  gap: 14px;
+  padding-right: 2px;
+  margin-bottom: 6px;
+}
+
+.optiscan-col-char {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--opti-text-muted);
+  width: 16px;
+  text-align: center;
+}
+
+.optiscan-rows-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.optiscan-q-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 0;
+  position: relative;
+}
+
+.optiscan-q-label {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--opti-text-secondary);
+  width: 34px;
+}
+
+.optiscan-bubbles-group {
+  display: flex;
+  gap: 14px;
+}
+
+.optiscan-bubble {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1.5px solid #94A3B8;
+  background-color: var(--opti-surface);
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.optiscan-bubble.fill-navy {
+  background-color: var(--opti-deep-navy);
+  border-color: var(--opti-deep-navy);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.45);
+}
+
+.optiscan-bubble.fill-blue {
+  background-color: var(--opti-primary-action);
+  border-color: var(--opti-primary-action);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.optiscan-bubble.fill-teal {
+  background-color: var(--opti-teal);
+  border-color: var(--opti-teal);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Subtle scanning evaluation line (Professional Blue Accent) */
+.optiscan-omr-scan-bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 54%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.75) 15%, rgba(37, 99, 235, 0.75) 85%, transparent);
+  pointer-events: none;
+}
+
+/* Subtle micro detail status badges around OMR */
+.optiscan-omr-foot-badges {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #EEF2F6;
+  margin-top: 14px;
+  padding-top: 10px;
+}
+
+.optiscan-status-tag {
+  font-size: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.optiscan-status-tag.active {
+  background-color: var(--opti-light-teal);
+  color: var(--opti-teal);
+  border: 1px solid #A7F3D0;
+}
+
+.optiscan-status-tag.ready {
+  background-color: var(--opti-light-blue);
+  color: var(--opti-primary-action);
+  border: 1px solid #BFDBFE;
+}
+
+.optiscan-footer-muted {
+  font-size: 12px;
+  color: var(--opti-text-muted);
+  line-height: 1.4;
+}
+
+/* --------------------------------------------------------------------------
+   RIGHT COLUMN: Premium Dark Translucent Authentication Card (~45%)
+   -------------------------------------------------------------------------- */
+.optiscan-auth-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.optiscan-auth-card {
+  background: rgba(10, 18, 42, 0.82);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(96, 165, 250, 0.25);
+  border-radius: 20px;
+  padding: 40px 36px;
+  max-width: 440px;
+  width: 100%;
+  box-shadow: 0 24px 60px -12px rgba(0, 0, 0, 0.65), 0 0 35px -5px rgba(37, 99, 235, 0.16);
+  box-sizing: border-box;
+}
+
+.optiscan-mobile-brand-bar {
+  display: none;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.optiscan-mobile-brand-bar img {
+  height: 48px;
+  width: auto;
+  margin: 0 auto 8px auto;
+}
+
+.optiscan-card-header {
+  margin-bottom: 24px;
+}
+
+.optiscan-card-title {
+  font-family: var(--font-heading);
+  font-size: 25px;
+  font-weight: 700;
+  color: #F8FAFC;
+  letter-spacing: -0.02em;
+  margin: 0 0 8px 0;
+}
+
+.optiscan-card-subtitle {
+  font-size: 14px;
+  color: #94A3B8;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Inputs & Form Rows */
+.optiscan-form-row {
+  margin-bottom: 18px;
+}
+
+.optiscan-label-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.optiscan-input-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #F8FAFC;
+}
+
+.optiscan-forgot-trigger {
+  background: transparent;
+  border: none;
+  font-size: 13px;
+  font-weight: 500;
+  color: #60A5FA;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.15s ease;
+}
+
+.optiscan-forgot-trigger:hover {
+  color: #93C5FD;
+  text-decoration: underline;
+}
+
+.optiscan-input-box-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.optiscan-text-input {
+  width: 100%;
+  height: 48px;
+  padding: 0 16px;
+  font-size: 14px;
+  font-family: var(--font-inter);
+  color: #F8FAFC;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 11px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+  box-sizing: border-box;
+}
+
+.optiscan-text-input:focus {
+  border-color: #3B82F6;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.optiscan-text-input::placeholder {
+  color: #64748B;
+}
+
+.optiscan-eye-toggle {
+  position: absolute;
+  right: 14px;
+  background: transparent;
+  border: none;
+  color: #94A3B8;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 4px;
+  transition: color 0.15s ease;
+}
+
+.optiscan-eye-toggle:hover {
+  color: #F8FAFC;
+}
+
+/* Primary Action Button (48px, #2563EB, Subtle Blue Shadow, No Gradients, No Orange) */
+.optiscan-main-action-btn {
+  width: 100%;
+  height: 48px;
+  background-color: #2563EB;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 11px;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.35);
+  transition: background-color 0.15s ease, transform 0.12s ease, box-shadow 0.15s ease;
+  margin-top: 12px;
+}
+
+.optiscan-main-action-btn:hover:not(:disabled) {
+  background-color: #1D4ED8;
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45);
+}
+
+.optiscan-main-action-btn:active:not(:disabled) {
+  transform: scale(0.99);
+}
+
+.optiscan-main-action-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Sign Up / Sign In Switcher */
+.optiscan-mode-switch-row {
+  text-align: center;
+  margin-top: 22px;
+  font-size: 14px;
+  color: #94A3B8;
+}
+
+.optiscan-mode-switch-btn {
+  background: transparent;
+  border: none;
+  color: #60A5FA;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 4px;
+  font-size: 14px;
+  padding: 0;
+  transition: color 0.15s ease;
+}
+
+.optiscan-mode-switch-btn:hover {
+  color: #93C5FD;
+  text-decoration: underline;
+}
+
+/* Alerts */
+.optiscan-error-callout {
+  padding: 12px 14px;
+  background-color: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 8px;
+  color: #FCA5A5;
+  font-size: 13px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.optiscan-notice-callout {
+  padding: 12px 14px;
+  background-color: rgba(37, 99, 235, 0.12);
+  border: 1px solid rgba(96, 165, 250, 0.3);
+  border-radius: 8px;
+  color: #93C5FD;
+  font-size: 12px;
+  margin-bottom: 18px;
+  line-height: 1.45;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Rules
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .optiscan-hero-logo {
+    width: 360px !important;
+    margin-left: -40px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .optiscan-auth-layout {
+    gap: 36px;
+    padding: 32px 24px;
+  }
+  .optiscan-hero-logo {
+    width: 310px !important;
+    margin-left: -34px;
+  }
+  .optiscan-omr-artifact-card {
+    max-width: 380px;
+  }
+}
+
+@media (max-width: 880px) {
+  .optiscan-auth-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 32px 20px;
+  }
+
+  .optiscan-intro-col {
+    display: none;
+  }
+
+  .optiscan-mobile-brand-bar {
+    display: block;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .optiscan-mobile-brand-bar .optiscan-official-logo {
+    width: 240px !important;
+    height: auto !important;
+    margin: 0 auto 8px auto;
+    display: inline-block;
+  }
+
+  .optiscan-auth-card {
+    padding: 32px 24px;
+    box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.6);
+  }
+}
