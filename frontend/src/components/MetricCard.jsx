@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MetricCard = ({ title, value, subtitle, icon: Icon, color = '#6366f1', trend }) => {
+const MetricCard = ({ title, value, subtitle, icon: Icon, color = '#2563EB', trend }) => {
   return (
     <div className="glass-card" style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
