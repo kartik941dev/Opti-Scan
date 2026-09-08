@@ -826,9 +826,10 @@ const AnswerKeyPage = () => {
           alignItems: 'center',
           justifyContent: 'space-between',
           padding: '12px 18px',
-          background: '#ffffff',
+          background: 'rgba(16, 24, 43, 0.86)',
+          backdropFilter: 'blur(10px)',
           borderRadius: 'var(--radius-sm)',
-          border: '1px solid var(--border-subtle)',
+          border: '1px solid #1E3152',
           boxShadow: 'var(--shadow-sm)',
           flexWrap: 'wrap',
           gap: '12px',
@@ -899,9 +900,13 @@ const AnswerKeyPage = () => {
       </div>
 
       {/* Interactive Matrix Grid */}
-      <div className="glass-card">
+      <div className="glass-card" style={{
+        background: 'rgba(7, 12, 24, 0.95)',
+        border: '1px solid #1E3152',
+        boxShadow: '0 8px 32px rgba(0, 0, 0, 0.6)',
+      }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', flexWrap: 'wrap', gap: '10px' }}>
-          <h3 style={{ fontSize: '16px', margin: 0, color: '#0f172a' }}>
+          <h3 style={{ fontSize: '16px', margin: 0, color: '#F8FAFC' }}>
             Master Answer Key Matrix ({totalQuestions} Questions Total)
           </h3>
           <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>
@@ -909,12 +914,16 @@ const AnswerKeyPage = () => {
           </span>
         </div>
 
-        {/* Dynamic Multi-Column Grid */}
+        {/* Dynamic Multi-Column Grid with slightly darker surrounding grid area */}
         <div
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))',
             gap: '16px',
+            background: 'rgba(5, 8, 18, 0.65)',
+            padding: '16px',
+            borderRadius: '10px',
+            border: '1px solid rgba(30, 49, 82, 0.5)',
           }}
         >
           {/* Chunk into columns of 25 */}
