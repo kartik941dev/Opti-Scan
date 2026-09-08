@@ -13,6 +13,23 @@ import PrintTemplatesPage from './pages/PrintTemplatesPage';
 
 const ProtectedRoute = ({ children }) => {
   const { user, loading } = useAuth();
+  const [sidebarCollapsed, setSidebarCollapsed] = React.useState(() => {
+    try {
+      return localStorage.getItem('optiscan_sidebar_collapsed') === 'true';
+    } catch {
+      return false;
+    }
+  });
+
+  const toggleSidebar = () => {
+    setSidebarCollapsed((prev) => {
+      const next = !prev;
+      try {
+        localStorage.setItem('optiscan_sidebar_collapsed', String(next));
+      } catch {}
+      return next;
+    });
+  };
 
   if (loading) {
     return (
@@ -44,8 +61,19 @@ const ProtectedRoute = ({ children }) => {
           pointerEvents: 'none',
         }}
       />
-      <Sidebar />
-      <main className="main-content" style={{ position: 'relative', zIndex: 1 }}>{children}</main>
+      <Sidebar collapsed={sidebarCollapsed} onToggle={toggleSidebar} />
+      <main
+        className={`main-content ${sidebarCollapsed ? 'collapsed' : ''}`}
+        style={{
+          position: 'relative',
+          zIndex: 1,
+          marginLeft: sidebarCollapsed ? '72px' : '260px',
+          maxWidth: sidebarCollapsed ? 'calc(100vw - 72px)' : '1400px',
+          transition: 'margin-left 0.25s cubic-bezier(0.4, 0, 0.2, 1), max-width 0.25s ease',
+        }}
+      >
+        {children}
+      </main>
     </div>
   );
 };
