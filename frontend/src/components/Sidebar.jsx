@@ -38,7 +38,7 @@ const Sidebar = () => {
       top: 0,
       left: 0,
       bottom: 0,
-      background: '#080D1C',
+      background: 'rgba(7, 11, 24, 0.92)',
       backdropFilter: 'blur(12px)',
       WebkitBackdropFilter: 'blur(12px)',
       borderRight: '1px solid #1E3152',
