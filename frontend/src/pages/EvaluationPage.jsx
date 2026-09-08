@@ -133,25 +133,25 @@ const EvaluationPage = () => {
             width: '36px',
             height: '36px',
             borderRadius: '8px',
-            background: 'var(--accent-orange-light)',
-            border: '1px solid var(--accent-orange-border)',
+            background: '#EFF6FF',
+            border: '1px solid #BFDBFE',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
           }}>
-            <ScanLine size={20} color="#ea580c" />
+            <ScanLine size={20} color="#2563EB" />
           </div>
-          <h1 style={{ fontSize: '26px', margin: 0, fontWeight: 800 }}>Scan answer sheet free</h1>
+          <h1 style={{ fontSize: '26px', margin: 0, fontWeight: 800, color: '#0F2742' }}>Scan answer sheet</h1>
         </div>
         <p style={{ fontSize: '13px', color: 'var(--text-secondary)', margin: 0 }}>
           Scan OMR sheets by uploading photos or scans of filled OMR forms. High-speed 4-point homography and PyTorch digit recognition.
         </p>
       </div>
 
-      {/* Main Dual-Column Aspose Card */}
+      {/* Main Dual-Column Assessment Card */}
       <div className="glass-card" style={{ padding: '32px' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1.1fr 1fr', gap: '36px', alignItems: 'start' }}>
-          {/* Left Column: Aspose Dashed Dropzone */}
+          {/* Left Column: Dashed Dropzone */}
           <div>
             <div
               onDragEnter={handleDrag}
@@ -159,9 +159,9 @@ const EvaluationPage = () => {
               onDragOver={handleDrag}
               onDrop={handleDrop}
               style={{
-                border: dragActive ? '2px dashed #ea580c' : '2px dashed #f37021',
-                borderRadius: '8px',
-                background: dragActive ? '#fff2e8' : '#fffcf9',
+                border: dragActive ? '2px dashed #2563EB' : '2px dashed #93C5FD',
+                borderRadius: '10px',
+                background: dragActive ? '#EFF6FF' : '#F8FAFC',
                 padding: '52px 24px',
                 textAlign: 'center',
                 transition: 'all 0.2s ease',
@@ -179,11 +179,11 @@ const EvaluationPage = () => {
                   padding: '10px 24px',
                   fontSize: '14px',
                   fontWeight: 600,
-                  background: '#ffe8d6',
-                  color: '#ea580c',
-                  border: '1px solid #fed7aa',
-                  borderRadius: '6px',
-                  boxShadow: '0 1px 3px rgba(243, 112, 33, 0.1)',
+                  background: '#EFF6FF',
+                  color: '#2563EB',
+                  border: '1px solid #BFDBFE',
+                  borderRadius: '8px',
+                  boxShadow: '0 1px 3px rgba(37, 99, 235, 0.08)',
                 }}
               >
                 Browse file(s)
@@ -196,7 +196,7 @@ const EvaluationPage = () => {
                 />
               </label>
 
-              <span style={{ fontSize: '13px', color: '#475569', marginTop: '16px', fontWeight: 500 }}>
+              <span style={{ fontSize: '13px', color: '#64748B', marginTop: '16px', fontWeight: 500 }}>
                 or drag them in this box *
               </span>
             </div>
@@ -253,7 +253,7 @@ const EvaluationPage = () => {
                   step={5}
                   value={numQuestions}
                   onChange={(e) => setNumQuestions(Number(e.target.value))}
-                  style={{ accentColor: '#f37021', width: '130px', cursor: 'pointer' }}
+                  style={{ accentColor: '#2563EB', width: '130px', cursor: 'pointer' }}
                 />
                 <span style={{
                   fontSize: '12px',
@@ -350,9 +350,6 @@ const EvaluationPage = () => {
                 style={{
                   borderRadius: '6px',
                   padding: '11px 18px',
-                  background: '#f97316',
-                  color: '#ffffff',
-                  border: 'none',
                 }}
                 disabled={uploading}
               >
@@ -368,7 +365,7 @@ const EvaluationPage = () => {
       {uploading && (
         <div className="glass-card" style={{ padding: '16px 20px' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px', fontSize: '13px' }}>
-            <span style={{ fontWeight: 600, color: '#ea580c' }}>
+            <span style={{ fontWeight: 600, color: '#2563EB' }}>
               Executing Computer Vision Alignment & Decision Engine...
             </span>
             <span>{progress}%</span>
@@ -401,14 +398,14 @@ const EvaluationPage = () => {
               width: '52px',
               height: '52px',
               borderRadius: '50%',
-              background: '#fff2e8',
-              border: '1px solid #fcd9bd',
+              background: '#EFF6FF',
+              border: '1px solid #BFDBFE',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               marginBottom: '14px',
             }}>
-              <FileImage size={24} style={{ color: '#ea580c' }} />
+              <FileImage size={24} style={{ color: '#2563EB' }} />
             </div>
             <h4 style={{ fontSize: '15px', fontWeight: 600, color: 'var(--text-primary)', margin: '0 0 6px 0' }}>
               No evaluated submissions yet
