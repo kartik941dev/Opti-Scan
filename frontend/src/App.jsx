@@ -33,7 +33,7 @@ const ProtectedRoute = ({ children }) => {
 
   if (loading) {
     return (
-      <div style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#6366f1' }}>
+      <div style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#4F80FF' }}>
         Loading OptiScan Portal...
       </div>
     );
@@ -44,7 +44,7 @@ const ProtectedRoute = ({ children }) => {
   }
 
   return (
-    <div className="app-container" style={{ position: 'relative', minHeight: '100vh', background: '#080C1A' }}>
+    <div className="app-container" style={{ position: 'relative', minHeight: '100vh', background: '#1E232F' }}>
       <DotField
         dotRadius={1.5}
         dotSpacing={14}

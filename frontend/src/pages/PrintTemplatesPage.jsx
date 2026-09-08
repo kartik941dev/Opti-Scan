@@ -30,9 +30,9 @@ const PrintTemplatesPage = () => {
             </p>
 
             <div style={{
-              background: 'rgba(15, 23, 42, 0.6)',
+              background: '#1A1F2B',
               borderRadius: 'var(--radius-sm)',
-              border: '1px solid var(--border-subtle)',
+              border: '1px solid #323B4C',
               padding: '12px',
               fontSize: '12px',
               color: 'var(--text-secondary)',
@@ -46,7 +46,7 @@ const PrintTemplatesPage = () => {
             </div>
           </div>
 
-          <div style={{ marginTop: '20px', paddingTop: '16px', borderTop: '1px solid var(--border-subtle)' }}>
+          <div style={{ marginTop: '20px', paddingTop: '16px', borderTop: '1px solid #323B4C' }}>
             <a
               href="/standard_100q_omr.pdf"
               download="OptiScan_Standard_100Q.pdf"
@@ -61,21 +61,22 @@ const PrintTemplatesPage = () => {
 
       {/* Printing & Scanning Guidelines */}
       <div className="glass-card" style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
-        <h3 style={{ fontSize: '18px', margin: 0, display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <Printer size={20} color="#6366f1" /> Printing & Scanning Best Practices
+        <h3 style={{ fontSize: '18px', margin: 0, display: 'flex', alignItems: 'center', gap: '8px', color: '#E6EDF6' }}>
+          <Printer size={20} color="#4F80FF" /> Printing & Scanning Best Practices
         </h3>
 
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', fontSize: '13px' }}>
           <div style={{
-            background: 'rgba(16, 185, 129, 0.08)',
-            border: '1px solid rgba(16, 185, 129, 0.2)',
+            background: 'rgba(16, 185, 129, 0.12)',
+            border: '1px solid rgba(16, 185, 129, 0.28)',
             borderRadius: 'var(--radius-sm)',
             padding: '14px',
             display: 'flex',
             flexDirection: 'column',
             gap: '8px',
+            color: '#E6EDF6',
           }}>
-            <span style={{ fontWeight: 700, color: '#10b981', display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <span style={{ fontWeight: 700, color: '#34D399', display: 'flex', alignItems: 'center', gap: '6px' }}>
               <CheckCircle2 size={16} /> Recommended Settings
             </span>
             <div>• Print at <b>100% Actual Size</b> (disable "Fit to Page" or "Shrink to Fit").</div>
@@ -85,15 +86,16 @@ const PrintTemplatesPage = () => {
           </div>
 
           <div style={{
-            background: 'rgba(245, 158, 11, 0.08)',
-            border: '1px solid rgba(245, 158, 11, 0.2)',
+            background: 'rgba(245, 158, 11, 0.12)',
+            border: '1px solid rgba(245, 158, 11, 0.28)',
             borderRadius: 'var(--radius-sm)',
             padding: '14px',
             display: 'flex',
             flexDirection: 'column',
             gap: '8px',
+            color: '#E6EDF6',
           }}>
-            <span style={{ fontWeight: 700, color: '#f59e0b', display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <span style={{ fontWeight: 700, color: '#FBBF24', display: 'flex', alignItems: 'center', gap: '6px' }}>
               <AlertTriangle size={16} /> Smartphone Photo Capture Guidelines
             </span>
             <div>• Ensure all <b>4 black corner squares</b> are fully inside the camera frame.</div>

@@ -606,23 +606,23 @@ const AnswerKeyPage = () => {
             fontWeight: 600,
             background:
               notification.type === 'success'
-                ? '#dcfce7'
+                ? 'rgba(16, 185, 129, 0.16)'
                 : notification.type === 'error'
-                ? '#fee2e2'
-                : '#EFF6FF',
+                ? 'rgba(244, 63, 94, 0.16)'
+                : 'rgba(79, 128, 255, 0.16)',
             border: `1px solid ${
               notification.type === 'success'
-                ? '#bbf7d0'
+                ? '#10B981'
                 : notification.type === 'error'
-                ? '#fecaca'
-                : '#BFDBFE'
+                ? '#F43F5E'
+                : '#4F80FF'
             }`,
             color:
               notification.type === 'success'
-                ? '#15803d'
+                ? '#34D399'
                 : notification.type === 'error'
-                ? '#b91c1c'
-                : '#1D4ED8',
+                ? '#FB7185'
+                : '#88AAFF',
           }}
         >
           {notification.type === 'success' ? (
@@ -703,16 +703,16 @@ const AnswerKeyPage = () => {
         <div>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
             <label style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <Layers size={14} color="#2563EB" /> Subject Sections:
+              <Layers size={14} color="#60A5FA" /> Subject Sections:
             </label>
             <div style={{ display: 'flex', gap: '6px' }}>
               <button
                 type="button"
                 onClick={() => setEnableSections(!enableSections)}
                 style={{
-                  background: enableSections ? '#dcfce7' : '#f1f5f9',
-                  border: enableSections ? '1px solid #bbf7d0' : '1px solid #e2e8f0',
-                  color: enableSections ? '#15803d' : '#64748b',
+                  background: enableSections ? 'rgba(16, 185, 129, 0.16)' : '#1E2431',
+                  border: enableSections ? '1px solid rgba(16, 185, 129, 0.3)' : '1px solid #323B4C',
+                  color: enableSections ? '#34D399' : '#94A3B8',
                   padding: '2px 8px',
                   borderRadius: '4px',
                   fontSize: '11px',
@@ -752,10 +752,10 @@ const AnswerKeyPage = () => {
             <span
               style={{
                 fontSize: '13px',
-                color: totalAnsweredCount === totalQuestions ? '#15803d' : '#2563EB',
+                color: totalAnsweredCount === totalQuestions ? '#34D399' : '#88AAFF',
                 fontWeight: 700,
-                background: totalAnsweredCount === totalQuestions ? '#dcfce7' : '#EFF6FF',
-                border: totalAnsweredCount === totalQuestions ? '1px solid #bbf7d0' : '1px solid #BFDBFE',
+                background: totalAnsweredCount === totalQuestions ? 'rgba(16, 185, 129, 0.16)' : 'rgba(79, 128, 255, 0.16)',
+                border: totalAnsweredCount === totalQuestions ? '1px solid rgba(16, 185, 129, 0.3)' : '1px solid rgba(79, 128, 255, 0.3)',
                 padding: '3px 10px',
                 borderRadius: '4px',
               }}
@@ -826,11 +826,10 @@ const AnswerKeyPage = () => {
           alignItems: 'center',
           justifyContent: 'space-between',
           padding: '12px 18px',
-          background: 'rgba(16, 24, 43, 0.86)',
-          backdropFilter: 'blur(10px)',
+          background: '#242A38',
           borderRadius: 'var(--radius-sm)',
-          border: '1px solid #1E3152',
-          boxShadow: 'var(--shadow-sm)',
+          border: '1px solid #323B4C',
+          boxShadow: '0 2px 8px rgba(0, 0, 0, 0.2)',
           flexWrap: 'wrap',
           gap: '12px',
         }}
@@ -901,12 +900,12 @@ const AnswerKeyPage = () => {
 
       {/* Interactive Matrix Grid */}
       <div className="glass-card" style={{
-        background: 'rgba(7, 12, 24, 0.95)',
-        border: '1px solid #1E3152',
-        boxShadow: '0 8px 32px rgba(0, 0, 0, 0.6)',
+        background: '#242A38',
+        border: '1px solid #323B4C',
+        boxShadow: '0 4px 16px rgba(0, 0, 0, 0.22)',
       }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', flexWrap: 'wrap', gap: '10px' }}>
-          <h3 style={{ fontSize: '16px', margin: 0, color: '#F8FAFC' }}>
+          <h3 style={{ fontSize: '16px', margin: 0, color: '#E6EDF6' }}>
             Master Answer Key Matrix ({totalQuestions} Questions Total)
           </h3>
           <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>
@@ -914,16 +913,16 @@ const AnswerKeyPage = () => {
           </span>
         </div>
 
-        {/* Dynamic Multi-Column Grid with slightly darker surrounding grid area */}
+        {/* Dynamic Multi-Column Grid */}
         <div
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))',
             gap: '16px',
-            background: 'rgba(5, 8, 18, 0.65)',
+            background: '#1A1F2B',
             padding: '16px',
             borderRadius: '10px',
-            border: '1px solid rgba(30, 49, 82, 0.5)',
+            border: '1px solid #2D3545',
           }}
         >
           {/* Chunk into columns of 25 */}
@@ -949,10 +948,11 @@ const AnswerKeyPage = () => {
               <div
                 key={colIndex}
                 style={{
-                  background: '#fbfcfd',
-                  border: '1px solid var(--border-subtle)',
+                  background: '#242A38',
+                  border: '1px solid #323B4C',
                   borderRadius: 'var(--radius-sm)',
                   padding: '14px',
+                  boxShadow: '0 1px 3px rgba(0, 0, 0, 0.2)',
                 }}
               >
                 <div
@@ -961,14 +961,14 @@ const AnswerKeyPage = () => {
                     alignItems: 'center',
                     justifyContent: 'space-between',
                     marginBottom: '10px',
-                    borderBottom: '1px solid var(--border-subtle)',
+                    borderBottom: '1px solid #2D3545',
                     paddingBottom: '6px',
                   }}
                 >
-                  <span style={{ fontSize: '12px', fontWeight: 700, color: '#2563EB' }}>
+                  <span style={{ fontSize: '12px', fontWeight: 700, color: '#60A5FA' }}>
                     {secLabel}
                   </span>
-                  <span style={{ fontSize: '11px', fontWeight: 600, color: colAnswered === colQuestions.length ? '#15803d' : 'var(--text-muted)' }}>
+                  <span style={{ fontSize: '11px', fontWeight: 600, color: colAnswered === colQuestions.length ? '#10B981' : 'var(--text-muted)' }}>
                     {colAnswered}/{colQuestions.length} Set
                   </span>
                 </div>
@@ -985,14 +985,14 @@ const AnswerKeyPage = () => {
                           justifyContent: 'space-between',
                           padding: '2px 4px',
                           borderRadius: '4px',
-                          background: selected ? '#EFF6FF' : 'transparent',
+                          background: selected ? 'rgba(79, 128, 255, 0.16)' : 'transparent',
                         }}
                       >
                         <span
                           style={{
                             fontSize: '11px',
                             fontWeight: 600,
-                            color: selected ? '#0F2742' : 'var(--text-muted)',
+                            color: selected ? '#E6EDF6' : 'var(--text-muted)',
                             width: '40px',
                           }}
                         >
@@ -1016,13 +1016,13 @@ const AnswerKeyPage = () => {
                                   fontSize: '10px',
                                   fontWeight: 700,
                                   border: isSelected
-                                    ? '1px solid #2563EB'
-                                    : '1px solid #E2E8F0',
+                                    ? '1px solid #4F80FF'
+                                    : '1px solid #363F52',
                                   background: isSelected
-                                    ? '#2563EB'
-                                    : '#FFFFFF',
-                                  color: isSelected ? '#FFFFFF' : '#475569',
-                                  boxShadow: isSelected ? '0 1px 4px rgba(37, 99, 235, 0.25)' : 'none',
+                                    ? '#4F80FF'
+                                    : '#1A1F2B',
+                                  color: isSelected ? '#FFFFFF' : '#94A3B8',
+                                  boxShadow: isSelected ? '0 2px 6px rgba(79, 128, 255, 0.35)' : 'none',
                                   cursor: 'pointer',
                                   transition: 'all 0.12s ease',
                                 }}
@@ -1049,8 +1049,8 @@ const AnswerKeyPage = () => {
             position: 'fixed',
             inset: 0,
             zIndex: 9999,
-            backgroundColor: 'rgba(0, 0, 0, 0.75)',
-            backdropFilter: 'blur(6px)',
+            backgroundColor: 'rgba(15, 18, 25, 0.72)',
+            backdropFilter: 'blur(8px)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -1067,12 +1067,15 @@ const AnswerKeyPage = () => {
               flexDirection: 'column',
               gap: '16px',
               padding: '24px',
+              background: '#242A38',
+              border: '1px solid #323B4C',
+              boxShadow: '0 20px 40px rgba(0, 0, 0, 0.5)',
             }}
           >
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <ClipboardPaste size={20} color="var(--accent-cyan)" />
-                <h2 style={{ fontSize: '18px', margin: 0 }}>Paste Answer Key (CSV / Text / JSON up to 1000 Qs)</h2>
+                <ClipboardPaste size={20} color="#60A5FA" />
+                <h2 style={{ fontSize: '18px', margin: 0, color: '#E6EDF6' }}>Paste Answer Key (CSV / Text / JSON up to 1000 Qs)</h2>
               </div>
               <button
                 onClick={() => setPasteModalOpen(false)}
@@ -1134,8 +1137,8 @@ const AnswerKeyPage = () => {
             position: 'fixed',
             inset: 0,
             zIndex: 9999,
-            backgroundColor: 'rgba(0, 0, 0, 0.75)',
-            backdropFilter: 'blur(6px)',
+            backgroundColor: 'rgba(15, 18, 25, 0.72)',
+            backdropFilter: 'blur(8px)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -1153,12 +1156,15 @@ const AnswerKeyPage = () => {
               flexDirection: 'column',
               gap: '16px',
               padding: '24px',
+              background: '#242A38',
+              border: '1px solid #323B4C',
+              boxShadow: '0 20px 40px rgba(0, 0, 0, 0.5)',
             }}
           >
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <Layers size={20} color="var(--accent-cyan)" />
-                <h2 style={{ fontSize: '18px', margin: 0 }}>Subject Sections & Breakdown Config</h2>
+                <Layers size={20} color="#60A5FA" />
+                <h2 style={{ fontSize: '18px', margin: 0, color: '#E6EDF6' }}>Subject Sections & Breakdown Config</h2>
               </div>
               <button
                 onClick={() => setSectionsModalOpen(false)}
@@ -1225,16 +1231,16 @@ const AnswerKeyPage = () => {
                       alignItems: 'center',
                       justifyContent: 'space-between',
                       padding: '10px 14px',
-                      background: 'rgba(255, 255, 255, 0.03)',
-                      border: '1px solid var(--border-subtle)',
+                      background: '#1D222F',
+                      border: '1px solid #323B4C',
                       borderRadius: 'var(--radius-sm)',
                     }}
                   >
                     <div>
-                      <span style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text-primary)' }}>
+                      <span style={{ fontSize: '13px', fontWeight: 600, color: '#E6EDF6' }}>
                         {sec.name}
                       </span>
-                      <span style={{ marginLeft: '10px', fontSize: '11px', color: 'var(--accent-cyan)' }}>
+                      <span style={{ marginLeft: '10px', fontSize: '11px', color: '#60A5FA' }}>
                         Q{sec.q_start} – Q{sec.q_end} ({sec.q_end - sec.q_start + 1} Qs)
                       </span>
                     </div>
@@ -1263,15 +1269,15 @@ const AnswerKeyPage = () => {
               style={{
                 marginTop: '12px',
                 padding: '12px',
-                background: 'rgba(15, 23, 42, 0.6)',
-                border: '1px solid var(--border-subtle)',
+                background: '#1A1F2B',
+                border: '1px solid #323B4C',
                 borderRadius: 'var(--radius-sm)',
                 display: 'flex',
                 flexDirection: 'column',
                 gap: '10px',
               }}
             >
-              <span style={{ fontSize: '12px', fontWeight: 600, color: 'var(--accent-cyan)' }}>
+              <span style={{ fontSize: '12px', fontWeight: 600, color: '#60A5FA' }}>
                 Add New Section:
               </span>
               <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr auto', gap: '8px', alignItems: 'center' }}>

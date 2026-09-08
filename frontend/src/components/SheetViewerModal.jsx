@@ -34,9 +34,9 @@ const SheetViewerModal = ({ submission, examId, onClose }) => {
             <button
               onClick={onClose}
               style={{
-                background: 'rgba(255, 255, 255, 0.08)',
-                border: 'none',
-                color: 'var(--text-primary)',
+                background: '#2A3245',
+                border: '1px solid #3D4860',
+                color: '#94A3B8',
                 borderRadius: '8px',
                 padding: '8px',
                 cursor: 'pointer',
@@ -54,13 +54,13 @@ const SheetViewerModal = ({ submission, examId, onClose }) => {
           gap: '12px',
           marginBottom: '20px',
           padding: '16px',
-          background: 'rgba(255, 255, 255, 0.04)',
+          background: '#1A1F2B',
           borderRadius: 'var(--radius-sm)',
-          border: '1px solid var(--border-subtle)',
+          border: '1px solid #323B4C',
         }}>
           <div>
             <span style={{ fontSize: '11px', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Total Score</span>
-            <h4 style={{ fontSize: '20px', margin: '4px 0 0 0', color: 'var(--accent-primary)' }}>
+            <h4 style={{ fontSize: '20px', margin: '4px 0 0 0', color: '#60A5FA' }}>
               {submission.total_score} / {submission.max_score}
             </h4>
           </div>
@@ -72,7 +72,7 @@ const SheetViewerModal = ({ submission, examId, onClose }) => {
           </div>
           <div>
             <span style={{ fontSize: '11px', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Correct / Attempted</span>
-            <h4 style={{ fontSize: '20px', margin: '4px 0 0 0' }}>
+            <h4 style={{ fontSize: '20px', margin: '4px 0 0 0', color: '#E6EDF6' }}>
               {submission.total_correct} / {submission.total_attempted}
             </h4>
           </div>
@@ -90,9 +90,9 @@ const SheetViewerModal = ({ submission, examId, onClose }) => {
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
           {/* Annotated Sheet Image */}
           <div style={{
-            background: '#090d16',
+            background: '#1A1F2B',
             borderRadius: 'var(--radius-sm)',
-            border: '1px solid var(--border-subtle)',
+            border: '1px solid #323B4C',
             padding: '12px',
             display: 'flex',
             flexDirection: 'column',
@@ -118,9 +118,9 @@ const SheetViewerModal = ({ submission, examId, onClose }) => {
           <div style={{
             maxHeight: '520px',
             overflowY: 'auto',
-            background: 'rgba(15, 23, 42, 0.4)',
+            background: '#1A1F2B',
             borderRadius: 'var(--radius-sm)',
-            border: '1px solid var(--border-subtle)',
+            border: '1px solid #323B4C',
             padding: '12px',
           }}>
             <span style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text-secondary)', marginBottom: '8px', display: 'block' }}>

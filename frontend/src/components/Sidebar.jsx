@@ -42,15 +42,13 @@ const Sidebar = ({ collapsed = false, onToggle }) => {
         top: 0,
         left: 0,
         bottom: 0,
-        background: 'rgba(7, 11, 24, 0.92)',
-        backdropFilter: 'blur(12px)',
-        WebkitBackdropFilter: 'blur(12px)',
-        borderRight: '1px solid #1E3152',
+        background: '#181C26',
+        borderRight: '1px solid #2C3545',
         display: 'flex',
         flexDirection: 'column',
         padding: collapsed ? '20px 10px' : '24px 16px',
         zIndex: 100,
-        boxShadow: '2px 0 20px rgba(0, 0, 0, 0.5)',
+        boxShadow: '0 0 20px rgba(0, 0, 0, 0.25)',
         transition: 'width 0.25s cubic-bezier(0.4, 0, 0.2, 1), padding 0.25s ease',
         overflowX: 'hidden',
       }}
@@ -61,12 +59,12 @@ const Sidebar = ({ collapsed = false, onToggle }) => {
         alignItems: 'center',
         justifyContent: collapsed ? 'center' : 'space-between',
         padding: collapsed ? '6px 0 16px 0' : '6px 4px 20px 8px',
-        borderBottom: '1px solid #1E3152',
+        borderBottom: '1px solid #2C3545',
         marginBottom: collapsed ? '16px' : '20px',
       }}>
         {!collapsed && (
           <div style={{ display: 'flex', alignItems: 'center', overflow: 'hidden' }}>
-            <Logo darkBg height={48} showLink to="/" />
+            <Logo darkBg={true} height={48} showLink to="/" />
           </div>
         )}
 
@@ -75,9 +73,9 @@ const Sidebar = ({ collapsed = false, onToggle }) => {
             onClick={onToggle}
             title={collapsed ? "Expand sidebar" : "Collapse sidebar"}
             style={{
-              background: 'rgba(37, 99, 235, 0.12)',
-              border: '1px solid rgba(96, 165, 250, 0.25)',
-              color: '#60A5FA',
+              background: '#222734',
+              border: '1px solid #2C3545',
+              color: '#4F80FF',
               width: '32px',
               height: '32px',
               borderRadius: '8px',
@@ -89,12 +87,12 @@ const Sidebar = ({ collapsed = false, onToggle }) => {
               flexShrink: 0,
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.background = 'rgba(37, 99, 235, 0.22)';
-              e.currentTarget.style.color = '#93C5FD';
+              e.currentTarget.style.background = '#2B3346';
+              e.currentTarget.style.color = '#7EA5FF';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.background = 'rgba(37, 99, 235, 0.12)';
-              e.currentTarget.style.color = '#60A5FA';
+              e.currentTarget.style.background = '#222734';
+              e.currentTarget.style.color = '#4F80FF';
             }}
             aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
           >
@@ -125,7 +123,7 @@ const Sidebar = ({ collapsed = false, onToggle }) => {
       {/* User Info & Logout */}
       <div style={{
         padding: collapsed ? '14px 0 0 0' : '16px 8px 0 8px',
-        borderTop: '1px solid #1E3152',
+        borderTop: '1px solid #2C3545',
         display: 'flex',
         alignItems: 'center',
         justifyContent: collapsed ? 'center' : 'space-between',
@@ -146,21 +144,21 @@ const Sidebar = ({ collapsed = false, onToggle }) => {
             width: '34px',
             height: '34px',
             borderRadius: '50%',
-            background: 'rgba(37, 99, 235, 0.16)',
-            border: '1px solid rgba(96, 165, 250, 0.25)',
+            background: '#2A3245',
+            border: '1px solid #3D4860',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             flexShrink: 0,
           }}>
-            <UserCheck size={18} color="#60A5FA" />
+            <UserCheck size={18} color="#88AAFF" />
           </div>
           {!collapsed && (
             <div style={{ display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
               <span style={{
                 fontSize: '13px',
                 fontWeight: 600,
-                color: '#F8FAFC',
+                color: '#E6EDF6',
                 whiteSpace: 'nowrap',
                 overflow: 'hidden',
                 textOverflow: 'ellipsis',
@@ -186,8 +184,8 @@ const Sidebar = ({ collapsed = false, onToggle }) => {
             transition: 'all 0.15s ease',
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.color = '#F8FAFC';
-            e.currentTarget.style.background = 'rgba(255, 255, 255, 0.06)';
+            e.currentTarget.style.color = '#E6EDF6';
+            e.currentTarget.style.background = '#222734';
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.color = '#94A3B8';

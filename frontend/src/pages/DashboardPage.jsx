@@ -86,10 +86,10 @@ const DashboardPage = () => {
     <div style={{ display: 'flex', flexDirection: 'column', gap: '28px' }}>
       {/* Top Banner Header */}
       <div className="glass-card" style={{
-        background: 'linear-gradient(135deg, rgba(16, 24, 43, 0.88) 0%, rgba(14, 22, 38, 0.88) 100%)',
+        background: 'linear-gradient(135deg, #283040 0%, #202634 100%)',
         backdropFilter: 'blur(10px)',
         WebkitBackdropFilter: 'blur(10px)',
-        border: '1px solid #1E3152',
+        border: '1px solid #363F52',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
@@ -99,7 +99,7 @@ const DashboardPage = () => {
           <span style={{ fontSize: '12px', fontWeight: 700, color: '#60A5FA', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
             Production Grading Hub
           </span>
-          <h1 style={{ fontSize: '26px', margin: '4px 0 8px 0', color: '#F8FAFC' }}>
+          <h1 style={{ fontSize: '26px', margin: '4px 0 8px 0', color: '#E6EDF6' }}>
             Automated OMR Grading & Performance Analytics
           </h1>
           <p style={{ fontSize: '14px', color: '#94A3B8', margin: 0, maxWidth: '650px' }}>
@@ -121,7 +121,7 @@ const DashboardPage = () => {
             style={{ fontSize: '13px' }}
             disabled={demoLoading}
           >
-            <FolderOpen size={15} color="#60A5FA" />
+            <FolderOpen size={15} color="#88AAFF" />
             {demoLoading ? 'Grading Demo...' : 'Load 5 Sample Sheets'}
           </button>
         </div>
@@ -140,7 +140,7 @@ const DashboardPage = () => {
             style={{ width: '360px', padding: '8px 12px' }}
           >
             {exams.map((ex) => (
-              <option key={ex.id} value={ex.id} style={{ background: '#10182B', color: '#F8FAFC' }}>
+              <option key={ex.id} value={ex.id} style={{ background: '#1A1F2B', color: '#E6EDF6' }}>
                 {ex.title} ({ex.code})
               </option>
             ))}
@@ -222,16 +222,16 @@ const DashboardPage = () => {
               width: '56px',
               height: '56px',
               borderRadius: '50%',
-              background: 'rgba(37, 99, 235, 0.1)',
-              border: '1px solid rgba(96, 165, 250, 0.2)',
+              background: '#2A3245',
+              border: '1px solid #3D4860',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               marginBottom: '16px',
             }}>
-              <ScanLine size={28} style={{ color: '#14B8A6', opacity: 0.9 }} />
+              <ScanLine size={28} style={{ color: '#60A5FA', opacity: 0.9 }} />
             </div>
-            <h4 style={{ fontSize: '16px', fontWeight: 600, color: '#F8FAFC', margin: '0 0 6px 0' }}>
+            <h4 style={{ fontSize: '16px', fontWeight: 600, color: '#E6EDF6', margin: '0 0 6px 0' }}>
               No submissions yet
             </h4>
             <p style={{ fontSize: '13px', color: '#94A3B8', margin: '0 0 16px 0', maxWidth: '440px', lineHeight: 1.5 }}>
@@ -251,7 +251,7 @@ const DashboardPage = () => {
                 style={{ fontSize: '12px', padding: '6px 14px' }}
                 disabled={demoLoading}
               >
-                <FolderOpen size={14} color="#60A5FA" />
+                <FolderOpen size={14} color="#88AAFF" />
                 {demoLoading ? 'Grading Demo...' : 'Load Sample Sheets'}
               </button>
             </div>
@@ -273,7 +273,7 @@ const DashboardPage = () => {
               <tbody>
                 {submissions.map((sub) => (
                   <tr key={sub.id || sub.student_id}>
-                    <td style={{ fontWeight: 700, color: '#14B8A6' }}>
+                    <td style={{ fontWeight: 700, color: '#60A5FA' }}>
                       #{sub.student_id}
                     </td>
                     <td style={{ fontWeight: 700 }}>

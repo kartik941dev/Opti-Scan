@@ -137,15 +137,15 @@ const EvaluationPage = () => {
             width: '36px',
             height: '36px',
             borderRadius: '8px',
-            background: '#EFF6FF',
-            border: '1px solid #BFDBFE',
+            background: '#2A3245',
+            border: '1px solid #3D4860',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
           }}>
-            <ScanLine size={20} color="#2563EB" />
+            <ScanLine size={20} color="#60A5FA" />
           </div>
-          <h1 style={{ fontSize: '26px', margin: 0, fontWeight: 800, color: '#0F2742' }}>Scan answer sheet</h1>
+          <h1 style={{ fontSize: '26px', margin: 0, fontWeight: 800, color: '#E6EDF6' }}>Scan answer sheet</h1>
         </div>
         <p style={{ fontSize: '13px', color: 'var(--text-secondary)', margin: 0 }}>
           Scan OMR sheets by uploading photos or scans of filled OMR forms. High-speed 4-point homography and PyTorch digit recognition.
@@ -163,9 +163,9 @@ const EvaluationPage = () => {
               onDragOver={handleDrag}
               onDrop={handleDrop}
               style={{
-                border: dragActive ? '2px dashed #2563EB' : '2px dashed #93C5FD',
+                border: dragActive ? '2px dashed #4F80FF' : '2px dashed #363F52',
                 borderRadius: '10px',
-                background: dragActive ? '#EFF6FF' : '#F8FAFC',
+                background: dragActive ? 'rgba(79, 128, 255, 0.16)' : '#1A1F2B',
                 padding: '52px 24px',
                 textAlign: 'center',
                 transition: 'all 0.2s ease',
@@ -177,17 +177,14 @@ const EvaluationPage = () => {
               }}
             >
               <label
-                className="btn btn-secondary"
+                className="btn btn-primary"
                 style={{
                   cursor: 'pointer',
                   padding: '10px 24px',
                   fontSize: '14px',
                   fontWeight: 600,
-                  background: '#EFF6FF',
-                  color: '#2563EB',
-                  border: '1px solid #BFDBFE',
                   borderRadius: '8px',
-                  boxShadow: '0 1px 3px rgba(37, 99, 235, 0.08)',
+                  boxShadow: '0 2px 8px rgba(79, 128, 255, 0.35)',
                 }}
               >
                 Browse file(s)
@@ -200,7 +197,7 @@ const EvaluationPage = () => {
                 />
               </label>
 
-              <span style={{ fontSize: '13px', color: '#64748B', marginTop: '16px', fontWeight: 500 }}>
+              <span style={{ fontSize: '13px', color: '#94A3B8', marginTop: '16px', fontWeight: 500 }}>
                 or drag them in this box *
               </span>
             </div>
@@ -260,14 +257,14 @@ const EvaluationPage = () => {
                     const val = Number(e.target.value);
                     setNumQuestions(Math.min(1000, Math.max(1, val)));
                   }}
-                  style={{ accentColor: '#2563EB', width: '130px', cursor: 'pointer' }}
+                  style={{ accentColor: '#4F80FF', width: '130px', cursor: 'pointer' }}
                 />
                 <span style={{
                   fontSize: '12px',
                   fontWeight: 700,
-                  color: '#60A5FA',
-                  background: 'rgba(37, 99, 235, 0.12)',
-                  border: '1px solid rgba(96, 165, 250, 0.25)',
+                  color: '#88AAFF',
+                  background: '#2A3245',
+                  border: '1px solid #3D4860',
                   padding: '3px 8px',
                   borderRadius: '4px',
                   minWidth: '48px',
@@ -374,13 +371,13 @@ const EvaluationPage = () => {
       {uploading && (
         <div className="glass-card" style={{ padding: '16px 20px' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px', fontSize: '13px' }}>
-            <span style={{ fontWeight: 600, color: '#2563EB' }}>
+            <span style={{ fontWeight: 600, color: '#60A5FA' }}>
               Executing Computer Vision Alignment & Decision Engine...
             </span>
             <span>{progress}%</span>
           </div>
-          <div style={{ width: '100%', height: '6px', background: '#f1f5f9', borderRadius: '3px', overflow: 'hidden' }}>
-            <div style={{ width: `${progress}%`, height: '100%', background: 'var(--accent-primary)', transition: 'width 0.3s ease' }} />
+          <div style={{ width: '100%', height: '6px', background: '#1A1F2B', borderRadius: '3px', overflow: 'hidden' }}>
+            <div style={{ width: `${progress}%`, height: '100%', background: '#4F80FF', transition: 'width 0.3s ease' }} />
           </div>
         </div>
       )}
@@ -388,7 +385,7 @@ const EvaluationPage = () => {
       {/* Results Table */}
       <div className="glass-card">
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
-          <h3 style={{ fontSize: '18px', margin: 0 }}>
+          <h3 style={{ fontSize: '18px', margin: 0, color: '#E6EDF6' }}>
             Graded Submissions ({submissions.length})
           </h3>
         </div>
@@ -407,19 +404,19 @@ const EvaluationPage = () => {
               width: '52px',
               height: '52px',
               borderRadius: '50%',
-              background: '#EFF6FF',
-              border: '1px solid #BFDBFE',
+              background: '#2A3245',
+              border: '1px solid #3D4860',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               marginBottom: '14px',
             }}>
-              <FileImage size={24} style={{ color: '#2563EB' }} />
+              <FileImage size={24} style={{ color: '#60A5FA' }} />
             </div>
-            <h4 style={{ fontSize: '15px', fontWeight: 600, color: 'var(--text-primary)', margin: '0 0 6px 0' }}>
+            <h4 style={{ fontSize: '15px', fontWeight: 600, color: '#E6EDF6', margin: '0 0 6px 0' }}>
               No evaluated submissions yet
             </h4>
-            <p style={{ fontSize: '13px', color: 'var(--text-secondary)', margin: 0, maxWidth: '440px', lineHeight: 1.5 }}>
+            <p style={{ fontSize: '13px', color: '#94A3B8', margin: 0, maxWidth: '440px', lineHeight: 1.5 }}>
               Drag and drop OMR sheet scans into the upload zone above or load sample sheets. Evaluated candidate records and visual audit overlays will appear here automatically.
             </p>
           </div>
@@ -439,7 +436,7 @@ const EvaluationPage = () => {
             <tbody>
               {submissions.map((sub) => (
                 <tr key={sub.id || sub.student_id}>
-                  <td style={{ fontWeight: 700, color: 'var(--accent-primary)' }}>
+                  <td style={{ fontWeight: 700, color: '#60A5FA' }}>
                     #{sub.student_id}
                   </td>
                   <td style={{ fontWeight: 700 }}>

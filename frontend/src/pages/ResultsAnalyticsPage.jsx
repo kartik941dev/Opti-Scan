@@ -127,14 +127,14 @@ const ResultsAnalyticsPage = () => {
             <div style={{ width: '100%', height: '240px' }}>
               <ResponsiveContainer>
                 <BarChart data={overview.score_distribution}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="rgba(255, 255, 255, 0.06)" />
-                  <XAxis dataKey="range" stroke="#94a3b8" fontSize={11} />
-                  <YAxis stroke="#94a3b8" fontSize={11} />
+                  <CartesianGrid strokeDasharray="3 3" stroke="#323B4C" />
+                  <XAxis dataKey="range" stroke="#94A3B8" fontSize={11} />
+                  <YAxis stroke="#94A3B8" fontSize={11} />
                   <Tooltip
-                    contentStyle={{ background: '#0f172a', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '8px' }}
-                    itemStyle={{ color: '#06b6d4' }}
+                    contentStyle={{ background: '#1A1F2B', border: '1px solid #323B4C', borderRadius: '8px', color: '#E6EDF6', boxShadow: '0 4px 12px rgba(0,0,0,0.3)' }}
+                    itemStyle={{ color: '#60A5FA' }}
                   />
-                  <Bar dataKey="count" fill="#6366f1" radius={[4, 4, 0, 0]} />
+                  <Bar dataKey="count" fill="#4F80FF" radius={[4, 4, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             </div>
@@ -146,14 +146,26 @@ const ResultsAnalyticsPage = () => {
               flexDirection: 'column',
               alignItems: 'center',
               justifyContent: 'center',
-              background: 'rgba(255, 255, 255, 0.02)',
+              background: '#1A1F2B',
               borderRadius: '8px',
-              border: '1px dashed rgba(255, 255, 255, 0.08)',
+              border: '1px dashed #323B4C',
               color: 'var(--text-muted)',
             }}>
-              <BarChart3 size={32} style={{ opacity: 0.35, marginBottom: '8px' }} />
-              <span style={{ fontSize: '13px', fontWeight: 500, color: 'var(--text-primary)' }}>No data available</span>
-              <span style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: '2px' }}>
+              <div style={{
+                width: '44px',
+                height: '44px',
+                borderRadius: '50%',
+                background: '#2A3245',
+                border: '1px solid #3D4860',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: '8px',
+              }}>
+                <BarChart3 size={22} style={{ color: '#60A5FA' }} />
+              </div>
+              <span style={{ fontSize: '13px', fontWeight: 600, color: '#E6EDF6' }}>No data available</span>
+              <span style={{ fontSize: '11px', color: '#94A3B8', marginTop: '2px' }}>
                 Evaluate submissions to view score distribution
               </span>
             </div>
@@ -162,7 +174,7 @@ const ResultsAnalyticsPage = () => {
 
         {/* Sectional Performance Mastery */}
         <div className="glass-card">
-          <h3 style={{ fontSize: '16px', marginBottom: '4px' }}>Sectional Mastery Breakdown</h3>
+          <h3 style={{ fontSize: '16px', marginBottom: '4px', color: '#E6EDF6' }}>Sectional Mastery Breakdown</h3>
           <span style={{ fontSize: '12px', color: 'var(--text-secondary)', display: 'block', marginBottom: '16px' }}>
             Mean student accuracy by curriculum subject domain
           </span>
@@ -171,14 +183,14 @@ const ResultsAnalyticsPage = () => {
             <div style={{ width: '100%', height: '240px' }}>
               <ResponsiveContainer>
                 <BarChart data={sectionalData} layout="vertical">
-                  <CartesianGrid strokeDasharray="3 3" stroke="rgba(255, 255, 255, 0.06)" />
-                  <XAxis type="number" domain={[0, 100]} stroke="#94a3b8" fontSize={11} unit="%" />
-                  <YAxis dataKey="name" type="category" stroke="#94a3b8" fontSize={11} width={90} />
+                  <CartesianGrid strokeDasharray="3 3" stroke="#323B4C" />
+                  <XAxis type="number" domain={[0, 100]} stroke="#94A3B8" fontSize={11} unit="%" />
+                  <YAxis dataKey="name" type="category" stroke="#94A3B8" fontSize={11} width={90} />
                   <Tooltip
-                    contentStyle={{ background: '#0f172a', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '8px' }}
-                    itemStyle={{ color: '#10b981' }}
+                    contentStyle={{ background: '#1A1F2B', border: '1px solid #323B4C', borderRadius: '8px', color: '#E6EDF6', boxShadow: '0 4px 12px rgba(0,0,0,0.3)' }}
+                    itemStyle={{ color: '#2DD4BF' }}
                   />
-                  <Bar dataKey="accuracy" fill="#06b6d4" radius={[0, 4, 4, 0]} />
+                  <Bar dataKey="accuracy" fill="#2DD4BF" radius={[0, 4, 4, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             </div>
@@ -190,14 +202,26 @@ const ResultsAnalyticsPage = () => {
               flexDirection: 'column',
               alignItems: 'center',
               justifyContent: 'center',
-              background: 'rgba(255, 255, 255, 0.02)',
+              background: '#1A1F2B',
               borderRadius: '8px',
-              border: '1px dashed rgba(255, 255, 255, 0.08)',
+              border: '1px dashed #323B4C',
               color: 'var(--text-muted)',
             }}>
-              <PieChart size={32} style={{ opacity: 0.35, marginBottom: '8px' }} />
-              <span style={{ fontSize: '13px', fontWeight: 500, color: 'var(--text-primary)' }}>No data available</span>
-              <span style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: '2px' }}>
+              <div style={{
+                width: '44px',
+                height: '44px',
+                borderRadius: '50%',
+                background: '#2A3245',
+                border: '1px solid #3D4860',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: '8px',
+              }}>
+                <PieChart size={22} style={{ color: '#2DD4BF' }} />
+              </div>
+              <span style={{ fontSize: '13px', fontWeight: 600, color: '#E6EDF6' }}>No data available</span>
+              <span style={{ fontSize: '11px', color: '#94A3B8', marginTop: '2px' }}>
                 Evaluate submissions to view sectional domain mastery
               </span>
             </div>
@@ -209,7 +233,7 @@ const ResultsAnalyticsPage = () => {
       <div className="glass-card">
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
           <div>
-            <h3 style={{ fontSize: '18px', margin: 0 }}>Item Diagnostic Matrix (Classical Test Theory)</h3>
+            <h3 style={{ fontSize: '18px', margin: 0, color: '#E6EDF6' }}>Item Diagnostic Matrix (Classical Test Theory)</h3>
             <span style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>
               Difficulty Index (P), Discrimination Index (D), and Distractor Choice Frequencies
             </span>
@@ -230,16 +254,16 @@ const ResultsAnalyticsPage = () => {
               width: '48px',
               height: '48px',
               borderRadius: '50%',
-              background: 'rgba(255, 255, 255, 0.03)',
-              border: '1px solid rgba(255, 255, 255, 0.08)',
+              background: '#2A3245',
+              border: '1px solid #3D4860',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               marginBottom: '12px',
             }}>
-              <HelpCircle size={22} style={{ color: 'var(--accent-cyan)', opacity: 0.8 }} />
+              <HelpCircle size={22} style={{ color: '#60A5FA', opacity: 0.9 }} />
             </div>
-            <h4 style={{ fontSize: '15px', fontWeight: 600, color: 'var(--text-primary)', margin: '0 0 6px 0' }}>
+            <h4 style={{ fontSize: '15px', fontWeight: 600, color: '#E6EDF6', margin: '0 0 6px 0' }}>
               No item statistics available yet
             </h4>
             <p style={{ fontSize: '13px', color: 'var(--text-secondary)', margin: 0, maxWidth: '440px', lineHeight: 1.5 }}>
