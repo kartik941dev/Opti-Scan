@@ -11,22 +11,7 @@ import {
   UserCheck,
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
-
-const OMRLogoIcon = ({ size = 22, color = '#ffffff' }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    {/* Corner Fiducial Markers */}
-    <rect x="2" y="2" width="5" height="5" rx="1" fill={color} />
-    <rect x="17" y="2" width="5" height="5" rx="1" fill={color} />
-    <rect x="2" y="17" width="5" height="5" rx="1" fill={color} />
-    <rect x="17" y="17" width="5" height="5" rx="1" fill={color} />
-    {/* Bubble Matrix Elements */}
-    <circle cx="12" cy="4.5" r="1.5" fill={color} opacity="0.85" />
-    <circle cx="4.5" cy="12" r="1.5" fill={color} opacity="0.85" />
-    <circle cx="12" cy="12" r="2.2" fill={color} />
-    <circle cx="19.5" cy="12" r="1.5" fill={color} opacity="0.85" />
-    <circle cx="12" cy="19.5" r="1.5" fill={color} opacity="0.85" />
-  </svg>
-);
+import Logo from './Logo';
 
 const Sidebar = () => {
   const { user, logout } = useAuth();
@@ -53,36 +38,25 @@ const Sidebar = () => {
       top: 0,
       left: 0,
       bottom: 0,
-      background: '#ffffff',
-      borderRight: '1px solid var(--border-subtle)',
+      background: '#080D1C',
+      backdropFilter: 'blur(12px)',
+      WebkitBackdropFilter: 'blur(12px)',
+      borderRight: '1px solid #1E3152',
       display: 'flex',
       flexDirection: 'column',
       padding: '24px 16px',
       zIndex: 100,
-      boxShadow: '2px 0 12px rgba(0, 0, 0, 0.02)',
+      boxShadow: '2px 0 20px rgba(0, 0, 0, 0.5)',
     }}>
-      {/* Brand Header */}
-      <div style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '0 12px 28px 12px' }}>
-        <div style={{
-          width: '38px',
-          height: '38px',
-          borderRadius: '10px',
-          background: 'linear-gradient(135deg, #f97316, #ea580c)',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          boxShadow: '0 2px 10px rgba(243, 112, 33, 0.35)',
-        }}>
-          <OMRLogoIcon size={22} color="#ffffff" />
-        </div>
-        <div>
-          <h2 style={{ fontSize: '18px', fontWeight: 800, letterSpacing: '-0.03em', margin: 0, color: '#0f172a' }}>
-            Opti<span style={{ color: '#f37021' }}>Scan</span>
-          </h2>
-          <span style={{ fontSize: '11px', color: '#64748b', fontWeight: 600, textTransform: 'uppercase' }}>
-            OMR GRADING PLATFORM
-          </span>
-        </div>
+      {/* Brand Header with Single Official Logo Component */}
+      <div style={{
+        display: 'flex',
+        alignItems: 'center',
+        padding: '6px 8px 24px 8px',
+        borderBottom: '1px solid #1E3152',
+        marginBottom: '20px',
+      }}>
+        <Logo darkBg height={32} showLink to="/" />
       </div>
 
       {/* Navigation Links */}
@@ -93,23 +67,9 @@ const Sidebar = () => {
             <NavLink
               key={item.path}
               to={item.path}
-              style={({ isActive }) => ({
-                display: 'flex',
-                alignItems: 'center',
-                gap: '12px',
-                padding: '12px 14px',
-                borderRadius: '8px',
-                color: isActive ? '#ea580c' : '#475569',
-                background: isActive ? '#fff2e8' : 'transparent',
-                borderLeft: isActive ? '3px solid #f37021' : '3px solid transparent',
-                textDecoration: 'none',
-                fontFamily: 'var(--font-heading)',
-                fontSize: '14px',
-                fontWeight: isActive ? 700 : 500,
-                transition: 'all 0.15s ease',
-              })}
+              className={({ isActive }) => `sidebar-nav-link ${isActive ? 'active' : ''}`.trim()}
             >
-              <Icon size={18} color={undefined} />
+              <Icon size={18} />
               <span>{item.name}</span>
             </NavLink>
           );
@@ -118,31 +78,39 @@ const Sidebar = () => {
 
       {/* User Info & Logout */}
       <div style={{
-        padding: '16px 12px 0 12px',
-        borderTop: '1px solid #f1f5f9',
+        padding: '16px 8px 0 8px',
+        borderTop: '1px solid #1E3152',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
       }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', minWidth: 0 }}>
           <div style={{
             width: '34px',
             height: '34px',
             borderRadius: '50%',
-            background: '#fff2e8',
-            border: '1px solid #fcd9bd',
+            background: 'rgba(37, 99, 235, 0.16)',
+            border: '1px solid rgba(96, 165, 250, 0.25)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
+            flexShrink: 0,
           }}>
-            <UserCheck size={18} color="#ea580c" />
+            <UserCheck size={18} color="#60A5FA" />
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <span style={{ fontSize: '13px', fontWeight: 600, color: '#0f172a' }}>
-              {user?.full_name || 'Demo Educator'}
+          <div style={{ display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+            <span style={{
+              fontSize: '13px',
+              fontWeight: 600,
+              color: '#F8FAFC',
+              whiteSpace: 'nowrap',
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
+            }}>
+              {user?.full_name || 'Educator'}
             </span>
-            <span style={{ fontSize: '11px', color: '#64748b' }}>
-              {user?.role || 'Teacher'}
+            <span style={{ fontSize: '11px', color: '#94A3B8' }}>
+              {user?.role || 'Instructor'}
             </span>
           </div>
         </div>
@@ -152,13 +120,22 @@ const Sidebar = () => {
           style={{
             background: 'transparent',
             border: 'none',
-            color: '#94a3b8',
+            color: '#94A3B8',
             cursor: 'pointer',
             padding: '6px',
             borderRadius: '6px',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
+            transition: 'all 0.15s ease',
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.color = '#F8FAFC';
+            e.currentTarget.style.background = 'rgba(255, 255, 255, 0.06)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.color = '#94A3B8';
+            e.currentTarget.style.background = 'transparent';
           }}
         >
           <LogOut size={16} />
