@@ -86,21 +86,23 @@ const DashboardPage = () => {
     <div style={{ display: 'flex', flexDirection: 'column', gap: '28px' }}>
       {/* Top Banner Header */}
       <div className="glass-card" style={{
-        background: 'linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%)',
-        border: '1px solid #fed7aa',
+        background: 'linear-gradient(135deg, rgba(16, 24, 43, 0.88) 0%, rgba(14, 22, 38, 0.88) 100%)',
+        backdropFilter: 'blur(10px)',
+        WebkitBackdropFilter: 'blur(10px)',
+        border: '1px solid #1E3152',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
         padding: '28px',
       }}>
         <div>
-          <span style={{ fontSize: '12px', fontWeight: 700, color: '#ea580c', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+          <span style={{ fontSize: '12px', fontWeight: 700, color: '#60A5FA', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
             Production Grading Hub
           </span>
-          <h1 style={{ fontSize: '26px', margin: '4px 0 8px 0', color: '#0f172a' }}>
+          <h1 style={{ fontSize: '26px', margin: '4px 0 8px 0', color: '#F8FAFC' }}>
             Automated OMR Grading & Performance Analytics
           </h1>
-          <p style={{ fontSize: '14px', color: '#475569', margin: 0, maxWidth: '650px' }}>
+          <p style={{ fontSize: '14px', color: '#94A3B8', margin: 0, maxWidth: '650px' }}>
             High-speed optical mark recognition with 4-point homography alignment, adaptive threshold calibration, and item psychometrics.
           </p>
         </div>
@@ -116,10 +118,10 @@ const DashboardPage = () => {
           <button
             onClick={handleGenerateDemo}
             className="btn btn-secondary"
-            style={{ fontSize: '13px', opacity: 0.9 }}
+            style={{ fontSize: '13px' }}
             disabled={demoLoading}
           >
-            <FolderOpen size={15} color="#ea580c" />
+            <FolderOpen size={15} color="#60A5FA" />
             {demoLoading ? 'Grading Demo...' : 'Load 5 Sample Sheets'}
           </button>
         </div>
@@ -128,7 +130,7 @@ const DashboardPage = () => {
       {/* Active Exam Selector */}
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-          <span style={{ fontSize: '14px', fontWeight: 600, color: 'var(--text-secondary)' }}>
+          <span style={{ fontSize: '14px', fontWeight: 600, color: '#94A3B8' }}>
             Active Assessment:
           </span>
           <select
@@ -138,7 +140,7 @@ const DashboardPage = () => {
             style={{ width: '360px', padding: '8px 12px' }}
           >
             {exams.map((ex) => (
-              <option key={ex.id} value={ex.id}>
+              <option key={ex.id} value={ex.id} style={{ background: '#10182B', color: '#F8FAFC' }}>
                 {ex.title} ({ex.code})
               </option>
             ))}
@@ -153,28 +155,28 @@ const DashboardPage = () => {
           value={overview?.total_candidates || 0}
           subtitle="Processed candidates"
           icon={Users}
-          color="#f37021"
+          color="#2563EB"
         />
         <MetricCard
           title="CLASS MEAN SCORE"
           value={`${overview?.average_score || 0}`}
           subtitle={`Out of ${overview?.max_possible_score || 400} pts`}
           icon={Award}
-          color="#ea580c"
+          color="#60A5FA"
         />
         <MetricCard
           title="AVERAGE ACCURACY"
           value={`${overview?.average_percentage || 0}%`}
           subtitle={`Pass Rate: ${overview?.pass_rate_pct || 0}%`}
           icon={CheckCircle2}
-          color="#16a34a"
+          color="#10B981"
         />
         <MetricCard
           title="TEST RELIABILITY (KR-20)"
           value={overview?.total_candidates > 0 && overview?.kr20_reliability != null ? overview.kr20_reliability : '—'}
           subtitle={overview?.total_candidates > 0 ? "Internal consistency index" : "No data available"}
           icon={TrendingUp}
-          color="#d97706"
+          color="#14B8A6"
         />
       </div>
 
@@ -220,19 +222,19 @@ const DashboardPage = () => {
               width: '56px',
               height: '56px',
               borderRadius: '50%',
-              background: 'rgba(255, 255, 255, 0.03)',
-              border: '1px solid rgba(255, 255, 255, 0.08)',
+              background: 'rgba(37, 99, 235, 0.1)',
+              border: '1px solid rgba(96, 165, 250, 0.2)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               marginBottom: '16px',
             }}>
-              <ScanLine size={28} style={{ color: 'var(--accent-cyan)', opacity: 0.8 }} />
+              <ScanLine size={28} style={{ color: '#14B8A6', opacity: 0.9 }} />
             </div>
-            <h4 style={{ fontSize: '16px', fontWeight: 600, color: 'var(--text-primary)', margin: '0 0 6px 0' }}>
+            <h4 style={{ fontSize: '16px', fontWeight: 600, color: '#F8FAFC', margin: '0 0 6px 0' }}>
               No submissions yet
             </h4>
-            <p style={{ fontSize: '13px', color: 'var(--text-secondary)', margin: '0 0 16px 0', maxWidth: '440px', lineHeight: 1.5 }}>
+            <p style={{ fontSize: '13px', color: '#94A3B8', margin: '0 0 16px 0', maxWidth: '440px', lineHeight: 1.5 }}>
               Upload and evaluate candidate OMR sheets in the Evaluation tab, or load sample sheets to see real-time grading and psychometrics.
             </p>
             <div style={{ display: 'flex', gap: '10px' }}>
@@ -249,7 +251,7 @@ const DashboardPage = () => {
                 style={{ fontSize: '12px', padding: '6px 14px' }}
                 disabled={demoLoading}
               >
-                <FolderOpen size={14} color="#ea580c" />
+                <FolderOpen size={14} color="#60A5FA" />
                 {demoLoading ? 'Grading Demo...' : 'Load Sample Sheets'}
               </button>
             </div>
@@ -271,7 +273,7 @@ const DashboardPage = () => {
               <tbody>
                 {submissions.map((sub) => (
                   <tr key={sub.id || sub.student_id}>
-                    <td style={{ fontWeight: 700, color: 'var(--accent-cyan)' }}>
+                    <td style={{ fontWeight: 700, color: '#14B8A6' }}>
                       #{sub.student_id}
                     </td>
                     <td style={{ fontWeight: 700 }}>
