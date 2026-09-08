@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import Sidebar from './components/Sidebar';
+import DotField from './components/DotField';
 import LoginPage from './pages/LoginPage';
 import DashboardPage from './pages/DashboardPage';
 import ExamsPage from './pages/ExamsPage';
@@ -26,9 +27,25 @@ const ProtectedRoute = ({ children }) => {
   }
 
   return (
-    <div className="app-container">
+    <div className="app-container" style={{ position: 'relative', minHeight: '100vh', background: '#080C1A' }}>
+      <DotField
+        dotRadius={1.5}
+        dotSpacing={14}
+        bulgeStrength={67}
+        glowRadius={160}
+        sparkle={false}
+        waveAmplitude={0}
+        style={{
+          position: 'fixed',
+          inset: 0,
+          width: '100vw',
+          height: '100vh',
+          zIndex: 0,
+          pointerEvents: 'none',
+        }}
+      />
       <Sidebar />
-      <main className="main-content">{children}</main>
+      <main className="main-content" style={{ position: 'relative', zIndex: 1 }}>{children}</main>
     </div>
   );
 };
