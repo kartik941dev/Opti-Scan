@@ -533,7 +533,7 @@ const AnswerKeyPage = () => {
       >
         <div>
           <h1 style={{ fontSize: '24px', margin: '0 0 4px 0', display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <KeyRound size={24} color="#ea580c" /> Master Answer Key & Assessment Config
+            <KeyRound size={24} color="#2563EB" /> Master Answer Key & Assessment Config
           </h1>
           <p style={{ fontSize: '13px', color: 'var(--text-secondary)', margin: 0 }}>
             Configurable question limits (up to 1,000 Qs), optional subject sections, CSV & Excel upload
@@ -553,7 +553,7 @@ const AnswerKeyPage = () => {
             }}
             title="Load standard demo answer key with 4 sections"
           >
-            <FileSpreadsheet size={14} color="#ea580c" /> Load Demo Answer Key
+            <FileSpreadsheet size={14} color="#2563EB" /> Load Demo Answer Key
           </button>
 
           <button
@@ -609,20 +609,20 @@ const AnswerKeyPage = () => {
                 ? '#dcfce7'
                 : notification.type === 'error'
                 ? '#fee2e2'
-                : '#ffedd5',
+                : '#EFF6FF',
             border: `1px solid ${
               notification.type === 'success'
                 ? '#bbf7d0'
                 : notification.type === 'error'
                 ? '#fecaca'
-                : '#fed7aa'
+                : '#BFDBFE'
             }`,
             color:
               notification.type === 'success'
                 ? '#15803d'
                 : notification.type === 'error'
                 ? '#b91c1c'
-                : '#c2410c',
+                : '#1D4ED8',
           }}
         >
           {notification.type === 'success' ? (
@@ -703,7 +703,7 @@ const AnswerKeyPage = () => {
         <div>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
             <label style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <Layers size={14} color="#ea580c" /> Subject Sections:
+              <Layers size={14} color="#2563EB" /> Subject Sections:
             </label>
             <div style={{ display: 'flex', gap: '6px' }}>
               <button
@@ -752,10 +752,10 @@ const AnswerKeyPage = () => {
             <span
               style={{
                 fontSize: '13px',
-                color: totalAnsweredCount === totalQuestions ? '#15803d' : '#ea580c',
+                color: totalAnsweredCount === totalQuestions ? '#15803d' : '#2563EB',
                 fontWeight: 700,
-                background: totalAnsweredCount === totalQuestions ? '#dcfce7' : '#ffedd5',
-                border: totalAnsweredCount === totalQuestions ? '1px solid #bbf7d0' : '1px solid #fed7aa',
+                background: totalAnsweredCount === totalQuestions ? '#dcfce7' : '#EFF6FF',
+                border: totalAnsweredCount === totalQuestions ? '1px solid #bbf7d0' : '1px solid #BFDBFE',
                 padding: '3px 10px',
                 borderRadius: '4px',
               }}
@@ -956,7 +956,7 @@ const AnswerKeyPage = () => {
                     paddingBottom: '6px',
                   }}
                 >
-                  <span style={{ fontSize: '12px', fontWeight: 700, color: '#ea580c' }}>
+                  <span style={{ fontSize: '12px', fontWeight: 700, color: '#2563EB' }}>
                     {secLabel}
                   </span>
                   <span style={{ fontSize: '11px', fontWeight: 600, color: colAnswered === colQuestions.length ? '#15803d' : 'var(--text-muted)' }}>
@@ -976,14 +976,14 @@ const AnswerKeyPage = () => {
                           justifyContent: 'space-between',
                           padding: '2px 4px',
                           borderRadius: '4px',
-                          background: selected ? '#fff7ed' : 'transparent',
+                          background: selected ? '#EFF6FF' : 'transparent',
                         }}
                       >
                         <span
                           style={{
                             fontSize: '11px',
                             fontWeight: 600,
-                            color: selected ? '#0f172a' : 'var(--text-muted)',
+                            color: selected ? '#0F2742' : 'var(--text-muted)',
                             width: '40px',
                           }}
                         >
@@ -1007,13 +1007,13 @@ const AnswerKeyPage = () => {
                                   fontSize: '10px',
                                   fontWeight: 700,
                                   border: isSelected
-                                    ? '1px solid #ea580c'
-                                    : '1px solid #e2e8f0',
+                                    ? '1px solid #2563EB'
+                                    : '1px solid #E2E8F0',
                                   background: isSelected
-                                    ? '#f37021'
-                                    : '#ffffff',
-                                  color: isSelected ? '#ffffff' : '#475569',
-                                  boxShadow: isSelected ? '0 1px 4px rgba(243, 112, 33, 0.35)' : 'none',
+                                    ? '#2563EB'
+                                    : '#FFFFFF',
+                                  color: isSelected ? '#FFFFFF' : '#475569',
+                                  boxShadow: isSelected ? '0 1px 4px rgba(37, 99, 235, 0.25)' : 'none',
                                   cursor: 'pointer',
                                   transition: 'all 0.12s ease',
                                 }}
