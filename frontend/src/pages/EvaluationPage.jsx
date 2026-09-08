@@ -36,8 +36,12 @@ const EvaluationPage = () => {
   useEffect(() => {
     if (selectedExamId) {
       loadSubmissions(selectedExamId);
+      const ex = exams.find((e) => e.id === selectedExamId);
+      if (ex && ex.total_questions) {
+        setNumQuestions(Math.min(1000, Math.max(1, ex.total_questions)));
+      }
     }
-  }, [selectedExamId]);
+  }, [selectedExamId, exams]);
 
   const loadExams = async () => {
     try {
@@ -248,22 +252,27 @@ const EvaluationPage = () => {
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                 <input
                   type="range"
-                  min={10}
-                  max={100}
+                  min={5}
+                  max={1000}
                   step={5}
                   value={numQuestions}
-                  onChange={(e) => setNumQuestions(Number(e.target.value))}
+                  onChange={(e) => {
+                    const val = Number(e.target.value);
+                    setNumQuestions(Math.min(1000, Math.max(1, val)));
+                  }}
                   style={{ accentColor: '#2563EB', width: '130px', cursor: 'pointer' }}
                 />
                 <span style={{
                   fontSize: '12px',
-                  fontWeight: 600,
-                  color: 'var(--text-secondary)',
-                  background: '#f1f5f9',
+                  fontWeight: 700,
+                  color: '#60A5FA',
+                  background: 'rgba(37, 99, 235, 0.12)',
+                  border: '1px solid rgba(96, 165, 250, 0.25)',
                   padding: '3px 8px',
                   borderRadius: '4px',
-                  minWidth: '36px',
+                  minWidth: '48px',
                   textAlign: 'center',
+                  fontVariantNumeric: 'tabular-nums',
                 }}>
                   {numQuestions}
                 </span>
